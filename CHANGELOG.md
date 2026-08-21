@@ -3,6 +3,39 @@
 Notable changes to this continuation. The addon code is jfstn's work; only
 the changes listed here depart from upstream v0.36.3.
 
+## 0.38.0 — 2026-08-21
+
+### Fixed
+
+* **Blizzard policy rule 5 violation, inherited from upstream.** The addon
+  shipped a "Support on Patreon" button and a panel tab listing Patreon
+  backers. The policy is explicit: "Add-ons may not include requests for
+  donations ... such requests should be limited to the add-on website or
+  distribution site and should not appear in the game." Both are removed.
+  Two further reasons beyond the policy: the Patreon belongs to the
+  discontinued upstream project, so it asked users to fund an addon that
+  is no longer maintained; and the backer list hard-coded fifteen real
+  names of people who pledged to jfstn, not to this repository.
+
+### Changed
+
+* The Supporters tab is now a **Credits** tab. Removing the tab outright
+  would have meant unpicking it from six places in `ClassCodex.lua` with
+  no way to test the result in-game, and credit for the work is worth
+  showing regardless. It names the original author, the project this
+  addon derives code from, and the four sites the data comes from.
+* The Discord card in the About tab now points at this repository's issue
+  tracker. The old link went to the discontinued project's server.
+
+### Added
+
+* `NOTICE.md` — third-party components, their authors and their licences.
+  `Shared/ReduceTaint.lua` and `Shared/ImportExport.lua` derive from
+  NumyAddon's TalentLoadoutManager (MIT), which requires its copyright
+  notice to travel with the code; `LICENSE` named only jfstn.
+* A policy section in the README recording what was checked and why the
+  remaining rules hold.
+
 ## 0.37.0 — 2026-08-21
 
 First release of the community continuation, built on upstream v0.36.3
