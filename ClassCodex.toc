@@ -1,13 +1,11 @@
-## Interface: 120007
+## Interface: 120100
 ## Title: Class Codex
-## Notes: Stat priorities, talent builds, rotation guides, and gearing recommendations for your current spec.
-## Author: jfstn
-## Version: 0.36.3
+## Notes: Stat priorities, talent builds, rotation guides, and gearing recommendations for your current spec.|nData refreshed for Midnight 12.1 Season 2.
+## Author: jfstn (community continuation by Sparxx947)
+## Version: 0.37.0
 ## SavedVariables: ClassCodexDB
 ## SavedVariablesPerCharacter: ClassCodexCharDB
-## X-Curse-Project-ID: 1480030
-## X-Wago-ID: rNkynwKa
-## X-Website: https://www.curseforge.com/wow/addons/class-codex
+## X-Website: https://github.com/Sparxx947/ClassCodex
 ## IconTexture: Interface\AddOns\ClassCodex\icon
 ## AddonCompartmentFunc: ClassCodex_OnAddonCompartmentClick
 ## AddonCompartmentFuncOnEnter: ClassCodex_OnAddonCompartmentEnter
