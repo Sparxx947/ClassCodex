@@ -15,8 +15,12 @@ Set up:
 
   1. https://develop.battle.net/access/clients — create a client.
      Any name, no redirect URL needed for client_credentials.
-  2. export BNET_CLIENT_ID=... BNET_CLIENT_SECRET=...
+  2. Put the two values in ~/.config/bnet/credentials (chmod 600), or
+     set BNET_CLIENT_ID and BNET_CLIENT_SECRET in the environment. See
+     ccutil.bnet_credentials.
   3. python3 tools/probe_bnet.py
+
+Nothing here prints the credentials.
 
 It makes at most four requests and writes nothing.
 
@@ -32,6 +36,11 @@ import sys
 import urllib.error
 import urllib.parse
 import urllib.request
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+from ccutil import bnet_credentials  # noqa: E402
 
 REGION = os.environ.get("BNET_REGION", "eu")
 LOCALE = "en_GB" if REGION == "eu" else "en_US"
@@ -45,11 +54,13 @@ def die(message: str, code: int = 2) -> None:
 
 
 def token() -> str:
-    client_id = os.environ.get("BNET_CLIENT_ID")
-    secret = os.environ.get("BNET_CLIENT_SECRET")
-    if not client_id or not secret:
-        die("set BNET_CLIENT_ID and BNET_CLIENT_SECRET first — see the module "
-            "docstring for where to get them")
+    # bnet_credentials exits 1 on its own; that code means "loadouts are
+    # absent" here, so a missing key file must not be read as an answer
+    # about the API.
+    try:
+        client_id, secret = bnet_credentials()
+    except SystemExit as exc:
+        die(str(exc), 2)
     data = urllib.parse.urlencode({"grant_type": "client_credentials"}).encode()
     req = urllib.request.Request(OAUTH, data=data)
     import base64
