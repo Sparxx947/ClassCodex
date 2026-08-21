@@ -19,7 +19,12 @@ data set and the toolchain to keep producing one.
 
 ## Installing
 
-Close World of Warcraft, then clone into your AddOns folder:
+**From a release:** download `ClassCodex-<version>.zip` from the
+[releases page](https://github.com/Sparxx947/ClassCodex/releases), extract
+it, and move the `ClassCodex` folder into
+`World of Warcraft/_retail_/Interface/AddOns/`. Nothing else is needed.
+
+**From git**, if you would rather update with `git pull`:
 
 ```bash
 git clone https://github.com/Sparxx947/ClassCodex.git \
@@ -78,6 +83,9 @@ their own after any change:
 * `tools/check_data.py` — every spec present in every generated file, and
   the scrape date not stale. A scrape that produced nothing for one spec
   otherwise looks exactly like a successful run.
+* `tools/check_policy.py` — the addon against Blizzard's add-on policy,
+  rule by rule. Only executable Lua is examined: a comment explaining why
+  a donation button was removed is not a donation request.
 * `tools/check_locales.py` — every key the code asks for is defined, and
   all ten translations carry the same set. A missing key shows up in-game
   as a blank label, not as an error.
@@ -96,9 +104,29 @@ the data rather than hard-coded, so a plain rerun is usually enough:
   scraped Archon data, and the addon's zone detection does the same at
   runtime.
 
+## Releasing
+
+```bash
+# bump ## Version in ClassCodex.toc and add a CHANGELOG section first
+git tag v0.38.2 && git push origin v0.38.2
+```
+
+The workflow refuses to publish if the tag disagrees with `## Version` in
+the TOC, if any check fails, or if the package is missing a file the TOC
+lists. A tag containing a hyphen (`v0.39.0-beta1`) is published as a
+pre-release, so it never becomes the "latest" download.
+
+Running the workflow manually builds and checks the package and attaches
+it as a build artifact without publishing anything — useful for testing a
+packaging change before a tag exists. `tools/package.sh` produces the
+identical zip locally.
+
 ## Blizzard add-on policy
 
 Checked against Blizzard's [UI Add-On Development Policy](https://us.forums.blizzard.com/en/wow/t/ui-add-on-development-policy/24534).
+
+`tools/check_policy.py` now enforces this on every push, and the release
+workflow will not publish a build that fails it.
 
 Upstream broke rule 5, "add-ons may not solicit donations": it shipped a
 "Support on Patreon" button and a panel tab listing Patreon backers. Both
@@ -185,9 +213,30 @@ Gebraucht wird nur Python 3.11+ aus dem Systembestand — keine virtuelle
 Umgebung, kein npm, kein Browser. Ein Durchlauf dauert etwa 15 Minuten und
 legt jede Seite in `tools/.cache/` ab, ein zweiter Lauf ist deshalb schnell.
 
+### Veröffentlichen
+
+```bash
+# vorher ## Version in ClassCodex.toc anheben und einen CHANGELOG-Abschnitt anlegen
+git tag v0.38.2 && git push origin v0.38.2
+```
+
+Der Workflow verweigert die Veröffentlichung, wenn das Tag nicht zu
+`## Version` in der TOC passt, wenn eine Prüfung fehlschlägt oder wenn dem
+Paket eine Datei fehlt, die die TOC auflistet. Ein Tag mit Bindestrich
+(`v0.39.0-beta1`) wird als Vorabversion veröffentlicht und damit nie zum
+„latest"-Download.
+
+Ein manueller Lauf baut und prüft das Paket, hängt es als Artefakt an und
+veröffentlicht nichts — praktisch, um eine Änderung an der Paketierung zu
+testen, bevor ein Tag existiert. `tools/package.sh` erzeugt dasselbe ZIP
+lokal.
+
 ### Blizzards Addon-Richtlinie
 
 Geprüft gegen Blizzards [UI Add-On Development Policy](https://us.forums.blizzard.com/en/wow/t/ui-add-on-development-policy/24534).
+
+`tools/check_policy.py` prüft das bei jedem Push nach, und der
+Release-Workflow veröffentlicht nichts, was daran scheitert.
 
 Das Original verstieß gegen Regel 5 („add-ons may not solicit
 donations"): Es lieferte einen „Support on Patreon"-Knopf und einen

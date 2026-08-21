@@ -41,7 +41,7 @@ function Credits.InitPanel(opts)
     panel.title:SetHeight(ns.SECTION_HEADER_HEIGHT)
     local title = panel.title:CreateFontString(nil, "OVERLAY", "GameFontNormal")
     title:SetPoint("LEFT", 2, 0)
-    title:SetText(L["about.supporters"])
+    title:SetText(L["about.credits"])
     title:SetTextColor(1, 0.82, 0)
     panel.title:Hide()
 

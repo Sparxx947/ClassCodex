@@ -836,7 +836,10 @@ craftsTab:SetPoint("TOPLEFT", enhancementsTab, "BOTTOMLEFT", 0, -SIDE_TAB_GAP)
 sideTabs[#sideTabs + 1] = craftsTab
 
 local supporters = {}
-supporters.tab = CreateSideTab(panel, "Interface\\Icons\\INV_Misc_Book_09", L["about.supporters"], "supporters")
+-- The tab key stays "supporters" even though the tab is now Credits:
+-- it is persisted as ClassCodexCharDB.activeTab, so renaming it would
+-- invalidate the remembered tab for anyone who had this one open.
+supporters.tab = CreateSideTab(panel, "Interface\\Icons\\INV_Misc_Book_09", L["about.credits"], "supporters")
 supporters.tab.noDesaturate = true -- kept in colour so the tab reads as a distinct destination
 supporters.tab.icon:SetDesaturated(false)
 bottomTabs[#bottomTabs + 1] = supporters.tab

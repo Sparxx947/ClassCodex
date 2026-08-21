@@ -1,0 +1,52 @@
+name: Checks
+
+# Runs on every push and pull request, so a problem is found where it is
+# cheap to fix rather than at release time. The same scripts run locally.
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  policy:
+    name: Blizzard add-on policy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check against the add-on policy
+        run: python3 tools/check_policy.py --verbose
+
+  code:
+    name: Lua and localisation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # Lua 5.1 is the version the WoW client runs.
+      - name: Install Lua 5.1
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq lua5.1
+      - name: Check Lua syntax
+        run: LUAC=$(command -v luac5.1) tools/check_lua.sh
+      - name: Check localisation keys
+        run: python3 tools/check_locales.py
+
+  data:
+    name: Generated data
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # Completeness is the point here. Staleness is generous so that a
+      # code-only change is not blocked by data a few weeks old; the
+      # release workflow states the scrape date so nobody has to guess.
+      - name: Check generated data
+        run: python3 tools/check_data.py --max-age 90
+
+  package:
+    name: Package builds and is clean
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # Building the zip on every change means a packaging mistake is
+      # caught here, not when a tag is already pushed.
+      - name: Build the package
+        run: tools/package.sh

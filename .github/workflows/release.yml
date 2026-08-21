@@ -1,0 +1,129 @@
+name: Release
+
+# A tag makes the release; the manual run is a dry run that builds and
+# checks the package without publishing anything. Keeping publication on
+# the tag means a release cannot happen by an accidental button press,
+# and the tag is what everything else is checked against.
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Read the version from the TOC
+        id: version
+        run: |
+          version=$(grep -m1 '^## Version:' ClassCodex.toc \
+            | sed 's/^## Version:[[:space:]]*//' | tr -d '\r')
+          if [[ -z $version ]]; then
+            echo "::error::ClassCodex.toc has no ## Version line"
+            exit 1
+          fi
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+          echo "Class Codex $version"
+
+      # A release whose metadata disagrees with its tag is worse than a
+      # failed build: the client shows one version and the download page
+      # another. This already happened once by hand.
+      - name: Check the tag against the TOC version
+        if: startsWith(github.ref, 'refs/tags/')
+        run: |
+          tag="${GITHUB_REF#refs/tags/}"
+          version="${{ steps.version.outputs.version }}"
+          if [[ "$tag" != "v$version" ]]; then
+            echo "::error::tag $tag does not match ## Version: $version in ClassCodex.toc"
+            echo "::error::tag the release as v$version, or bump the TOC first"
+            exit 1
+          fi
+          echo "$tag matches the TOC"
+
+      # Lua 5.1 is the version the WoW client runs, so that is what the
+      # syntax check has to use.
+      - name: Install Lua 5.1
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq lua5.1
+
+      - name: Check Lua syntax
+        run: LUAC=$(command -v luac5.1) tools/check_lua.sh
+
+      - name: Check localisation keys
+        run: python3 tools/check_locales.py
+
+      # Completeness is a hard gate; staleness is generous here on
+      # purpose, so that a code-only release is not blocked by data that
+      # is a few weeks old. The scrape date is stated in the release body
+      # either way, so nobody has to guess how fresh it is.
+      - name: Check generated data
+        run: python3 tools/check_data.py --max-age 90
+
+      # A policy violation must never reach a published download. This is
+      # the check that would have stopped the upstream Patreon button.
+      - name: Check against the Blizzard add-on policy
+        run: python3 tools/check_policy.py --verbose
+
+      - name: Build the package
+        run: tools/package.sh
+
+      - name: Show what is being shipped
+        run: |
+          zip="dist/ClassCodex-${{ steps.version.outputs.version }}.zip"
+          echo "### Package contents" >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          unzip -Z1 "$zip" | cut -d/ -f1-2 | sort -u >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          echo "$(unzip -Z1 "$zip" | grep -vc '/$') files, $(du -h "$zip" | cut -f1)" \
+            >> "$GITHUB_STEP_SUMMARY"
+
+      # On a manual run the artifact is the whole point: it lets a
+      # packaging change be inspected before any tag exists.
+      - name: Upload the package as a build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ClassCodex-${{ steps.version.outputs.version }}
+          path: dist/*.zip
+          if-no-files-found: error
+
+      - name: Assemble the release notes
+        if: startsWith(github.ref, 'refs/tags/')
+        run: |
+          version="${{ steps.version.outputs.version }}"
+          scrape=$(grep -oE '[0-9]{4}-[0-9]{2}-[0-9]{2}' Data/Generated.lua | head -1)
+          iface=$(grep -m1 '^## Interface:' ClassCodex.toc | sed 's/^## Interface:[[:space:]]*//' | tr -d '\r')
+          {
+            echo "**Install:** download \`ClassCodex-$version.zip\`, extract it, and put the"
+            echo "\`ClassCodex\` folder into \`World of Warcraft/_retail_/Interface/AddOns/\`."
+            echo "The folder must keep that name — WoW matches the TOC file to it."
+            echo
+            echo "Guide data scraped **$scrape**. Built for interface $iface."
+            echo
+            tools/release_notes.sh "$version"
+          } > release-notes.md
+          cat release-notes.md
+
+      - name: Publish the release
+        if: startsWith(github.ref, 'refs/tags/')
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          version="${{ steps.version.outputs.version }}"
+          tag="${GITHUB_REF#refs/tags/}"
+          # A tag like v0.39.0-beta1 is not a release for people playing
+          # the game; mark it so it does not become "latest".
+          prerelease=()
+          if [[ $tag == *-* ]]; then
+            prerelease=(--prerelease)
+            echo "::notice::$tag is marked as a pre-release"
+          fi
+          gh release create "$tag" "dist/ClassCodex-$version.zip" \
+            --title "Class Codex $version" \
+            --notes-file release-notes.md \
+            "${prerelease[@]}"
