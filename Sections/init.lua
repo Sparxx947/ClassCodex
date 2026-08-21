@@ -35,7 +35,7 @@ local _, ns = ...
 --   Sections/Crafting.lua      — Crafts + Embellishments (v2 data)
 --   Sections/Trinkets.lua      — trinket tier list + context dropdown
 --   Sections/Gear.lua          — BiS gear (Wowhead / Icy Veins / PvP)
---   Sections/Supporters.lua    — panel-only Supporters + Patreon button
+--   Sections/Credits.lua       — panel-only credits list
 --   Sections/About.lua         — panel-only About + button factory
 --   Sections/Stats.lua         — stat priority list (both surfaces)
 --   Sections/Enhancements.lua  — enchants + gems + consumables + source
