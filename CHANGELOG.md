@@ -3,16 +3,29 @@
 Notable changes to this continuation. The addon code is jfstn's work; only
 the changes listed here depart from upstream v0.36.3.
 
-## Unreleased
+## 0.39.0 — 2026-08-21
+
+Verified in-game: the checklist covering everything the static checks
+cannot see came back clean.
 
 ### Added
 
-* `bnet-pvp-talents.lua` is generated again, for all 40 specs. It was the
-  one file still carrying upstream data from 2026-07-02. `refresh_bnet.py`
-  reads the PvP leaderboards and each listed character's profile — the
-  heaviest scraper here, because there is no aggregate endpoint.
-  `refresh_all.sh` skips it cleanly when no Blizzard credentials are set,
-  so a data refresh never fails over the one source that needs a key.
+* **`bnet-pvp-talents.lua` is generated again** — all 40 specs, 182
+  brackets, from the live season 42 leaderboards. It was the last file
+  still carrying upstream data from 2026-07-02, so every generated file
+  in the repository is now current.
+* `tools/refresh_bnet.py` reads the PvP leaderboards and each listed
+  character's profile. There is no aggregate endpoint, which makes it by
+  far the heaviest scraper here. `refresh_all.sh` runs it but skips it
+  cleanly when no credentials are set — a data refresh should not fail
+  over the one source that needs a key.
+* `tools/probe_bnet.py` answers, in four requests, whether Blizzard's API
+  still exposes talent loadouts. The field went missing in patch 11.2 and
+  is back as of season 42; this is the thing to run first if the scraper
+  ever comes back empty.
+* Credentials are read from `~/.config/bnet/credentials`, so an API key
+  never has to pass through shell history or a transcript. The tools
+  refuse a file that is readable beyond its owner rather than warning.
 
 ### Changed
 
@@ -23,17 +36,10 @@ the changes listed here depart from upstream v0.36.3.
 ### Fixed
 
 * `tools/check_locales.py` no longer reports dynamically built keys as
-  unused. It listed the four `title_bar.menu.width_*` keys, which are
-  assembled by concatenation; deleting them would have left the width
-  menu showing raw key names in every language, silently.
-
-### Added
-
-* `tools/probe_bnet.py` — establishes whether Blizzard's API still
-  exposes talent loadouts, which is the open question behind #7. It reads
-  credentials from `~/.config/bnet/credentials`, so a key never has to go
-  through a shell history or a transcript, and refuses to read the file
-  if it is readable beyond its owner.
+  unused. It listed the four `title_bar.menu.width_*` labels, which the
+  code assembles by concatenation; deleting them would have left the
+  width menu showing raw key names in every language, with nothing
+  raising an error to give it away.
 
 ## 0.38.2 — 2026-08-21
 
