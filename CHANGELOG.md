@@ -3,6 +3,20 @@
 Notable changes to this continuation. The addon code is jfstn's work; only
 the changes listed here depart from upstream v0.36.3.
 
+## 0.38.1 — 2026-08-21
+
+### Changed
+
+* The Credits tab now names who maintains the addon, not only who wrote
+  it. It listed jfstn as "Original author" and stopped there, which read
+  as though he still maintained it — the data refresh, the toolchain and
+  the fixes come from this repository.
+* The tab's description states the lineage explicitly: that this
+  continues the addon originally written by jfstn, and where it is
+  maintained. Naming the origin in the addon itself, rather than only in
+  the README, means a player who never opens the repository still sees
+  whose work this is built on.
+
 ## 0.38.0 — 2026-08-21
 
 ### Fixed
