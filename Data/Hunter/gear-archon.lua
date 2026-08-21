@@ -16,7 +16,9 @@ ClassCodexArchonGearData["HUNTER"] = {
           {
             item = {
               itemId = 271492,
+              name = "Skulking Viper's Weeping Fangs",
             },
+            bis = true,
           },
           {
             item = {
@@ -27,7 +29,9 @@ ClassCodexArchonGearData["HUNTER"] = {
           {
             item = {
               itemId = 271490,
+              name = "Jaws of the Skulking Viper",
             },
+            bis = true,
           },
           {
             item = {
@@ -44,12 +48,16 @@ ClassCodexArchonGearData["HUNTER"] = {
           {
             item = {
               itemId = 244584,
+              name = "Farstrider's Plated Bracers",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 271493,
+              name = "Skulking Viper's Hidepiercers",
             },
+            bis = true,
           },
           {
             item = {
@@ -107,7 +115,9 @@ ClassCodexArchonGearData["HUNTER"] = {
           {
             item = {
               itemId = 271492,
+              name = "Skulking Viper's Weeping Fangs",
             },
+            bis = true,
           },
           {
             item = {
@@ -118,7 +128,9 @@ ClassCodexArchonGearData["HUNTER"] = {
           {
             item = {
               itemId = 271490,
+              name = "Jaws of the Skulking Viper",
             },
+            bis = true,
           },
           {
             item = {
@@ -135,12 +147,16 @@ ClassCodexArchonGearData["HUNTER"] = {
           {
             item = {
               itemId = 244584,
+              name = "Farstrider's Plated Bracers",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 271493,
+              name = "Skulking Viper's Hidepiercers",
             },
+            bis = true,
           },
           {
             item = {
@@ -202,7 +218,9 @@ ClassCodexArchonGearData["HUNTER"] = {
           {
             item = {
               itemId = 271492,
+              name = "Skulking Viper's Weeping Fangs",
             },
+            bis = true,
           },
           {
             item = {
@@ -213,7 +231,9 @@ ClassCodexArchonGearData["HUNTER"] = {
           {
             item = {
               itemId = 271490,
+              name = "Jaws of the Skulking Viper",
             },
+            bis = true,
           },
           {
             item = {
@@ -230,12 +250,16 @@ ClassCodexArchonGearData["HUNTER"] = {
           {
             item = {
               itemId = 244584,
+              name = "Farstrider's Plated Bracers",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 271493,
+              name = "Skulking Viper's Hidepiercers",
             },
+            bis = true,
           },
           {
             item = {
@@ -287,12 +311,16 @@ ClassCodexArchonGearData["HUNTER"] = {
           {
             item = {
               itemId = 268207,
+              name = "Caustic Repose Greatbow",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 271492,
+              name = "Skulking Viper's Weeping Fangs",
             },
+            bis = true,
           },
           {
             item = {
@@ -303,7 +331,9 @@ ClassCodexArchonGearData["HUNTER"] = {
           {
             item = {
               itemId = 271490,
+              name = "Jaws of the Skulking Viper",
             },
+            bis = true,
           },
           {
             item = {
@@ -320,12 +350,16 @@ ClassCodexArchonGearData["HUNTER"] = {
           {
             item = {
               itemId = 244584,
+              name = "Farstrider's Plated Bracers",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 271493,
+              name = "Skulking Viper's Hidepiercers",
             },
+            bis = true,
           },
           {
             item = {
@@ -393,7 +427,9 @@ ClassCodexArchonGearData["HUNTER"] = {
           {
             item = {
               itemId = 271492,
+              name = "Skulking Viper's Weeping Fangs",
             },
+            bis = true,
           },
           {
             item = {
@@ -404,7 +440,9 @@ ClassCodexArchonGearData["HUNTER"] = {
           {
             item = {
               itemId = 271490,
+              name = "Jaws of the Skulking Viper",
             },
+            bis = true,
           },
           {
             item = {
@@ -421,12 +459,16 @@ ClassCodexArchonGearData["HUNTER"] = {
           {
             item = {
               itemId = 244584,
+              name = "Farstrider's Plated Bracers",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 271493,
+              name = "Skulking Viper's Hidepiercers",
             },
+            bis = true,
           },
           {
             item = {
@@ -490,7 +532,9 @@ ClassCodexArchonGearData["HUNTER"] = {
           {
             item = {
               itemId = 271492,
+              name = "Skulking Viper's Weeping Fangs",
             },
+            bis = true,
           },
           {
             item = {
@@ -501,7 +545,9 @@ ClassCodexArchonGearData["HUNTER"] = {
           {
             item = {
               itemId = 271490,
+              name = "Jaws of the Skulking Viper",
             },
+            bis = true,
           },
           {
             item = {
@@ -518,12 +564,16 @@ ClassCodexArchonGearData["HUNTER"] = {
           {
             item = {
               itemId = 244584,
+              name = "Farstrider's Plated Bracers",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 271493,
+              name = "Skulking Viper's Hidepiercers",
             },
+            bis = true,
           },
           {
             item = {

@@ -16,7 +16,9 @@ ClassCodexArchonGearData["WARRIOR"] = {
           {
             item = {
               itemId = 271456,
+              name = "Tempered Horns of the Jade Warlord",
             },
+            bis = true,
           },
           {
             item = {
@@ -27,7 +29,9 @@ ClassCodexArchonGearData["WARRIOR"] = {
           {
             item = {
               itemId = 271454,
+              name = "Raging Pauldrons of the Jade Warlord",
             },
+            bis = true,
           },
           {
             item = {
@@ -38,17 +42,23 @@ ClassCodexArchonGearData["WARRIOR"] = {
           {
             item = {
               itemId = 271459,
+              name = "Cuirass of the Jade Warlord",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 237834,
+              name = "Spellbreaker's Bracers",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 271457,
+              name = "Jeweled Gauntlets of the Jade Warlord",
             },
+            bis = true,
           },
           {
             item = {
@@ -106,7 +116,9 @@ ClassCodexArchonGearData["WARRIOR"] = {
           {
             item = {
               itemId = 271456,
+              name = "Tempered Horns of the Jade Warlord",
             },
+            bis = true,
           },
           {
             item = {
@@ -117,7 +129,9 @@ ClassCodexArchonGearData["WARRIOR"] = {
           {
             item = {
               itemId = 271454,
+              name = "Raging Pauldrons of the Jade Warlord",
             },
+            bis = true,
           },
           {
             item = {
@@ -128,17 +142,23 @@ ClassCodexArchonGearData["WARRIOR"] = {
           {
             item = {
               itemId = 271459,
+              name = "Cuirass of the Jade Warlord",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 237834,
+              name = "Spellbreaker's Bracers",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 271457,
+              name = "Jeweled Gauntlets of the Jade Warlord",
             },
+            bis = true,
           },
           {
             item = {
@@ -200,12 +220,16 @@ ClassCodexArchonGearData["WARRIOR"] = {
           {
             item = {
               itemId = 237846,
+              name = "Blood Knight's Warblade",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 271456,
+              name = "Tempered Horns of the Jade Warlord",
             },
+            bis = true,
           },
           {
             item = {
@@ -216,7 +240,9 @@ ClassCodexArchonGearData["WARRIOR"] = {
           {
             item = {
               itemId = 271454,
+              name = "Raging Pauldrons of the Jade Warlord",
             },
+            bis = true,
           },
           {
             item = {
@@ -227,17 +253,23 @@ ClassCodexArchonGearData["WARRIOR"] = {
           {
             item = {
               itemId = 271459,
+              name = "Cuirass of the Jade Warlord",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 237834,
+              name = "Spellbreaker's Bracers",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 271457,
+              name = "Jeweled Gauntlets of the Jade Warlord",
             },
+            bis = true,
           },
           {
             item = {
@@ -289,17 +321,23 @@ ClassCodexArchonGearData["WARRIOR"] = {
           {
             item = {
               itemId = 237846,
+              name = "Blood Knight's Warblade",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 237846,
+              name = "Blood Knight's Warblade",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 271456,
+              name = "Tempered Horns of the Jade Warlord",
             },
+            bis = true,
           },
           {
             item = {
@@ -310,7 +348,9 @@ ClassCodexArchonGearData["WARRIOR"] = {
           {
             item = {
               itemId = 271454,
+              name = "Raging Pauldrons of the Jade Warlord",
             },
+            bis = true,
           },
           {
             item = {
@@ -321,17 +361,23 @@ ClassCodexArchonGearData["WARRIOR"] = {
           {
             item = {
               itemId = 271459,
+              name = "Cuirass of the Jade Warlord",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 237834,
+              name = "Spellbreaker's Bracers",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 271457,
+              name = "Jeweled Gauntlets of the Jade Warlord",
             },
+            bis = true,
           },
           {
             item = {
@@ -399,7 +445,9 @@ ClassCodexArchonGearData["WARRIOR"] = {
           {
             item = {
               itemId = 271456,
+              name = "Tempered Horns of the Jade Warlord",
             },
+            bis = true,
           },
           {
             item = {
@@ -410,7 +458,9 @@ ClassCodexArchonGearData["WARRIOR"] = {
           {
             item = {
               itemId = 271454,
+              name = "Raging Pauldrons of the Jade Warlord",
             },
+            bis = true,
           },
           {
             item = {
@@ -427,12 +477,16 @@ ClassCodexArchonGearData["WARRIOR"] = {
           {
             item = {
               itemId = 237834,
+              name = "Spellbreaker's Bracers",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 271457,
+              name = "Jeweled Gauntlets of the Jade Warlord",
             },
+            bis = true,
           },
           {
             item = {
@@ -496,7 +550,9 @@ ClassCodexArchonGearData["WARRIOR"] = {
           {
             item = {
               itemId = 271456,
+              name = "Tempered Horns of the Jade Warlord",
             },
+            bis = true,
           },
           {
             item = {
@@ -507,7 +563,9 @@ ClassCodexArchonGearData["WARRIOR"] = {
           {
             item = {
               itemId = 271454,
+              name = "Raging Pauldrons of the Jade Warlord",
             },
+            bis = true,
           },
           {
             item = {
@@ -524,12 +582,16 @@ ClassCodexArchonGearData["WARRIOR"] = {
           {
             item = {
               itemId = 237834,
+              name = "Spellbreaker's Bracers",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 271457,
+              name = "Jeweled Gauntlets of the Jade Warlord",
             },
+            bis = true,
           },
           {
             item = {

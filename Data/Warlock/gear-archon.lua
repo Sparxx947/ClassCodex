@@ -28,7 +28,9 @@ ClassCodexArchonGearData["WARLOCK"] = {
           {
             item = {
               itemId = 271544,
+              name = "Spires of the Damned Necrolyte",
             },
+            bis = true,
           },
           {
             item = {
@@ -39,17 +41,23 @@ ClassCodexArchonGearData["WARLOCK"] = {
           {
             item = {
               itemId = 271549,
+              name = "Damned Necrolyte's Rattling Robes",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 239648,
+              name = "Martyr's Bindings",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 271547,
+              name = "Damned Necrolyte's Charred Grasps",
             },
+            bis = true,
           },
           {
             item = {
@@ -60,7 +68,9 @@ ClassCodexArchonGearData["WARLOCK"] = {
           {
             item = {
               itemId = 271545,
+              name = "Damned Necrolyte's Leg Bindings",
             },
+            bis = true,
           },
           {
             item = {
@@ -124,7 +134,9 @@ ClassCodexArchonGearData["WARLOCK"] = {
           {
             item = {
               itemId = 271544,
+              name = "Spires of the Damned Necrolyte",
             },
+            bis = true,
           },
           {
             item = {
@@ -135,12 +147,16 @@ ClassCodexArchonGearData["WARLOCK"] = {
           {
             item = {
               itemId = 271549,
+              name = "Damned Necrolyte's Rattling Robes",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 239648,
+              name = "Martyr's Bindings",
             },
+            bis = true,
           },
           {
             item = {
@@ -157,7 +173,9 @@ ClassCodexArchonGearData["WARLOCK"] = {
           {
             item = {
               itemId = 271545,
+              name = "Damned Necrolyte's Leg Bindings",
             },
+            bis = true,
           },
           {
             item = {
@@ -219,7 +237,9 @@ ClassCodexArchonGearData["WARLOCK"] = {
           {
             item = {
               itemId = 271544,
+              name = "Spires of the Damned Necrolyte",
             },
+            bis = true,
           },
           {
             item = {
@@ -230,17 +250,23 @@ ClassCodexArchonGearData["WARLOCK"] = {
           {
             item = {
               itemId = 271549,
+              name = "Damned Necrolyte's Rattling Robes",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 239648,
+              name = "Martyr's Bindings",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 271547,
+              name = "Damned Necrolyte's Charred Grasps",
             },
+            bis = true,
           },
           {
             item = {
@@ -251,7 +277,9 @@ ClassCodexArchonGearData["WARLOCK"] = {
           {
             item = {
               itemId = 271545,
+              name = "Damned Necrolyte's Leg Bindings",
             },
+            bis = true,
           },
           {
             item = {
@@ -309,7 +337,9 @@ ClassCodexArchonGearData["WARLOCK"] = {
           {
             item = {
               itemId = 271544,
+              name = "Spires of the Damned Necrolyte",
             },
+            bis = true,
           },
           {
             item = {
@@ -320,12 +350,16 @@ ClassCodexArchonGearData["WARLOCK"] = {
           {
             item = {
               itemId = 271549,
+              name = "Damned Necrolyte's Rattling Robes",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 239648,
+              name = "Martyr's Bindings",
             },
+            bis = true,
           },
           {
             item = {
@@ -342,7 +376,9 @@ ClassCodexArchonGearData["WARLOCK"] = {
           {
             item = {
               itemId = 271545,
+              name = "Damned Necrolyte's Leg Bindings",
             },
+            bis = true,
           },
           {
             item = {
@@ -404,7 +440,9 @@ ClassCodexArchonGearData["WARLOCK"] = {
           {
             item = {
               itemId = 271544,
+              name = "Spires of the Damned Necrolyte",
             },
+            bis = true,
           },
           {
             item = {
@@ -421,12 +459,16 @@ ClassCodexArchonGearData["WARLOCK"] = {
           {
             item = {
               itemId = 239648,
+              name = "Martyr's Bindings",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 271547,
+              name = "Damned Necrolyte's Charred Grasps",
             },
+            bis = true,
           },
           {
             item = {
@@ -437,7 +479,9 @@ ClassCodexArchonGearData["WARLOCK"] = {
           {
             item = {
               itemId = 271545,
+              name = "Damned Necrolyte's Leg Bindings",
             },
+            bis = true,
           },
           {
             item = {
@@ -495,7 +539,9 @@ ClassCodexArchonGearData["WARLOCK"] = {
           {
             item = {
               itemId = 271544,
+              name = "Spires of the Damned Necrolyte",
             },
+            bis = true,
           },
           {
             item = {
@@ -512,12 +558,16 @@ ClassCodexArchonGearData["WARLOCK"] = {
           {
             item = {
               itemId = 239648,
+              name = "Martyr's Bindings",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 271547,
+              name = "Damned Necrolyte's Charred Grasps",
             },
+            bis = true,
           },
           {
             item = {
@@ -528,7 +578,9 @@ ClassCodexArchonGearData["WARLOCK"] = {
           {
             item = {
               itemId = 271545,
+              name = "Damned Necrolyte's Leg Bindings",
             },
+            bis = true,
           },
           {
             item = {

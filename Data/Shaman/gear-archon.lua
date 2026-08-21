@@ -22,7 +22,9 @@ ClassCodexArchonGearData["SHAMAN"] = {
           {
             item = {
               itemId = 271483,
+              name = "Serpent Crown of the Ophidian Oracle",
             },
+            bis = true,
           },
           {
             item = {
@@ -33,7 +35,9 @@ ClassCodexArchonGearData["SHAMAN"] = {
           {
             item = {
               itemId = 271481,
+              name = "Hissing Mantle of the Ophidian Oracle",
             },
+            bis = true,
           },
           {
             item = {
@@ -50,12 +54,16 @@ ClassCodexArchonGearData["SHAMAN"] = {
           {
             item = {
               itemId = 244584,
+              name = "Farstrider's Plated Bracers",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 271484,
+              name = "Hexing Grips of the Ophidian Oracle",
             },
+            bis = true,
           },
           {
             item = {
@@ -119,7 +127,9 @@ ClassCodexArchonGearData["SHAMAN"] = {
           {
             item = {
               itemId = 271483,
+              name = "Serpent Crown of the Ophidian Oracle",
             },
+            bis = true,
           },
           {
             item = {
@@ -130,7 +140,9 @@ ClassCodexArchonGearData["SHAMAN"] = {
           {
             item = {
               itemId = 271481,
+              name = "Hissing Mantle of the Ophidian Oracle",
             },
+            bis = true,
           },
           {
             item = {
@@ -147,12 +159,16 @@ ClassCodexArchonGearData["SHAMAN"] = {
           {
             item = {
               itemId = 244584,
+              name = "Farstrider's Plated Bracers",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 271484,
+              name = "Hexing Grips of the Ophidian Oracle",
             },
+            bis = true,
           },
           {
             item = {
@@ -208,17 +224,23 @@ ClassCodexArchonGearData["SHAMAN"] = {
           {
             item = {
               itemId = 237850,
+              name = "Farstrider's Chopper",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 237850,
+              name = "Farstrider's Chopper",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 271483,
+              name = "Serpent Crown of the Ophidian Oracle",
             },
+            bis = true,
           },
           {
             item = {
@@ -229,7 +251,9 @@ ClassCodexArchonGearData["SHAMAN"] = {
           {
             item = {
               itemId = 271481,
+              name = "Hissing Mantle of the Ophidian Oracle",
             },
+            bis = true,
           },
           {
             item = {
@@ -240,17 +264,23 @@ ClassCodexArchonGearData["SHAMAN"] = {
           {
             item = {
               itemId = 271486,
+              name = "Fanged Raiment of the Ophidian Oracle",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 244584,
+              name = "Farstrider's Plated Bracers",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 271484,
+              name = "Hexing Grips of the Ophidian Oracle",
             },
+            bis = true,
           },
           {
             item = {
@@ -302,17 +332,23 @@ ClassCodexArchonGearData["SHAMAN"] = {
           {
             item = {
               itemId = 237850,
+              name = "Farstrider's Chopper",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 237850,
+              name = "Farstrider's Chopper",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 271483,
+              name = "Serpent Crown of the Ophidian Oracle",
             },
+            bis = true,
           },
           {
             item = {
@@ -335,17 +371,23 @@ ClassCodexArchonGearData["SHAMAN"] = {
           {
             item = {
               itemId = 271486,
+              name = "Fanged Raiment of the Ophidian Oracle",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 244584,
+              name = "Farstrider's Plated Bracers",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 271484,
+              name = "Hexing Grips of the Ophidian Oracle",
             },
+            bis = true,
           },
           {
             item = {
@@ -356,7 +398,9 @@ ClassCodexArchonGearData["SHAMAN"] = {
           {
             item = {
               itemId = 271482,
+              name = "Leggings of the Ophidian Oracle",
             },
+            bis = true,
           },
           {
             item = {

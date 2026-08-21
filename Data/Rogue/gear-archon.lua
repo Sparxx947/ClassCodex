@@ -10,17 +10,23 @@ ClassCodexArchonGearData["ROGUE"] = {
           {
             item = {
               itemId = 237837,
+              name = "Farstrider's Mercy",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 237837,
+              name = "Farstrider's Mercy",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 271510,
+              name = "Chosen Bloodslayer's Spirit Shroud",
             },
+            bis = true,
           },
           {
             item = {
@@ -43,17 +49,23 @@ ClassCodexArchonGearData["ROGUE"] = {
           {
             item = {
               itemId = 271513,
+              name = "Chosen Bloodslayer's Banded Poncho",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 244576,
+              name = "Silvermoon Agent's Deflectors",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 271511,
+              name = "Chosen Bloodslayer's Fanged Grips",
             },
+            bis = true,
           },
           {
             item = {
@@ -64,12 +76,16 @@ ClassCodexArchonGearData["ROGUE"] = {
           {
             item = {
               itemId = 271509,
+              name = "Chosen Bloodslayer's Reinforced Pants",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 251153,
+              name = "Arctic Explorer's Legwraps",
             },
+            bis = true,
           },
           {
             item = {
@@ -103,12 +119,16 @@ ClassCodexArchonGearData["ROGUE"] = {
           {
             item = {
               itemId = 237837,
+              name = "Farstrider's Mercy",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 237837,
+              name = "Farstrider's Mercy",
             },
+            bis = true,
           },
           {
             item = {
@@ -125,7 +145,9 @@ ClassCodexArchonGearData["ROGUE"] = {
           {
             item = {
               itemId = 271508,
+              name = "Chosen Bloodslayer's Voodoo Guards",
             },
+            bis = true,
           },
           {
             item = {
@@ -136,17 +158,23 @@ ClassCodexArchonGearData["ROGUE"] = {
           {
             item = {
               itemId = 271513,
+              name = "Chosen Bloodslayer's Banded Poncho",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 244576,
+              name = "Silvermoon Agent's Deflectors",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 271511,
+              name = "Chosen Bloodslayer's Fanged Grips",
             },
+            bis = true,
           },
           {
             item = {
@@ -157,7 +185,9 @@ ClassCodexArchonGearData["ROGUE"] = {
           {
             item = {
               itemId = 271509,
+              name = "Chosen Bloodslayer's Reinforced Pants",
             },
+            bis = true,
           },
           {
             item = {
@@ -225,7 +255,9 @@ ClassCodexArchonGearData["ROGUE"] = {
           {
             item = {
               itemId = 271508,
+              name = "Chosen Bloodslayer's Voodoo Guards",
             },
+            bis = true,
           },
           {
             item = {
@@ -236,7 +268,9 @@ ClassCodexArchonGearData["ROGUE"] = {
           {
             item = {
               itemId = 271513,
+              name = "Chosen Bloodslayer's Banded Poncho",
             },
+            bis = true,
           },
           {
             item = {
@@ -259,12 +293,16 @@ ClassCodexArchonGearData["ROGUE"] = {
           {
             item = {
               itemId = 271509,
+              name = "Chosen Bloodslayer's Reinforced Pants",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 244569,
+              name = "Silvermoon Agent's Sneakers",
             },
+            bis = true,
           },
           {
             item = {
@@ -322,7 +360,9 @@ ClassCodexArchonGearData["ROGUE"] = {
           {
             item = {
               itemId = 271508,
+              name = "Chosen Bloodslayer's Voodoo Guards",
             },
+            bis = true,
           },
           {
             item = {
@@ -333,7 +373,9 @@ ClassCodexArchonGearData["ROGUE"] = {
           {
             item = {
               itemId = 271513,
+              name = "Chosen Bloodslayer's Banded Poncho",
             },
+            bis = true,
           },
           {
             item = {
@@ -344,7 +386,9 @@ ClassCodexArchonGearData["ROGUE"] = {
           {
             item = {
               itemId = 271511,
+              name = "Chosen Bloodslayer's Fanged Grips",
             },
+            bis = true,
           },
           {
             item = {
@@ -355,12 +399,16 @@ ClassCodexArchonGearData["ROGUE"] = {
           {
             item = {
               itemId = 271509,
+              name = "Chosen Bloodslayer's Reinforced Pants",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 244569,
+              name = "Silvermoon Agent's Sneakers",
             },
+            bis = true,
           },
           {
             item = {
@@ -398,17 +446,23 @@ ClassCodexArchonGearData["ROGUE"] = {
           {
             item = {
               itemId = 237837,
+              name = "Farstrider's Mercy",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 237837,
+              name = "Farstrider's Mercy",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 271510,
+              name = "Chosen Bloodslayer's Spirit Shroud",
             },
+            bis = true,
           },
           {
             item = {
@@ -419,7 +473,9 @@ ClassCodexArchonGearData["ROGUE"] = {
           {
             item = {
               itemId = 271508,
+              name = "Chosen Bloodslayer's Voodoo Guards",
             },
+            bis = true,
           },
           {
             item = {
@@ -430,12 +486,16 @@ ClassCodexArchonGearData["ROGUE"] = {
           {
             item = {
               itemId = 271513,
+              name = "Chosen Bloodslayer's Banded Poncho",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 244576,
+              name = "Silvermoon Agent's Deflectors",
             },
+            bis = true,
           },
           {
             item = {
@@ -452,7 +512,9 @@ ClassCodexArchonGearData["ROGUE"] = {
           {
             item = {
               itemId = 271509,
+              name = "Chosen Bloodslayer's Reinforced Pants",
             },
+            bis = true,
           },
           {
             item = {
@@ -492,12 +554,16 @@ ClassCodexArchonGearData["ROGUE"] = {
           {
             item = {
               itemId = 237837,
+              name = "Farstrider's Mercy",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 237837,
+              name = "Farstrider's Mercy",
             },
+            bis = true,
           },
           {
             item = {
@@ -514,7 +580,9 @@ ClassCodexArchonGearData["ROGUE"] = {
           {
             item = {
               itemId = 271508,
+              name = "Chosen Bloodslayer's Voodoo Guards",
             },
+            bis = true,
           },
           {
             item = {
@@ -525,17 +593,23 @@ ClassCodexArchonGearData["ROGUE"] = {
           {
             item = {
               itemId = 271513,
+              name = "Chosen Bloodslayer's Banded Poncho",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 244576,
+              name = "Silvermoon Agent's Deflectors",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 271511,
+              name = "Chosen Bloodslayer's Fanged Grips",
             },
+            bis = true,
           },
           {
             item = {
@@ -546,7 +620,9 @@ ClassCodexArchonGearData["ROGUE"] = {
           {
             item = {
               itemId = 271509,
+              name = "Chosen Bloodslayer's Reinforced Pants",
             },
+            bis = true,
           },
           {
             item = {

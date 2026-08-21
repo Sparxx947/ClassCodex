@@ -16,7 +16,9 @@ ClassCodexArchonGearData["MONK"] = {
           {
             item = {
               itemId = 271519,
+              name = "Monkey King's Unyielding Visage",
             },
+            bis = true,
           },
           {
             item = {
@@ -39,7 +41,9 @@ ClassCodexArchonGearData["MONK"] = {
           {
             item = {
               itemId = 271522,
+              name = "Battle Gi of the Monkey King",
             },
+            bis = true,
           },
           {
             item = {
@@ -50,7 +54,9 @@ ClassCodexArchonGearData["MONK"] = {
           {
             item = {
               itemId = 271520,
+              name = "Monkey King's Fighting Fists",
             },
+            bis = true,
           },
           {
             item = {
@@ -61,7 +67,9 @@ ClassCodexArchonGearData["MONK"] = {
           {
             item = {
               itemId = 271518,
+              name = "Pantaloons of the Monkey King",
             },
+            bis = true,
           },
           {
             item = {
@@ -72,7 +80,9 @@ ClassCodexArchonGearData["MONK"] = {
           {
             item = {
               itemId = 251513,
+              name = "Loa Worshiper's Band",
             },
+            bis = true,
           },
           {
             item = {
@@ -106,7 +116,9 @@ ClassCodexArchonGearData["MONK"] = {
           {
             item = {
               itemId = 271519,
+              name = "Monkey King's Unyielding Visage",
             },
+            bis = true,
           },
           {
             item = {
@@ -117,7 +129,9 @@ ClassCodexArchonGearData["MONK"] = {
           {
             item = {
               itemId = 271517,
+              name = "Tassels of the Monkey King",
             },
+            bis = true,
           },
           {
             item = {
@@ -128,7 +142,9 @@ ClassCodexArchonGearData["MONK"] = {
           {
             item = {
               itemId = 271522,
+              name = "Battle Gi of the Monkey King",
             },
+            bis = true,
           },
           {
             item = {
@@ -151,7 +167,9 @@ ClassCodexArchonGearData["MONK"] = {
           {
             item = {
               itemId = 271518,
+              name = "Pantaloons of the Monkey King",
             },
+            bis = true,
           },
           {
             item = {
@@ -162,7 +180,9 @@ ClassCodexArchonGearData["MONK"] = {
           {
             item = {
               itemId = 251513,
+              name = "Loa Worshiper's Band",
             },
+            bis = true,
           },
           {
             item = {
@@ -406,7 +426,9 @@ ClassCodexArchonGearData["MONK"] = {
           {
             item = {
               itemId = 271517,
+              name = "Tassels of the Monkey King",
             },
+            bis = true,
           },
           {
             item = {
@@ -423,7 +445,9 @@ ClassCodexArchonGearData["MONK"] = {
           {
             item = {
               itemId = 244576,
+              name = "Silvermoon Agent's Deflectors",
             },
+            bis = true,
           },
           {
             item = {
@@ -499,7 +523,9 @@ ClassCodexArchonGearData["MONK"] = {
           {
             item = {
               itemId = 271517,
+              name = "Tassels of the Monkey King",
             },
+            bis = true,
           },
           {
             item = {
@@ -516,7 +542,9 @@ ClassCodexArchonGearData["MONK"] = {
           {
             item = {
               itemId = 244576,
+              name = "Silvermoon Agent's Deflectors",
             },
+            bis = true,
           },
           {
             item = {

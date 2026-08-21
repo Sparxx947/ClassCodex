@@ -16,7 +16,9 @@ ClassCodexArchonGearData["DEATHKNIGHT"] = {
           {
             item = {
               itemId = 271474,
+              name = "Baleful Grave-Knight's Casque",
             },
+            bis = true,
           },
           {
             item = {
@@ -27,7 +29,9 @@ ClassCodexArchonGearData["DEATHKNIGHT"] = {
           {
             item = {
               itemId = 271472,
+              name = "Baleful Grave-Knight's Gibbets",
             },
+            bis = true,
           },
           {
             item = {
@@ -38,17 +42,23 @@ ClassCodexArchonGearData["DEATHKNIGHT"] = {
           {
             item = {
               itemId = 271477,
+              name = "Baleful Grave-Knight's Breastplate",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 237834,
+              name = "Spellbreaker's Bracers",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 271475,
+              name = "Baleful Grave-Knight's Deathgrips",
             },
+            bis = true,
           },
           {
             item = {
@@ -106,7 +116,9 @@ ClassCodexArchonGearData["DEATHKNIGHT"] = {
           {
             item = {
               itemId = 271474,
+              name = "Baleful Grave-Knight's Casque",
             },
+            bis = true,
           },
           {
             item = {
@@ -117,7 +129,9 @@ ClassCodexArchonGearData["DEATHKNIGHT"] = {
           {
             item = {
               itemId = 271472,
+              name = "Baleful Grave-Knight's Gibbets",
             },
+            bis = true,
           },
           {
             item = {
@@ -128,17 +142,23 @@ ClassCodexArchonGearData["DEATHKNIGHT"] = {
           {
             item = {
               itemId = 271477,
+              name = "Baleful Grave-Knight's Breastplate",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 237834,
+              name = "Spellbreaker's Bracers",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 271475,
+              name = "Baleful Grave-Knight's Deathgrips",
             },
+            bis = true,
           },
           {
             item = {
@@ -206,7 +226,9 @@ ClassCodexArchonGearData["DEATHKNIGHT"] = {
           {
             item = {
               itemId = 271474,
+              name = "Baleful Grave-Knight's Casque",
             },
+            bis = true,
           },
           {
             item = {
@@ -217,7 +239,9 @@ ClassCodexArchonGearData["DEATHKNIGHT"] = {
           {
             item = {
               itemId = 271472,
+              name = "Baleful Grave-Knight's Gibbets",
             },
+            bis = true,
           },
           {
             item = {
@@ -234,7 +258,9 @@ ClassCodexArchonGearData["DEATHKNIGHT"] = {
           {
             item = {
               itemId = 237834,
+              name = "Spellbreaker's Bracers",
             },
+            bis = true,
           },
           {
             item = {
@@ -304,7 +330,9 @@ ClassCodexArchonGearData["DEATHKNIGHT"] = {
           {
             item = {
               itemId = 271474,
+              name = "Baleful Grave-Knight's Casque",
             },
+            bis = true,
           },
           {
             item = {
@@ -315,7 +343,9 @@ ClassCodexArchonGearData["DEATHKNIGHT"] = {
           {
             item = {
               itemId = 271472,
+              name = "Baleful Grave-Knight's Gibbets",
             },
+            bis = true,
           },
           {
             item = {
@@ -332,12 +362,16 @@ ClassCodexArchonGearData["DEATHKNIGHT"] = {
           {
             item = {
               itemId = 237834,
+              name = "Spellbreaker's Bracers",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 271475,
+              name = "Baleful Grave-Knight's Deathgrips",
             },
+            bis = true,
           },
           {
             item = {
@@ -399,7 +433,9 @@ ClassCodexArchonGearData["DEATHKNIGHT"] = {
           {
             item = {
               itemId = 271474,
+              name = "Baleful Grave-Knight's Casque",
             },
+            bis = true,
           },
           {
             item = {
@@ -410,7 +446,9 @@ ClassCodexArchonGearData["DEATHKNIGHT"] = {
           {
             item = {
               itemId = 271472,
+              name = "Baleful Grave-Knight's Gibbets",
             },
+            bis = true,
           },
           {
             item = {
@@ -421,17 +459,23 @@ ClassCodexArchonGearData["DEATHKNIGHT"] = {
           {
             item = {
               itemId = 271477,
+              name = "Baleful Grave-Knight's Breastplate",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 237834,
+              name = "Spellbreaker's Bracers",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 271475,
+              name = "Baleful Grave-Knight's Deathgrips",
             },
+            bis = true,
           },
           {
             item = {
@@ -489,7 +533,9 @@ ClassCodexArchonGearData["DEATHKNIGHT"] = {
           {
             item = {
               itemId = 271474,
+              name = "Baleful Grave-Knight's Casque",
             },
+            bis = true,
           },
           {
             item = {
@@ -500,7 +546,9 @@ ClassCodexArchonGearData["DEATHKNIGHT"] = {
           {
             item = {
               itemId = 271472,
+              name = "Baleful Grave-Knight's Gibbets",
             },
+            bis = true,
           },
           {
             item = {
@@ -511,17 +559,23 @@ ClassCodexArchonGearData["DEATHKNIGHT"] = {
           {
             item = {
               itemId = 271477,
+              name = "Baleful Grave-Knight's Breastplate",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 237834,
+              name = "Spellbreaker's Bracers",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 271475,
+              name = "Baleful Grave-Knight's Deathgrips",
             },
+            bis = true,
           },
           {
             item = {

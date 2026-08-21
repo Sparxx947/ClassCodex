@@ -22,7 +22,9 @@ ClassCodexArchonGearData["PALADIN"] = {
           {
             item = {
               itemId = 271465,
+              name = "Warhelm of the Consecrated Flame",
             },
+            bis = true,
           },
           {
             item = {
@@ -45,7 +47,9 @@ ClassCodexArchonGearData["PALADIN"] = {
           {
             item = {
               itemId = 271468,
+              name = "Bulwark of the Consecrated Flame",
             },
+            bis = true,
           },
           {
             item = {
@@ -56,7 +60,9 @@ ClassCodexArchonGearData["PALADIN"] = {
           {
             item = {
               itemId = 271466,
+              name = "Gauntlets of the Consecrated Flame",
             },
+            bis = true,
           },
           {
             item = {
@@ -67,7 +73,9 @@ ClassCodexArchonGearData["PALADIN"] = {
           {
             item = {
               itemId = 271464,
+              name = "Greaves of the Consecrated Flame",
             },
+            bis = true,
           },
           {
             item = {
@@ -119,7 +127,9 @@ ClassCodexArchonGearData["PALADIN"] = {
           {
             item = {
               itemId = 271465,
+              name = "Warhelm of the Consecrated Flame",
             },
+            bis = true,
           },
           {
             item = {
@@ -130,7 +140,9 @@ ClassCodexArchonGearData["PALADIN"] = {
           {
             item = {
               itemId = 271463,
+              name = "Pauldrons of the Consecrated Flame",
             },
+            bis = true,
           },
           {
             item = {
@@ -141,7 +153,9 @@ ClassCodexArchonGearData["PALADIN"] = {
           {
             item = {
               itemId = 271468,
+              name = "Bulwark of the Consecrated Flame",
             },
+            bis = true,
           },
           {
             item = {
@@ -152,7 +166,9 @@ ClassCodexArchonGearData["PALADIN"] = {
           {
             item = {
               itemId = 271466,
+              name = "Gauntlets of the Consecrated Flame",
             },
+            bis = true,
           },
           {
             item = {
@@ -181,7 +197,9 @@ ClassCodexArchonGearData["PALADIN"] = {
           {
             item = {
               itemId = 252258,
+              name = "Sickening Signet of Atroxus",
             },
+            bis = true,
           },
           {
             item = {
@@ -219,7 +237,9 @@ ClassCodexArchonGearData["PALADIN"] = {
           {
             item = {
               itemId = 271465,
+              name = "Warhelm of the Consecrated Flame",
             },
+            bis = true,
           },
           {
             item = {
@@ -230,7 +250,9 @@ ClassCodexArchonGearData["PALADIN"] = {
           {
             item = {
               itemId = 271463,
+              name = "Pauldrons of the Consecrated Flame",
             },
+            bis = true,
           },
           {
             item = {
@@ -241,17 +263,23 @@ ClassCodexArchonGearData["PALADIN"] = {
           {
             item = {
               itemId = 271468,
+              name = "Bulwark of the Consecrated Flame",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 237834,
+              name = "Spellbreaker's Bracers",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 271466,
+              name = "Gauntlets of the Consecrated Flame",
             },
+            bis = true,
           },
           {
             item = {
@@ -315,7 +343,9 @@ ClassCodexArchonGearData["PALADIN"] = {
           {
             item = {
               itemId = 271465,
+              name = "Warhelm of the Consecrated Flame",
             },
+            bis = true,
           },
           {
             item = {
@@ -338,17 +368,23 @@ ClassCodexArchonGearData["PALADIN"] = {
           {
             item = {
               itemId = 271468,
+              name = "Bulwark of the Consecrated Flame",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 237834,
+              name = "Spellbreaker's Bracers",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 271466,
+              name = "Gauntlets of the Consecrated Flame",
             },
+            bis = true,
           },
           {
             item = {
@@ -410,7 +446,9 @@ ClassCodexArchonGearData["PALADIN"] = {
           {
             item = {
               itemId = 271465,
+              name = "Warhelm of the Consecrated Flame",
             },
+            bis = true,
           },
           {
             item = {
@@ -421,7 +459,9 @@ ClassCodexArchonGearData["PALADIN"] = {
           {
             item = {
               itemId = 271463,
+              name = "Pauldrons of the Consecrated Flame",
             },
+            bis = true,
           },
           {
             item = {
@@ -432,17 +472,23 @@ ClassCodexArchonGearData["PALADIN"] = {
           {
             item = {
               itemId = 271468,
+              name = "Bulwark of the Consecrated Flame",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 237834,
+              name = "Spellbreaker's Bracers",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 271466,
+              name = "Gauntlets of the Consecrated Flame",
             },
+            bis = true,
           },
           {
             item = {
@@ -500,7 +546,9 @@ ClassCodexArchonGearData["PALADIN"] = {
           {
             item = {
               itemId = 271465,
+              name = "Warhelm of the Consecrated Flame",
             },
+            bis = true,
           },
           {
             item = {
@@ -511,7 +559,9 @@ ClassCodexArchonGearData["PALADIN"] = {
           {
             item = {
               itemId = 271463,
+              name = "Pauldrons of the Consecrated Flame",
             },
+            bis = true,
           },
           {
             item = {
@@ -522,17 +572,23 @@ ClassCodexArchonGearData["PALADIN"] = {
           {
             item = {
               itemId = 271468,
+              name = "Bulwark of the Consecrated Flame",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 237834,
+              name = "Spellbreaker's Bracers",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 271466,
+              name = "Gauntlets of the Consecrated Flame",
             },
+            bis = true,
           },
           {
             item = {

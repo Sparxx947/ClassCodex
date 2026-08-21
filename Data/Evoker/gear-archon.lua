@@ -22,7 +22,9 @@ ClassCodexArchonGearData["EVOKER"] = {
           {
             item = {
               itemId = 271501,
+              name = "Calamitous Echo's Magmashapers",
             },
+            bis = true,
           },
           {
             item = {
@@ -45,17 +47,23 @@ ClassCodexArchonGearData["EVOKER"] = {
           {
             item = {
               itemId = 271504,
+              name = "Searing Caldera of Calamity",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 244584,
+              name = "Farstrider's Plated Bracers",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 271502,
+              name = "Calamitous Echo's Ebon Greathorns",
             },
+            bis = true,
           },
           {
             item = {
@@ -66,7 +74,9 @@ ClassCodexArchonGearData["EVOKER"] = {
           {
             item = {
               itemId = 271500,
+              name = "Earthen Pillars of Calamity",
             },
+            bis = true,
           },
           {
             item = {
@@ -118,7 +128,9 @@ ClassCodexArchonGearData["EVOKER"] = {
           {
             item = {
               itemId = 271501,
+              name = "Calamitous Echo's Magmashapers",
             },
+            bis = true,
           },
           {
             item = {
@@ -129,7 +141,9 @@ ClassCodexArchonGearData["EVOKER"] = {
           {
             item = {
               itemId = 271499,
+              name = "Calamitous Echo's Sundered Peaks",
             },
+            bis = true,
           },
           {
             item = {
@@ -146,12 +160,16 @@ ClassCodexArchonGearData["EVOKER"] = {
           {
             item = {
               itemId = 244584,
+              name = "Farstrider's Plated Bracers",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 271502,
+              name = "Calamitous Echo's Ebon Greathorns",
             },
+            bis = true,
           },
           {
             item = {
@@ -162,7 +180,9 @@ ClassCodexArchonGearData["EVOKER"] = {
           {
             item = {
               itemId = 271500,
+              name = "Earthen Pillars of Calamity",
             },
+            bis = true,
           },
           {
             item = {
@@ -218,7 +238,9 @@ ClassCodexArchonGearData["EVOKER"] = {
           {
             item = {
               itemId = 271501,
+              name = "Calamitous Echo's Magmashapers",
             },
+            bis = true,
           },
           {
             item = {
@@ -229,7 +251,9 @@ ClassCodexArchonGearData["EVOKER"] = {
           {
             item = {
               itemId = 271499,
+              name = "Calamitous Echo's Sundered Peaks",
             },
+            bis = true,
           },
           {
             item = {
@@ -240,17 +264,23 @@ ClassCodexArchonGearData["EVOKER"] = {
           {
             item = {
               itemId = 271504,
+              name = "Searing Caldera of Calamity",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 244584,
+              name = "Farstrider's Plated Bracers",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 271502,
+              name = "Calamitous Echo's Ebon Greathorns",
             },
+            bis = true,
           },
           {
             item = {
@@ -314,7 +344,9 @@ ClassCodexArchonGearData["EVOKER"] = {
           {
             item = {
               itemId = 271501,
+              name = "Calamitous Echo's Magmashapers",
             },
+            bis = true,
           },
           {
             item = {
@@ -337,17 +369,23 @@ ClassCodexArchonGearData["EVOKER"] = {
           {
             item = {
               itemId = 271504,
+              name = "Searing Caldera of Calamity",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 244584,
+              name = "Farstrider's Plated Bracers",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 271502,
+              name = "Calamitous Echo's Ebon Greathorns",
             },
+            bis = true,
           },
           {
             item = {
@@ -358,7 +396,9 @@ ClassCodexArchonGearData["EVOKER"] = {
           {
             item = {
               itemId = 271500,
+              name = "Earthen Pillars of Calamity",
             },
+            bis = true,
           },
           {
             item = {

@@ -34,7 +34,9 @@ ClassCodexArchonGearData["PRIEST"] = {
           {
             item = {
               itemId = 271553,
+              name = "Cosmic Penitent's Echoing Screams",
             },
+            bis = true,
           },
           {
             item = {
@@ -45,12 +47,16 @@ ClassCodexArchonGearData["PRIEST"] = {
           {
             item = {
               itemId = 271558,
+              name = "Cosmic Penitent's Eclipsing Robes",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 239648,
+              name = "Martyr's Bindings",
             },
+            bis = true,
           },
           {
             item = {
@@ -67,7 +73,9 @@ ClassCodexArchonGearData["PRIEST"] = {
           {
             item = {
               itemId = 271554,
+              name = "Enveloping Legwraps of the Cosmic Penitent",
             },
+            bis = true,
           },
           {
             item = {
@@ -131,7 +139,9 @@ ClassCodexArchonGearData["PRIEST"] = {
           {
             item = {
               itemId = 271553,
+              name = "Cosmic Penitent's Echoing Screams",
             },
+            bis = true,
           },
           {
             item = {
@@ -142,12 +152,16 @@ ClassCodexArchonGearData["PRIEST"] = {
           {
             item = {
               itemId = 271558,
+              name = "Cosmic Penitent's Eclipsing Robes",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 239648,
+              name = "Martyr's Bindings",
             },
+            bis = true,
           },
           {
             item = {
@@ -164,7 +178,9 @@ ClassCodexArchonGearData["PRIEST"] = {
           {
             item = {
               itemId = 271554,
+              name = "Enveloping Legwraps of the Cosmic Penitent",
             },
+            bis = true,
           },
           {
             item = {
@@ -232,7 +248,9 @@ ClassCodexArchonGearData["PRIEST"] = {
           {
             item = {
               itemId = 271553,
+              name = "Cosmic Penitent's Echoing Screams",
             },
+            bis = true,
           },
           {
             item = {
@@ -243,17 +261,23 @@ ClassCodexArchonGearData["PRIEST"] = {
           {
             item = {
               itemId = 271558,
+              name = "Cosmic Penitent's Eclipsing Robes",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 239648,
+              name = "Martyr's Bindings",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 271556,
+              name = "Cosmic Penitent's Celestial Grips",
             },
+            bis = true,
           },
           {
             item = {
@@ -264,7 +288,9 @@ ClassCodexArchonGearData["PRIEST"] = {
           {
             item = {
               itemId = 271554,
+              name = "Enveloping Legwraps of the Cosmic Penitent",
             },
+            bis = true,
           },
           {
             item = {
@@ -328,7 +354,9 @@ ClassCodexArchonGearData["PRIEST"] = {
           {
             item = {
               itemId = 271553,
+              name = "Cosmic Penitent's Echoing Screams",
             },
+            bis = true,
           },
           {
             item = {
@@ -339,17 +367,23 @@ ClassCodexArchonGearData["PRIEST"] = {
           {
             item = {
               itemId = 271558,
+              name = "Cosmic Penitent's Eclipsing Robes",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 239648,
+              name = "Martyr's Bindings",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 271556,
+              name = "Cosmic Penitent's Celestial Grips",
             },
+            bis = true,
           },
           {
             item = {
@@ -360,7 +394,9 @@ ClassCodexArchonGearData["PRIEST"] = {
           {
             item = {
               itemId = 271554,
+              name = "Enveloping Legwraps of the Cosmic Penitent",
             },
+            bis = true,
           },
           {
             item = {
@@ -410,7 +446,9 @@ ClassCodexArchonGearData["PRIEST"] = {
           {
             item = {
               itemId = 271555,
+              name = "Cosmic Penitent's Truesight",
             },
+            bis = true,
           },
           {
             item = {
@@ -433,12 +471,16 @@ ClassCodexArchonGearData["PRIEST"] = {
           {
             item = {
               itemId = 271558,
+              name = "Cosmic Penitent's Eclipsing Robes",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 239648,
+              name = "Martyr's Bindings",
             },
+            bis = true,
           },
           {
             item = {
@@ -455,7 +497,9 @@ ClassCodexArchonGearData["PRIEST"] = {
           {
             item = {
               itemId = 271554,
+              name = "Enveloping Legwraps of the Cosmic Penitent",
             },
+            bis = true,
           },
           {
             item = {
@@ -501,7 +545,9 @@ ClassCodexArchonGearData["PRIEST"] = {
           {
             item = {
               itemId = 271555,
+              name = "Cosmic Penitent's Truesight",
             },
+            bis = true,
           },
           {
             item = {
@@ -530,12 +576,16 @@ ClassCodexArchonGearData["PRIEST"] = {
           {
             item = {
               itemId = 239648,
+              name = "Martyr's Bindings",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 271556,
+              name = "Cosmic Penitent's Celestial Grips",
             },
+            bis = true,
           },
           {
             item = {
@@ -546,7 +596,9 @@ ClassCodexArchonGearData["PRIEST"] = {
           {
             item = {
               itemId = 271554,
+              name = "Enveloping Legwraps of the Cosmic Penitent",
             },
+            bis = true,
           },
           {
             item = {

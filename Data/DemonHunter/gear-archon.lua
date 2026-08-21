@@ -22,7 +22,9 @@ ClassCodexArchonGearData["DEMONHUNTER"] = {
           {
             item = {
               itemId = 271537,
+              name = "Abyssal Doomhound's Relentless Stare",
             },
+            bis = true,
           },
           {
             item = {
@@ -45,17 +47,23 @@ ClassCodexArchonGearData["DEMONHUNTER"] = {
           {
             item = {
               itemId = 271540,
+              name = "Abyssal Doomhound's Coreguard",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 244576,
+              name = "Silvermoon Agent's Deflectors",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 271538,
+              name = "Abyssal Doomhound's Studded Gauntlets",
             },
+            bis = true,
           },
           {
             item = {
@@ -66,7 +74,9 @@ ClassCodexArchonGearData["DEMONHUNTER"] = {
           {
             item = {
               itemId = 271536,
+              name = "Abyssal Doomhound's Legwraps",
             },
+            bis = true,
           },
           {
             item = {
@@ -118,7 +128,9 @@ ClassCodexArchonGearData["DEMONHUNTER"] = {
           {
             item = {
               itemId = 271537,
+              name = "Abyssal Doomhound's Relentless Stare",
             },
+            bis = true,
           },
           {
             item = {
@@ -141,17 +153,23 @@ ClassCodexArchonGearData["DEMONHUNTER"] = {
           {
             item = {
               itemId = 271540,
+              name = "Abyssal Doomhound's Coreguard",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 244576,
+              name = "Silvermoon Agent's Deflectors",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 271538,
+              name = "Abyssal Doomhound's Studded Gauntlets",
             },
+            bis = true,
           },
           {
             item = {
@@ -162,7 +180,9 @@ ClassCodexArchonGearData["DEMONHUNTER"] = {
           {
             item = {
               itemId = 271536,
+              name = "Abyssal Doomhound's Legwraps",
             },
+            bis = true,
           },
           {
             item = {
@@ -206,12 +226,16 @@ ClassCodexArchonGearData["DEMONHUNTER"] = {
           {
             item = {
               itemId = 237840,
+              name = "Spellbreaker's Warglaive",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 237840,
+              name = "Spellbreaker's Warglaive",
             },
+            bis = true,
           },
           {
             item = {
@@ -240,17 +264,23 @@ ClassCodexArchonGearData["DEMONHUNTER"] = {
           {
             item = {
               itemId = 271540,
+              name = "Abyssal Doomhound's Coreguard",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 244576,
+              name = "Silvermoon Agent's Deflectors",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 271538,
+              name = "Abyssal Doomhound's Studded Gauntlets",
             },
+            bis = true,
           },
           {
             item = {
@@ -261,7 +291,9 @@ ClassCodexArchonGearData["DEMONHUNTER"] = {
           {
             item = {
               itemId = 271536,
+              name = "Abyssal Doomhound's Legwraps",
             },
+            bis = true,
           },
           {
             item = {
@@ -301,12 +333,16 @@ ClassCodexArchonGearData["DEMONHUNTER"] = {
           {
             item = {
               itemId = 237840,
+              name = "Spellbreaker's Warglaive",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 237840,
+              name = "Spellbreaker's Warglaive",
             },
+            bis = true,
           },
           {
             item = {
@@ -335,17 +371,23 @@ ClassCodexArchonGearData["DEMONHUNTER"] = {
           {
             item = {
               itemId = 271540,
+              name = "Abyssal Doomhound's Coreguard",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 244576,
+              name = "Silvermoon Agent's Deflectors",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 271538,
+              name = "Abyssal Doomhound's Studded Gauntlets",
             },
+            bis = true,
           },
           {
             item = {
@@ -356,7 +398,9 @@ ClassCodexArchonGearData["DEMONHUNTER"] = {
           {
             item = {
               itemId = 271536,
+              name = "Abyssal Doomhound's Legwraps",
             },
+            bis = true,
           },
           {
             item = {
@@ -400,17 +444,23 @@ ClassCodexArchonGearData["DEMONHUNTER"] = {
           {
             item = {
               itemId = 237840,
+              name = "Spellbreaker's Warglaive",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 237840,
+              name = "Spellbreaker's Warglaive",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 271537,
+              name = "Abyssal Doomhound's Relentless Stare",
             },
+            bis = true,
           },
           {
             item = {
@@ -421,7 +471,9 @@ ClassCodexArchonGearData["DEMONHUNTER"] = {
           {
             item = {
               itemId = 271535,
+              name = "Abyssal Doomhound's Jaws",
             },
+            bis = true,
           },
           {
             item = {
@@ -432,12 +484,16 @@ ClassCodexArchonGearData["DEMONHUNTER"] = {
           {
             item = {
               itemId = 271540,
+              name = "Abyssal Doomhound's Coreguard",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 244576,
+              name = "Silvermoon Agent's Deflectors",
             },
+            bis = true,
           },
           {
             item = {
@@ -454,7 +510,9 @@ ClassCodexArchonGearData["DEMONHUNTER"] = {
           {
             item = {
               itemId = 271536,
+              name = "Abyssal Doomhound's Legwraps",
             },
+            bis = true,
           },
           {
             item = {
@@ -494,12 +552,16 @@ ClassCodexArchonGearData["DEMONHUNTER"] = {
           {
             item = {
               itemId = 237840,
+              name = "Spellbreaker's Warglaive",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 237840,
+              name = "Spellbreaker's Warglaive",
             },
+            bis = true,
           },
           {
             item = {
@@ -516,7 +578,9 @@ ClassCodexArchonGearData["DEMONHUNTER"] = {
           {
             item = {
               itemId = 271535,
+              name = "Abyssal Doomhound's Jaws",
             },
+            bis = true,
           },
           {
             item = {
@@ -527,17 +591,23 @@ ClassCodexArchonGearData["DEMONHUNTER"] = {
           {
             item = {
               itemId = 271540,
+              name = "Abyssal Doomhound's Coreguard",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 244576,
+              name = "Silvermoon Agent's Deflectors",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 271538,
+              name = "Abyssal Doomhound's Studded Gauntlets",
             },
+            bis = true,
           },
           {
             item = {
@@ -548,7 +618,9 @@ ClassCodexArchonGearData["DEMONHUNTER"] = {
           {
             item = {
               itemId = 271536,
+              name = "Abyssal Doomhound's Legwraps",
             },
+            bis = true,
           },
           {
             item = {

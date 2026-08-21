@@ -53,7 +53,22 @@ STAT_KEYS = {
 }
 
 _GEAR_ID = re.compile(r"id=\{(\d+)\}")
-_GEAR_NAME = re.compile(r">([^<>]+)</GearIcon>")
+_GEAR_NAME = re.compile(r"<span>(?:&nbsp;)?([^<>]+)</span>\s*</GearIcon>"
+                        r"|>([^<>]+)</GearIcon>")
+_ITEM_ID = re.compile(r"<ItemIcon id=\{(\d+)\}")
+# The name is either the tag's own text, or — when a BiS badge is
+# present — a trailing <span>.
+_ITEM_NAME = re.compile(r"<span>(?:&nbsp;)?([^<>]+)</span>\s*</ItemIcon>"
+                        r"|>([^<>]+)</ItemIcon>")
+_PERCENT = re.compile(r"([\d.]+)%")
+# Archon flags an item that Wowhead lists as best in slot with a badge.
+# That is the only trustworthy source for the addon's "BiS" label — the
+# rest of Archon's numbers are popularity, which is a different claim.
+_BIS_BADGE = re.compile(r"<BadgeLabel>\s*BiS\s*</BadgeLabel>", re.I)
+
+# Above this share of logged players an item counts as "popular", which
+# is what the addon's crafting panel highlights.
+POPULAR_THRESHOLD = 25.0
 
 
 def page(url: str) -> dict:
@@ -195,9 +210,39 @@ def extract_gear(sec: dict) -> list[dict] | None:
             item: dict = {"itemId": int(m.group(1))}
             name = _GEAR_NAME.search(icon)
             if name:
-                item["name"] = name.group(1).strip()
-            slots.append({"item": item})
+                item["name"] = (name.group(1) or name.group(2)).strip()
+            entry: dict = {"item": item}
+            if _BIS_BADGE.search(icon):
+                entry["bis"] = True
+            slots.append(entry)
     return slots or None
+
+
+def extract_crafting(sec: dict) -> dict | None:
+    """Crafted gear and embellishments from the gear-and-tier-set page."""
+    out: dict = {}
+    for key, field in (("crafted-gear", "crafts"),
+                       ("embellishments", "embellishments")):
+        table = (sec.get(key) or {}).get("table") or {}
+        entries: list[dict] = []
+        for row in table.get("data") or []:
+            cell = row.get("item") or ""
+            m = _ITEM_ID.search(cell)
+            if not m:
+                continue
+            entry: dict = {"itemId": int(m.group(1))}
+            name = _ITEM_NAME.search(cell)
+            if name:
+                entry["name"] = (name.group(1) or name.group(2)).strip()
+            if _BIS_BADGE.search(cell):
+                entry["bis"] = True
+            share = _PERCENT.search(strip_markup(row.get("popularity") or ""))
+            if share and float(share.group(1)) >= POPULAR_THRESHOLD:
+                entry["popular"] = True
+            entries.append(entry)
+        if entries:
+            out[field] = entries
+    return out or None
 
 
 # ---------------------------------------------------------------------------
@@ -212,6 +257,7 @@ def scrape_spec(spec: dict) -> dict:
         "contextOrder": [],
         "stats": {},
         "bisGear": [],
+        "crafting": {},
         "lastUpdated": None,
         "_rank": {},
     }
@@ -258,6 +304,20 @@ def scrape_spec(spec: dict) -> dict:
                 else:
                     existing["slots"] = slots
                 result["_rank"][("gear", bucket)] = rank
+
+            # Crafted gear and embellishments live on their own page.
+            craft_key = "mythicPlus" if zone == "mythic-plus" else "raid"
+            if rank >= result["_rank"].get(("craft", craft_key), -1):
+                try:
+                    craft_page = page(build_url(spec, zone, "gear-and-tier-set",
+                                                diff, enc))
+                except Exception as exc:  # noqa: BLE001
+                    log(f"  ! {label} crafting {zone}/{diff}: {exc}")
+                else:
+                    crafting = extract_crafting(sections(craft_page))
+                    if crafting:
+                        result["crafting"][craft_key] = crafting
+                        result["_rank"][("craft", craft_key)] = rank
 
     prune_normal_duplicates(result)
     return result
@@ -310,6 +370,11 @@ def write_class(class_dir: str, specs: dict[str, dict], stamp: str) -> None:
         write_lua(out / "gear-archon.lua", "ClassCodexArchonGearData", token,
                   gear, header=header)
 
+    crafting = {slug: d["crafting"] for slug, d in specs.items() if d["crafting"]}
+    if crafting:
+        write_lua(out / "crafting.lua", "ClassCodexCraftingData", token,
+                  crafting, header=header)
+
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
@@ -335,7 +400,8 @@ def main() -> int:
             done += 1
             log(f"  [{done}/{len(specs)}] {spec['classDir']}/{spec['specSlug']}: "
                 f"{len(data['contexts'])} contexts, {len(data['stats'])} stat sets, "
-                f"{len(data['bisGear'])} gear sets")
+                f"{len(data['bisGear'])} gear sets, "
+                f"{len(data['crafting'])} crafting sets")
             by_class.setdefault(spec["classDir"], {})[spec["specSlug"]] = data
             stamp = data.get("lastUpdated") or stamp
 

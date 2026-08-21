@@ -46,7 +46,9 @@ ClassCodexArchonGearData["DRUID"] = {
           {
             item = {
               itemId = 244576,
+              name = "Silvermoon Agent's Deflectors",
             },
+            bis = true,
           },
           {
             item = {
@@ -110,7 +112,9 @@ ClassCodexArchonGearData["DRUID"] = {
           {
             item = {
               itemId = 245769,
+              name = "Aln'hara Lantern",
             },
+            bis = true,
           },
           {
             item = {
@@ -145,7 +149,9 @@ ClassCodexArchonGearData["DRUID"] = {
           {
             item = {
               itemId = 244576,
+              name = "Silvermoon Agent's Deflectors",
             },
+            bis = true,
           },
           {
             item = {
@@ -225,7 +231,9 @@ ClassCodexArchonGearData["DRUID"] = {
           {
             item = {
               itemId = 271526,
+              name = "Enigmatic Dreamwatcher's Plumage",
             },
+            bis = true,
           },
           {
             item = {
@@ -236,12 +244,16 @@ ClassCodexArchonGearData["DRUID"] = {
           {
             item = {
               itemId = 271531,
+              name = "Enigmatic Dreamwatcher's Lunar Raiment",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 244576,
+              name = "Silvermoon Agent's Deflectors",
             },
+            bis = true,
           },
           {
             item = {
@@ -258,7 +270,9 @@ ClassCodexArchonGearData["DRUID"] = {
           {
             item = {
               itemId = 271527,
+              name = "Enigmatic Dreamwatcher's Leggings",
             },
+            bis = true,
           },
           {
             item = {
@@ -304,7 +318,9 @@ ClassCodexArchonGearData["DRUID"] = {
           {
             item = {
               itemId = 271528,
+              name = "Enigmatic Dreamwatcher's Somnolent Stare",
             },
+            bis = true,
           },
           {
             item = {
@@ -327,12 +343,16 @@ ClassCodexArchonGearData["DRUID"] = {
           {
             item = {
               itemId = 271531,
+              name = "Enigmatic Dreamwatcher's Lunar Raiment",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 244576,
+              name = "Silvermoon Agent's Deflectors",
             },
+            bis = true,
           },
           {
             item = {
@@ -349,7 +369,9 @@ ClassCodexArchonGearData["DRUID"] = {
           {
             item = {
               itemId = 271527,
+              name = "Enigmatic Dreamwatcher's Leggings",
             },
+            bis = true,
           },
           {
             item = {
@@ -411,7 +433,9 @@ ClassCodexArchonGearData["DRUID"] = {
           {
             item = {
               itemId = 271526,
+              name = "Enigmatic Dreamwatcher's Plumage",
             },
+            bis = true,
           },
           {
             item = {
@@ -422,7 +446,9 @@ ClassCodexArchonGearData["DRUID"] = {
           {
             item = {
               itemId = 271531,
+              name = "Enigmatic Dreamwatcher's Lunar Raiment",
             },
+            bis = true,
           },
           {
             item = {
@@ -445,7 +471,9 @@ ClassCodexArchonGearData["DRUID"] = {
           {
             item = {
               itemId = 271527,
+              name = "Enigmatic Dreamwatcher's Leggings",
             },
+            bis = true,
           },
           {
             item = {
@@ -503,7 +531,9 @@ ClassCodexArchonGearData["DRUID"] = {
           {
             item = {
               itemId = 271526,
+              name = "Enigmatic Dreamwatcher's Plumage",
             },
+            bis = true,
           },
           {
             item = {
@@ -514,7 +544,9 @@ ClassCodexArchonGearData["DRUID"] = {
           {
             item = {
               itemId = 271531,
+              name = "Enigmatic Dreamwatcher's Lunar Raiment",
             },
+            bis = true,
           },
           {
             item = {
@@ -537,7 +569,9 @@ ClassCodexArchonGearData["DRUID"] = {
           {
             item = {
               itemId = 271527,
+              name = "Enigmatic Dreamwatcher's Leggings",
             },
+            bis = true,
           },
           {
             item = {

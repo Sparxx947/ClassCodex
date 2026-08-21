@@ -16,7 +16,9 @@ ClassCodexArchonGearData["MAGE"] = {
           {
             item = {
               itemId = 271564,
+              name = "Crown of the Primal Leywarden",
             },
+            bis = true,
           },
           {
             item = {
@@ -27,7 +29,9 @@ ClassCodexArchonGearData["MAGE"] = {
           {
             item = {
               itemId = 271562,
+              name = "Primal Leywarden's Manaflux",
             },
+            bis = true,
           },
           {
             item = {
@@ -38,12 +42,16 @@ ClassCodexArchonGearData["MAGE"] = {
           {
             item = {
               itemId = 271567,
+              name = "Crest of the Primal Leywarden",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 239648,
+              name = "Martyr's Bindings",
             },
+            bis = true,
           },
           {
             item = {
@@ -60,7 +68,9 @@ ClassCodexArchonGearData["MAGE"] = {
           {
             item = {
               itemId = 271563,
+              name = "Primal Leywarden's Tailored Legwraps",
             },
+            bis = true,
           },
           {
             item = {
@@ -118,7 +128,9 @@ ClassCodexArchonGearData["MAGE"] = {
           {
             item = {
               itemId = 271562,
+              name = "Primal Leywarden's Manaflux",
             },
+            bis = true,
           },
           {
             item = {
@@ -129,17 +141,23 @@ ClassCodexArchonGearData["MAGE"] = {
           {
             item = {
               itemId = 271567,
+              name = "Crest of the Primal Leywarden",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 239648,
+              name = "Martyr's Bindings",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 271565,
+              name = "Primal Leywarden's Manashapers",
             },
+            bis = true,
           },
           {
             item = {
@@ -150,7 +168,9 @@ ClassCodexArchonGearData["MAGE"] = {
           {
             item = {
               itemId = 271563,
+              name = "Primal Leywarden's Tailored Legwraps",
             },
+            bis = true,
           },
           {
             item = {
@@ -200,7 +220,9 @@ ClassCodexArchonGearData["MAGE"] = {
           {
             item = {
               itemId = 271564,
+              name = "Crown of the Primal Leywarden",
             },
+            bis = true,
           },
           {
             item = {
@@ -223,17 +245,23 @@ ClassCodexArchonGearData["MAGE"] = {
           {
             item = {
               itemId = 271567,
+              name = "Crest of the Primal Leywarden",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 239648,
+              name = "Martyr's Bindings",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 271565,
+              name = "Primal Leywarden's Manashapers",
             },
+            bis = true,
           },
           {
             item = {
@@ -244,7 +272,9 @@ ClassCodexArchonGearData["MAGE"] = {
           {
             item = {
               itemId = 271563,
+              name = "Primal Leywarden's Tailored Legwraps",
             },
+            bis = true,
           },
           {
             item = {
@@ -302,7 +332,9 @@ ClassCodexArchonGearData["MAGE"] = {
           {
             item = {
               itemId = 271562,
+              name = "Primal Leywarden's Manaflux",
             },
+            bis = true,
           },
           {
             item = {
@@ -313,17 +345,23 @@ ClassCodexArchonGearData["MAGE"] = {
           {
             item = {
               itemId = 271567,
+              name = "Crest of the Primal Leywarden",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 239648,
+              name = "Martyr's Bindings",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 271565,
+              name = "Primal Leywarden's Manashapers",
             },
+            bis = true,
           },
           {
             item = {
@@ -334,7 +372,9 @@ ClassCodexArchonGearData["MAGE"] = {
           {
             item = {
               itemId = 271563,
+              name = "Primal Leywarden's Tailored Legwraps",
             },
+            bis = true,
           },
           {
             item = {
@@ -384,7 +424,9 @@ ClassCodexArchonGearData["MAGE"] = {
           {
             item = {
               itemId = 271564,
+              name = "Crown of the Primal Leywarden",
             },
+            bis = true,
           },
           {
             item = {
@@ -395,7 +437,9 @@ ClassCodexArchonGearData["MAGE"] = {
           {
             item = {
               itemId = 271562,
+              name = "Primal Leywarden's Manaflux",
             },
+            bis = true,
           },
           {
             item = {
@@ -412,12 +456,16 @@ ClassCodexArchonGearData["MAGE"] = {
           {
             item = {
               itemId = 239648,
+              name = "Martyr's Bindings",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 271565,
+              name = "Primal Leywarden's Manashapers",
             },
+            bis = true,
           },
           {
             item = {
@@ -428,7 +476,9 @@ ClassCodexArchonGearData["MAGE"] = {
           {
             item = {
               itemId = 271563,
+              name = "Primal Leywarden's Tailored Legwraps",
             },
+            bis = true,
           },
           {
             item = {
@@ -474,7 +524,9 @@ ClassCodexArchonGearData["MAGE"] = {
           {
             item = {
               itemId = 271564,
+              name = "Crown of the Primal Leywarden",
             },
+            bis = true,
           },
           {
             item = {
@@ -485,7 +537,9 @@ ClassCodexArchonGearData["MAGE"] = {
           {
             item = {
               itemId = 271562,
+              name = "Primal Leywarden's Manaflux",
             },
+            bis = true,
           },
           {
             item = {
@@ -502,12 +556,16 @@ ClassCodexArchonGearData["MAGE"] = {
           {
             item = {
               itemId = 239648,
+              name = "Martyr's Bindings",
             },
+            bis = true,
           },
           {
             item = {
               itemId = 271565,
+              name = "Primal Leywarden's Manashapers",
             },
+            bis = true,
           },
           {
             item = {
@@ -518,7 +576,9 @@ ClassCodexArchonGearData["MAGE"] = {
           {
             item = {
               itemId = 271563,
+              name = "Primal Leywarden's Tailored Legwraps",
             },
+            bis = true,
           },
           {
             item = {
