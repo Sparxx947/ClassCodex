@@ -1,0 +1,21 @@
+ClassCodexSources = ClassCodexSources or {}
+ClassCodexSources["ROGUE"] = {
+  ["assassination"] = {
+    wowhead = { guide = "https://www.wowhead.com/guide/classes/rogue/assassination/midnight-season-1", bis = "https://www.wowhead.com/guide/classes/rogue/assassination/bis-gear" },
+    icyveins = { bis = "https://www.icy-veins.com/wow/assassination-rogue-pve-dps-gear-best-in-slot", talents = "https://www.icy-veins.com/wow/assassination-rogue-pve-dps-spec-builds-talents", leveling = "https://www.icy-veins.com/wow/assassination-rogue-leveling-guide" },
+    archon = { build = "https://www.archon.gg/wow/builds/assassination/rogue/mythic-plus/overview/high-keys/all-dungeons/this-week" },
+    murlok = { pvp = "https://murlok.io/rogue/assassination/solo" },
+  },
+  ["outlaw"] = {
+    wowhead = { guide = "https://www.wowhead.com/guide/classes/rogue/outlaw/midnight-season-1", bis = "https://www.wowhead.com/guide/classes/rogue/outlaw/bis-gear" },
+    icyveins = { bis = "https://www.icy-veins.com/wow/outlaw-rogue-pve-dps-gear-best-in-slot", talents = "https://www.icy-veins.com/wow/outlaw-rogue-pve-dps-spec-builds-talents", leveling = "https://www.icy-veins.com/wow/outlaw-rogue-leveling-guide" },
+    archon = { build = "https://www.archon.gg/wow/builds/outlaw/rogue/mythic-plus/overview/high-keys/all-dungeons/this-week" },
+    murlok = { pvp = "https://murlok.io/rogue/outlaw/solo" },
+  },
+  ["subtlety"] = {
+    wowhead = { guide = "https://www.wowhead.com/guide/classes/rogue/subtlety/midnight-season-1", bis = "https://www.wowhead.com/guide/classes/rogue/subtlety/bis-gear" },
+    icyveins = { bis = "https://www.icy-veins.com/wow/subtlety-rogue-pve-dps-gear-best-in-slot", talents = "https://www.icy-veins.com/wow/subtlety-rogue-pve-dps-spec-builds-talents", leveling = "https://www.icy-veins.com/wow/subtlety-rogue-leveling-guide" },
+    archon = { build = "https://www.archon.gg/wow/builds/subtlety/rogue/mythic-plus/overview/high-keys/all-dungeons/this-week" },
+    murlok = { pvp = "https://murlok.io/rogue/subtlety/solo" },
+  },
+}

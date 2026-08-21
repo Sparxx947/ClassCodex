@@ -1,0 +1,56 @@
+local _, ns = ...
+
+-- Section modules each own one logical content area shared between the panel
+-- (docked / floating) and the standalone Compendium. They register
+-- themselves under ns.Sections.<Name> with this API:
+--
+--   InitPanel(parent | opts)      -> creates the panel-side frame pool +
+--                                    section frame anchored inside the panel
+--                                    contentFrame; called once at load.
+--
+--   RenderPanel(args)             -> repaints the panel section against
+--                                    current data; returns the section's
+--                                    height in ROW_HEIGHT units so the
+--                                    layout pass can stack the next section.
+--                                    (Panel-only modules expose
+--                                    LayoutPanel/HidePanel instead.)
+--
+--   InitCompendium(opts)          -> creates the Compendium-side frame pool.
+--                                    opts.parent + opts.headerFactory +
+--                                    opts.rowFactory are passed in to avoid
+--                                    coupling each module to the Compendium
+--                                    scaffold.
+--
+--   RenderCompendium(args)        -> repaints the Compendium section.
+--
+--   GetCompendiumContentHeight()  -> pixel height for the Compendium layout
+--                                    pass.
+--
+-- Each module's frame pools + dropdown handles + state are kept INTERNAL —
+-- surface owners never reach across. Adding a new section means dropping a
+-- file under Sections/ and wiring it into the dispatcher in
+-- ClassCodex.lua / GearingSections.lua / Compendium.lua.
+--
+-- Extracted:
+--   Sections/Crafting.lua      — Crafts + Embellishments (v2 data)
+--   Sections/Trinkets.lua      — trinket tier list + context dropdown
+--   Sections/Gear.lua          — BiS gear (Wowhead / Icy Veins / PvP)
+--   Sections/Supporters.lua    — panel-only Supporters + Patreon button
+--   Sections/About.lua         — panel-only About + button factory
+--   Sections/Stats.lua         — stat priority list (both surfaces)
+--   Sections/Enhancements.lua  — enchants + gems + consumables + source
+--                                dropdown (both surfaces)
+--   Sections/StatTargets.lua   — live stat-target bars (panel "Stats" tab)
+--   Sections/Rotation.lua      — rotation step list + context dropdown
+--                                (both surfaces)
+--   Sections/Talents.lua       — Guide-tab talents preview (panel-only).
+--                                The full Talents-tab list and Compendium
+--                                talents-tab render still live in
+--                                ClassCodex.lua / Compendium.lua because of
+--                                their on-demand row pools, Archon-section
+--                                collapse state, and source-dropdown logic.
+
+ns.Sections = ns.Sections or {}
+
+-- Section scaffolding widgets (CreateSectionTitle, CreateHelpIcon, etc.)
+-- live in UI/. This file is just the registry + module-shape docs above.

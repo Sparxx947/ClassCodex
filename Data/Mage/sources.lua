@@ -1,0 +1,21 @@
+ClassCodexSources = ClassCodexSources or {}
+ClassCodexSources["MAGE"] = {
+  ["arcane"] = {
+    wowhead = { guide = "https://www.wowhead.com/guide/classes/mage/arcane/midnight-season-1", bis = "https://www.wowhead.com/guide/classes/mage/arcane/bis-gear" },
+    icyveins = { bis = "https://www.icy-veins.com/wow/arcane-mage-pve-dps-gear-best-in-slot", talents = "https://www.icy-veins.com/wow/arcane-mage-pve-dps-spec-builds-talents", leveling = "https://www.icy-veins.com/wow/arcane-mage-leveling-guide" },
+    archon = { build = "https://www.archon.gg/wow/builds/arcane/mage/mythic-plus/overview/high-keys/all-dungeons/this-week" },
+    murlok = { pvp = "https://murlok.io/mage/arcane/solo" },
+  },
+  ["fire"] = {
+    wowhead = { guide = "https://www.wowhead.com/guide/classes/mage/fire/midnight-season-1", bis = "https://www.wowhead.com/guide/classes/mage/fire/bis-gear" },
+    icyveins = { bis = "https://www.icy-veins.com/wow/fire-mage-pve-dps-gear-best-in-slot", talents = "https://www.icy-veins.com/wow/fire-mage-pve-dps-spec-builds-talents", leveling = "https://www.icy-veins.com/wow/fire-mage-leveling-guide" },
+    archon = { build = "https://www.archon.gg/wow/builds/fire/mage/mythic-plus/overview/high-keys/all-dungeons/this-week" },
+    murlok = { pvp = "https://murlok.io/mage/fire/solo" },
+  },
+  ["frost"] = {
+    wowhead = { guide = "https://www.wowhead.com/guide/classes/mage/frost/midnight-season-1", bis = "https://www.wowhead.com/guide/classes/mage/frost/bis-gear" },
+    icyveins = { bis = "https://www.icy-veins.com/wow/frost-mage-pve-dps-gear-best-in-slot", talents = "https://www.icy-veins.com/wow/frost-mage-pve-dps-spec-builds-talents", leveling = "https://www.icy-veins.com/wow/frost-mage-leveling-guide" },
+    archon = { build = "https://www.archon.gg/wow/builds/frost/mage/mythic-plus/overview/high-keys/all-dungeons/this-week" },
+    murlok = { pvp = "https://murlok.io/mage/frost/solo" },
+  },
+}

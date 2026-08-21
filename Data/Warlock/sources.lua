@@ -1,0 +1,21 @@
+ClassCodexSources = ClassCodexSources or {}
+ClassCodexSources["WARLOCK"] = {
+  ["affliction"] = {
+    wowhead = { guide = "https://www.wowhead.com/guide/classes/warlock/affliction/midnight-season-1", bis = "https://www.wowhead.com/guide/classes/warlock/affliction/bis-gear" },
+    icyveins = { bis = "https://www.icy-veins.com/wow/affliction-warlock-pve-dps-gear-best-in-slot", talents = "https://www.icy-veins.com/wow/affliction-warlock-pve-dps-spec-builds-talents", leveling = "https://www.icy-veins.com/wow/affliction-warlock-leveling-guide" },
+    archon = { build = "https://www.archon.gg/wow/builds/affliction/warlock/mythic-plus/overview/high-keys/all-dungeons/this-week" },
+    murlok = { pvp = "https://murlok.io/warlock/affliction/solo" },
+  },
+  ["demonology"] = {
+    wowhead = { guide = "https://www.wowhead.com/guide/classes/warlock/demonology/midnight-season-1", bis = "https://www.wowhead.com/guide/classes/warlock/demonology/bis-gear" },
+    icyveins = { bis = "https://www.icy-veins.com/wow/demonology-warlock-pve-dps-gear-best-in-slot", talents = "https://www.icy-veins.com/wow/demonology-warlock-pve-dps-spec-builds-talents", leveling = "https://www.icy-veins.com/wow/demonology-warlock-leveling-guide" },
+    archon = { build = "https://www.archon.gg/wow/builds/demonology/warlock/mythic-plus/overview/high-keys/all-dungeons/this-week" },
+    murlok = { pvp = "https://murlok.io/warlock/demonology/solo" },
+  },
+  ["destruction"] = {
+    wowhead = { guide = "https://www.wowhead.com/guide/classes/warlock/destruction/midnight-season-1", bis = "https://www.wowhead.com/guide/classes/warlock/destruction/bis-gear" },
+    icyveins = { bis = "https://www.icy-veins.com/wow/destruction-warlock-pve-dps-gear-best-in-slot", talents = "https://www.icy-veins.com/wow/destruction-warlock-pve-dps-spec-builds-talents", leveling = "https://www.icy-veins.com/wow/destruction-warlock-leveling-guide" },
+    archon = { build = "https://www.archon.gg/wow/builds/destruction/warlock/mythic-plus/overview/high-keys/all-dungeons/this-week" },
+    murlok = { pvp = "https://murlok.io/warlock/destruction/solo" },
+  },
+}

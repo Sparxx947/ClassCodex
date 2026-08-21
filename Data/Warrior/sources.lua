@@ -1,0 +1,21 @@
+ClassCodexSources = ClassCodexSources or {}
+ClassCodexSources["WARRIOR"] = {
+  ["arms"] = {
+    wowhead = { guide = "https://www.wowhead.com/guide/classes/warrior/arms/midnight-season-1", bis = "https://www.wowhead.com/guide/classes/warrior/arms/bis-gear" },
+    icyveins = { bis = "https://www.icy-veins.com/wow/arms-warrior-pve-dps-gear-best-in-slot", talents = "https://www.icy-veins.com/wow/arms-warrior-pve-dps-spec-builds-talents", leveling = "https://www.icy-veins.com/wow/arms-warrior-leveling-guide" },
+    archon = { build = "https://www.archon.gg/wow/builds/arms/warrior/mythic-plus/overview/high-keys/all-dungeons/this-week" },
+    murlok = { pvp = "https://murlok.io/warrior/arms/solo" },
+  },
+  ["fury"] = {
+    wowhead = { guide = "https://www.wowhead.com/guide/classes/warrior/fury/midnight-season-1", bis = "https://www.wowhead.com/guide/classes/warrior/fury/bis-gear" },
+    icyveins = { bis = "https://www.icy-veins.com/wow/fury-warrior-pve-dps-gear-best-in-slot", talents = "https://www.icy-veins.com/wow/fury-warrior-pve-dps-spec-builds-talents", leveling = "https://www.icy-veins.com/wow/fury-warrior-leveling-guide" },
+    archon = { build = "https://www.archon.gg/wow/builds/fury/warrior/mythic-plus/overview/high-keys/all-dungeons/this-week" },
+    murlok = { pvp = "https://murlok.io/warrior/fury/solo" },
+  },
+  ["protection"] = {
+    wowhead = { guide = "https://www.wowhead.com/guide/classes/warrior/protection/midnight-season-1", bis = "https://www.wowhead.com/guide/classes/warrior/protection/bis-gear" },
+    icyveins = { bis = "https://www.icy-veins.com/wow/protection-warrior-pve-tank-gear-best-in-slot", talents = "https://www.icy-veins.com/wow/protection-warrior-pve-tank-spec-builds-talents", leveling = "https://www.icy-veins.com/wow/protection-warrior-leveling-guide" },
+    archon = { build = "https://www.archon.gg/wow/builds/protection/warrior/mythic-plus/overview/high-keys/all-dungeons/this-week" },
+    murlok = { pvp = "https://murlok.io/warrior/protection/solo" },
+  },
+}

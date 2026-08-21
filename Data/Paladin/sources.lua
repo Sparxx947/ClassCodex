@@ -1,0 +1,21 @@
+ClassCodexSources = ClassCodexSources or {}
+ClassCodexSources["PALADIN"] = {
+  ["holy"] = {
+    wowhead = { guide = "https://www.wowhead.com/guide/classes/paladin/holy/midnight-season-1", bis = "https://www.wowhead.com/guide/classes/paladin/holy/bis-gear" },
+    icyveins = { bis = "https://www.icy-veins.com/wow/holy-paladin-pve-healing-gear-best-in-slot", talents = "https://www.icy-veins.com/wow/holy-paladin-pve-healing-spec-builds-talents", leveling = "https://www.icy-veins.com/wow/holy-paladin-leveling-guide" },
+    archon = { build = "https://www.archon.gg/wow/builds/holy/paladin/mythic-plus/overview/high-keys/all-dungeons/this-week" },
+    murlok = { pvp = "https://murlok.io/paladin/holy/solo" },
+  },
+  ["protection"] = {
+    wowhead = { guide = "https://www.wowhead.com/guide/classes/paladin/protection/midnight-season-1", bis = "https://www.wowhead.com/guide/classes/paladin/protection/bis-gear" },
+    icyveins = { bis = "https://www.icy-veins.com/wow/protection-paladin-pve-tank-gear-best-in-slot", talents = "https://www.icy-veins.com/wow/protection-paladin-pve-tank-spec-builds-talents", leveling = "https://www.icy-veins.com/wow/protection-paladin-leveling-guide" },
+    archon = { build = "https://www.archon.gg/wow/builds/protection/paladin/mythic-plus/overview/high-keys/all-dungeons/this-week" },
+    murlok = { pvp = "https://murlok.io/paladin/protection/solo" },
+  },
+  ["retribution"] = {
+    wowhead = { guide = "https://www.wowhead.com/guide/classes/paladin/retribution/midnight-season-1", bis = "https://www.wowhead.com/guide/classes/paladin/retribution/bis-gear" },
+    icyveins = { bis = "https://www.icy-veins.com/wow/retribution-paladin-pve-dps-gear-best-in-slot", talents = "https://www.icy-veins.com/wow/retribution-paladin-pve-dps-spec-builds-talents", leveling = "https://www.icy-veins.com/wow/retribution-paladin-leveling-guide" },
+    archon = { build = "https://www.archon.gg/wow/builds/retribution/paladin/mythic-plus/overview/high-keys/all-dungeons/this-week" },
+    murlok = { pvp = "https://murlok.io/paladin/retribution/solo" },
+  },
+}
