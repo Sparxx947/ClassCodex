@@ -72,8 +72,14 @@ Individual scrapers, in the order `refresh_all.sh` runs them:
 | `refresh_icyveins.py` | `talents-icyveins`, `gear-icyveins` | |
 | `refresh_murlok.py` | `murlok-pvp.lua` | Rated PvP stats and gear |
 
-`tools/check_lua.sh` parses every Lua file with a Lua 5.1 compiler — the
-version the WoW client runs. See [docs/data-sources.md](docs/data-sources.md)
+Two checks run at the end of `refresh_all.sh`, and are worth running on
+their own after any change:
+
+* `tools/check_data.py` — every spec present in every generated file, and
+  the scrape date not stale. A scrape that produced nothing for one spec
+  otherwise looks exactly like a successful run.
+* `tools/check_lua.sh` — parses every Lua file with a Lua 5.1 compiler,
+  the version the WoW client runs. See [docs/data-sources.md](docs/data-sources.md)
 for what each generated file contains and where each field comes from.
 
 ### After a season rollover
@@ -92,6 +98,9 @@ the data rather than hard-coded, so a plain rerun is usually enough:
 * `bnet-pvp-talents.lua` still carries the upstream data from 2026-07-02.
   It came from Blizzard's API by way of the PvP leaderboards, which needs
   API credentials and a very large number of requests. Tracked as an issue.
+* Brewmaster Monk has no murlok PvP data: the site has no sample in any
+  bracket this early in the season. `check_data.py` reports it as a known
+  gap rather than failing on it.
 * Wowhead stat priorities come from its `[build]` blocks, which cover the
   recommended hero talent. Its standalone stat-priority page is prose and
   is not machine-readable. Archon's stat targets cover every spec.

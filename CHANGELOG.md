@@ -36,6 +36,9 @@ First release of the community continuation, built on upstream v0.36.3
   never published its scraper, which is why the data went stale the moment
   the author stopped. Python 3.11+ standard library only.
 * `tools/check_lua.sh` — parses every Lua file with a Lua 5.1 compiler.
+* `tools/check_data.py` — completeness and staleness check. It found ten
+  specs with no PvP data on its first run; nine are now covered by
+  falling back to another rated bracket.
 * README, this changelog, and `docs/data-sources.md`.
 
 ### Removed
