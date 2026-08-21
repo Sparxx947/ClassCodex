@@ -6,12 +6,10 @@ local L = ns.L
 
 -- Tab labels
 L["tab.guide"] = "指南"
-L["tab.enchants_gems"] = "附魔 & 宝石"
 L["tab.enchants"] = "附魔"
 L["tab.gems"] = "宝石"
 L["tab.consumables"] = "消耗品"
 L["tab.trinkets"] = "饰品"
-L["tab.crafts"] = "制造"
 L["tab.bis_gear"] = "最佳装备"
 L["tab.best_in_slot"] = "最佳装备"
 L["bis.help.intro"] = "每个部位的推荐装备。使用来源下拉菜单比较攻略。"
@@ -52,16 +50,7 @@ L["tooltip.bis_header"] = "最佳装备"
 L["tooltip.source"] = "来源"
 
 -- Rotation / stat contexts (Wowhead headings)
-L["rotation.single_target"] = "单体目标"
-L["rotation.multitarget"] = "多目标"
-L["rotation.opener"] = "起手"
-L["rotation.aoe_opener"] = "AOE起手"
-L["rotation.single_target_opener"] = "单体目标起手"
-L["rotation.easy_mode"] = "简单模式"
-L["rotation.opener_cooldowns"] = "起手 / 爆发"
 L["context.mythic_plus"] = "史诗钥石"
-L["rotation.dps_priority"] = "输出优先级"
-L["rotation.healing_priority"] = "治疗优先级"
 -- L["settings.header.general"] handled by the Settings section below ("常规").
 
 -- Consumable labels
@@ -76,8 +65,6 @@ L["gem.primary"] = "主宝石"
 L["gem.secondary"] = "副宝石"
 
 -- Craft section headers
-L["craft.early"] = "前期制造"
-L["craft.bis"] = "最佳制造"
 
 -- Talent build fallback
 L["talent.build"] = "构建"
@@ -88,19 +75,14 @@ L["empty.no_data"] = "该专精暂无数据。"
 L["empty.no_builds_details"] = "暂无可用构建 - 请查看Wowhead了解详情。"
 L["empty.no_builds_for"] = "%s暂无构建 - 请查看Wowhead。"
 L["empty.no_rotation_for_details"] = "%s暂无输出循环 - 请查看Wowhead了解详情。"
-L["empty.no_rotation_for"] = "%s暂无输出循环 - 请查看Wowhead。"
 
 -- About panel
 L["about.title"] = "关于 Class Codex v%s"
 L["about.description"] = "为你当前专精提供属性优先级、天赋、输出循环和装备。仅供参考，精确结果请用 Raidbots 模拟。"
-L["about.links"] = "链接："
 L["about.help_hint"] = "输入 /cc help 查看命令列表。"
 L["attribution.copy_url"] = "点击复制链接"
 L["attribution.visit_source"] = "查看来源：%s"
 L["attribution.visit_cta"] = "查看"
-L["attribution.source"] = "来源："
-L["about.community"] = "社区"
-L["about.role.compendium"] = "浏览所有专精"
 L["about.role.settings"] = "选项与显示"
 L["about.role.github"] = "报告问题或寻求帮助"
 L["about.data_sources"] = "数据来源"
@@ -131,7 +113,6 @@ L["settings.header.panel"] = "面板"
 L["settings.label.stat_priority_ranks"] = "属性优先级排名"
 L["settings.label.wowhead_bis"] = "鼠标提示Wowhead最佳装备信息"
 L["settings.label.icy_veins_bis"] = "鼠标提示Icy Veins最佳装备信息"
-L["settings.label.bis_source"] = "最佳装备来源"
 L["settings.label.trinket_tier"] = "鼠标提示饰品等级"
 L["settings.label.bis_scope"] = "鼠标提示 BiS 范围"
 L["settings.label.highlight_owned"] = "高亮已拥有装备"
@@ -307,8 +288,6 @@ L["settings.label.horizontal_offset"] = "水平偏移"
 L["settings.tooltip.horizontal_offset"] = "相对于角色面板右上角的水平偏移(像素)。"
 L["settings.label.vertical_offset"] = "垂直偏移"
 L["settings.tooltip.vertical_offset"] = "相对于角色面板右上角的垂直偏移(像素)。"
-L["settings.label.reset_position"] = "重置位置"
-L["settings.tooltip.reset_position"] = "将装备按钮恢复到默认位置。"
 
 -- Footer
 L["footer.today"] = "今天"

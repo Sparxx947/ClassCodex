@@ -27,16 +27,31 @@ SKIP_DIRS = {".git", "tools", "Data", "Locales", "Libs"}
 
 _USE = re.compile(r'L\["([^"]+)"\]')
 _DEF = re.compile(r'^L\["([^"]+)"\]\s*=', re.M)
+# L["some.prefix_" .. variable] — the concatenated form. Everything
+# sharing the prefix is potentially reached, so none of it is unused.
+_PREFIX = re.compile(r'L\[\s*"([^"]*)"\s*\.\.')
+# L[variable] — nothing static can say which keys this reaches.
+# The lookbehind matters: without it this also matches the tail of an
+# unrelated identifier such as STAT_KEY_FROM_LABEL[label].
+_DYNAMIC = re.compile(r'(?<![A-Za-z0-9_])L\[\s*[a-zA-Z_][a-zA-Z0-9_.]*\s*\]')
 
 
-def used_keys() -> set[str]:
+def scan_uses() -> tuple[set[str], set[str], list[str]]:
+    """(literal keys, concatenated prefixes, files using L[variable])."""
     keys: set[str] = set()
+    prefixes: set[str] = set()
+    dynamic: list[str] = []
     for path in REPO.rglob("*.lua"):
         rel = path.relative_to(REPO)
         if rel.parts and rel.parts[0] in SKIP_DIRS:
             continue
-        keys |= set(_USE.findall(path.read_text(encoding="utf-8", errors="replace")))
-    return keys
+        text = path.read_text(encoding="utf-8", errors="replace")
+        keys |= set(_USE.findall(text))
+        prefixes |= {p for p in _PREFIX.findall(text) if p}
+        for number, line in enumerate(text.splitlines(), 1):
+            if _DYNAMIC.search(line):
+                dynamic.append(f"{rel}:{number}")
+    return keys, prefixes, dynamic
 
 
 def defined_keys(path: Path) -> set[str]:
@@ -50,7 +65,7 @@ def main() -> int:
 
     base = LOCALES / "enUS.lua"
     english = defined_keys(base)
-    used = used_keys()
+    used, prefixes, dynamic = scan_uses()
     problems = 0
 
     missing = sorted(used - english)
@@ -77,11 +92,28 @@ def main() -> int:
         if gap:
             problems += 1
 
-    unused = sorted(english - used)
-    print(f"  {len(unused)} defined but unused")
+    # A key reached only by concatenation is used, even though no literal
+    # L["that.key"] appears anywhere. Deleting one leaves the UI showing
+    # the raw key name, because ns.L's __index returns the key itself —
+    # four broken menu entries and no error to notice them by.
+    reached = {key for key in english
+               if any(key.startswith(prefix) for prefix in prefixes)}
+    unused = sorted(english - used - reached)
+
+    print(f"  {len(unused)} defined and not referenced")
+    if prefixes:
+        print(f"  {len(reached)} more reached by {len(prefixes)} concatenated "
+              f"prefix(es): {', '.join(sorted(prefixes))}")
     if args.show_unused:
         for key in unused:
             print(f"      {key}")
+
+    if dynamic:
+        print(f"\n  Caveat: {len(dynamic)} lookup(s) build the key from a bare\n"
+              "  variable, so the list above is candidates to review, not keys\n"
+              "  that are safe to delete unread:")
+        for where in dynamic:
+            print(f"    - {where}")
 
     return 1 if problems else 0
 

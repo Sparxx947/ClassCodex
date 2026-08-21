@@ -6,12 +6,10 @@ local L = ns.L
 
 -- Tab labels
 L["tab.guide"] = "가이드"
-L["tab.enchants_gems"] = "마법부여 & 보석"
 L["tab.enchants"] = "마법부여"
 L["tab.gems"] = "보석"
 L["tab.consumables"] = "소모품"
 L["tab.trinkets"] = "장신구"
-L["tab.crafts"] = "제작"
 L["tab.bis_gear"] = "최적 장비"
 L["tab.best_in_slot"] = "최적 장비"
 L["bis.help.intro"] = "슬롯별 추천 장비입니다. 출처 드롭다운으로 가이드를 비교하세요."
@@ -52,16 +50,7 @@ L["tooltip.bis_header"] = "최적 장비"
 L["tooltip.source"] = "출처"
 
 -- Rotation / stat contexts (Wowhead headings)
-L["rotation.single_target"] = "단일 대상"
-L["rotation.multitarget"] = "다중 대상"
-L["rotation.opener"] = "오프닝"
-L["rotation.aoe_opener"] = "광역 오프닝"
-L["rotation.single_target_opener"] = "단일 대상 오프닝"
-L["rotation.easy_mode"] = "쉬운 모드"
-L["rotation.opener_cooldowns"] = "오프닝 / 쿨다운"
 L["context.mythic_plus"] = "신화+"
-L["rotation.dps_priority"] = "딜링 우선순위"
-L["rotation.healing_priority"] = "힐링 우선순위"
 -- L["settings.header.general"] also lives in the Settings section below; the entry there
 -- already covers this key. Don't duplicate — Lua's last-write-wins lets
 -- the Settings translation win silently anyway.
@@ -78,8 +67,6 @@ L["gem.primary"] = "주 보석"
 L["gem.secondary"] = "보조 보석"
 
 -- Craft section headers
-L["craft.early"] = "초기 제작"
-L["craft.bis"] = "최적 제작"
 
 -- Talent build fallback
 L["talent.build"] = "빌드"
@@ -90,19 +77,14 @@ L["empty.no_data"] = "이 전문화에 대한 데이터가 없습니다."
 L["empty.no_builds_details"] = "사용 가능한 빌드가 없습니다 — Wowhead를 확인하세요."
 L["empty.no_builds_for"] = "%s 빌드가 없습니다 — Wowhead를 확인하세요."
 L["empty.no_rotation_for_details"] = "%s 로테이션이 없습니다 — Wowhead를 확인하세요."
-L["empty.no_rotation_for"] = "%s 로테이션이 없습니다 — Wowhead를 확인하세요."
 
 -- About panel
 L["about.title"] = "Class Codex v%s 정보"
 L["about.description"] = "현재 전문화의 스탯 우선순위, 특성, 로테이션, 장비 정보입니다. 일반적인 가이드라인이며 정확한 결과는 Raidbots로 시뮬레이션하세요."
-L["about.links"] = "링크:"
 L["about.help_hint"] = "/cc help을 입력하면 명령어 목록이 표시됩니다."
 L["attribution.copy_url"] = "클릭하여 링크 복사"
 L["attribution.visit_source"] = "출처 보기: %s"
 L["attribution.visit_cta"] = "확인"
-L["attribution.source"] = "출처:"
-L["about.community"] = "커뮤니티"
-L["about.role.compendium"] = "모든 전문화 보기"
 L["about.role.settings"] = "옵션 및 표시"
 L["about.role.github"] = "버그 신고 및 도움 요청"
 L["about.data_sources"] = "데이터 출처"
@@ -133,7 +115,6 @@ L["settings.header.panel"] = "패널"
 L["settings.label.stat_priority_ranks"] = "스탯 우선순위 등급"
 L["settings.label.wowhead_bis"] = "툴팁에 Wowhead 최적 장비 정보"
 L["settings.label.icy_veins_bis"] = "툴팁에 Icy Veins 최적 장비 정보"
-L["settings.label.bis_source"] = "최적 장비 출처"
 L["settings.label.trinket_tier"] = "툴팁에 장신구 등급"
 L["settings.label.bis_scope"] = "BiS 툴팁 범위"
 L["settings.label.highlight_owned"] = "보유 장비 강조"
@@ -309,8 +290,6 @@ L["settings.label.horizontal_offset"] = "수평 오프셋"
 L["settings.tooltip.horizontal_offset"] = "캐릭터 창 우측 상단 모서리에서의 수평 오프셋(픽셀)."
 L["settings.label.vertical_offset"] = "수직 오프셋"
 L["settings.tooltip.vertical_offset"] = "캐릭터 창 우측 상단 모서리에서의 수직 오프셋(픽셀)."
-L["settings.label.reset_position"] = "위치 초기화"
-L["settings.tooltip.reset_position"] = "장비 버튼을 기본 위치로 되돌립니다."
 
 -- Footer
 L["footer.today"] = "오늘"

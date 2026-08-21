@@ -3,6 +3,26 @@
 Notable changes to this continuation. The addon code is jfstn's work; only
 the changes listed here depart from upstream v0.36.3.
 
+## Unreleased
+
+### Changed
+
+* Removed 21 locale keys across all ten languages that nothing reaches.
+  Nine were rotation context labels for a data model that no longer
+  exists — the guides now supply their own free-text tab names.
+
+### Fixed
+
+* `tools/check_locales.py` no longer reports dynamically built keys as
+  unused. It listed the four `title_bar.menu.width_*` keys, which are
+  assembled by concatenation; deleting them would have left the width
+  menu showing raw key names in every language, silently.
+
+### Added
+
+* `tools/probe_bnet.py` — establishes whether Blizzard's API still
+  exposes talent loadouts, which is the open question behind #7.
+
 ## 0.38.2 — 2026-08-21
 
 ### Added

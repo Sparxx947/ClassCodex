@@ -145,8 +145,13 @@ automation is applying a talent loadout you picked, through the public
 ## Known gaps
 
 * `bnet-pvp-talents.lua` still carries the upstream data from 2026-07-02.
-  It came from Blizzard's API by way of the PvP leaderboards, which needs
-  API credentials and a very large number of requests. Tracked as an issue.
+  It came from Blizzard's API by way of the PvP leaderboards. Whether that
+  route still works is genuinely unknown: the `loadouts` field carrying
+  `talent_loadout_code` disappeared from the character specializations
+  endpoint in patch 11.2, reported on the API bug forum on 2025-08-07 and
+  never answered. Confirming it either way needs credentials, so
+  `tools/probe_bnet.py` answers the question in one run before anyone
+  writes a scraper against an API that may not carry the data.
 * Brewmaster Monk has no murlok PvP data: the site has no sample in any
   bracket this early in the season. `check_data.py` reports it as a known
   gap rather than failing on it.
