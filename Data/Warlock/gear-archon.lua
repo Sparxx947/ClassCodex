@@ -2,7 +2,7 @@
 -- Source: archon.gg | scraped 2026-08-20T12:00:00Z
 ClassCodexArchonGearData = ClassCodexArchonGearData or {}
 ClassCodexArchonGearData["WARLOCK"] = {
-  affliction = {
+  ["affliction"] = {
     bisGear = {
       {
         label = "Mythic+",
@@ -193,7 +193,7 @@ ClassCodexArchonGearData["WARLOCK"] = {
       },
     },
   },
-  demonology = {
+  ["demonology"] = {
     bisGear = {
       {
         label = "Mythic+",
@@ -378,7 +378,7 @@ ClassCodexArchonGearData["WARLOCK"] = {
       },
     },
   },
-  destruction = {
+  ["destruction"] = {
     bisGear = {
       {
         label = "Mythic+",

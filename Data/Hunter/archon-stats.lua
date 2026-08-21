@@ -11,7 +11,7 @@ ClassCodexArchonStats["HUNTER"] = {
         versatility = 156,
       },
     },
-    Raid = {
+    ["Raid"] = {
       targets = {
         crit = 808,
         haste = 730,
@@ -20,7 +20,7 @@ ClassCodexArchonStats["HUNTER"] = {
       },
     },
   },
-  marksmanship = {
+  ["marksmanship"] = {
     ["Mythic+"] = {
       targets = {
         crit = 1265,
@@ -29,7 +29,7 @@ ClassCodexArchonStats["HUNTER"] = {
         versatility = 185,
       },
     },
-    Raid = {
+    ["Raid"] = {
       targets = {
         crit = 1329,
         haste = 444,
@@ -38,7 +38,7 @@ ClassCodexArchonStats["HUNTER"] = {
       },
     },
   },
-  survival = {
+  ["survival"] = {
     ["Mythic+"] = {
       targets = {
         crit = 810,
@@ -47,7 +47,7 @@ ClassCodexArchonStats["HUNTER"] = {
         versatility = 137,
       },
     },
-    Raid = {
+    ["Raid"] = {
       targets = {
         crit = 780,
         haste = 679,

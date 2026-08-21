@@ -2,7 +2,7 @@
 -- Source: archon.gg | scraped 2026-08-20T12:00:00Z
 ClassCodexArchonData = ClassCodexArchonData or {}
 ClassCodexArchonData["WARLOCK"] = {
-  affliction = {
+  ["affliction"] = {
     label = "Affliction Warlock",
     contextOrder = {
       "mythic-plus:10:all-dungeons",
@@ -294,7 +294,7 @@ ClassCodexArchonData["WARLOCK"] = {
       },
     },
   },
-  demonology = {
+  ["demonology"] = {
     label = "Demonology Warlock",
     contextOrder = {
       "mythic-plus:10:all-dungeons",
@@ -586,7 +586,7 @@ ClassCodexArchonData["WARLOCK"] = {
       },
     },
   },
-  destruction = {
+  ["destruction"] = {
     label = "Destruction Warlock",
     contextOrder = {
       "mythic-plus:10:all-dungeons",

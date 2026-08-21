@@ -2,7 +2,7 @@
 -- Source: archon.gg | scraped 2026-08-20T12:00:00Z
 ClassCodexArchonStats = ClassCodexArchonStats or {}
 ClassCodexArchonStats["PRIEST"] = {
-  discipline = {
+  ["discipline"] = {
     ["Mythic+"] = {
       targets = {
         crit = 568,
@@ -11,7 +11,7 @@ ClassCodexArchonStats["PRIEST"] = {
         versatility = 161,
       },
     },
-    Raid = {
+    ["Raid"] = {
       targets = {
         crit = 495,
         haste = 1362,
@@ -20,7 +20,7 @@ ClassCodexArchonStats["PRIEST"] = {
       },
     },
   },
-  holy = {
+  ["holy"] = {
     ["Mythic+"] = {
       targets = {
         crit = 783,
@@ -29,7 +29,7 @@ ClassCodexArchonStats["PRIEST"] = {
         versatility = 226,
       },
     },
-    Raid = {
+    ["Raid"] = {
       targets = {
         crit = 873,
         haste = 668,
@@ -38,7 +38,7 @@ ClassCodexArchonStats["PRIEST"] = {
       },
     },
   },
-  shadow = {
+  ["shadow"] = {
     ["Mythic+"] = {
       targets = {
         crit = 574,
@@ -47,7 +47,7 @@ ClassCodexArchonStats["PRIEST"] = {
         versatility = 137,
       },
     },
-    Raid = {
+    ["Raid"] = {
       targets = {
         crit = 568,
         haste = 993,

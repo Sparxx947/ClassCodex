@@ -188,7 +188,7 @@ ClassCodexArchonGearData["HUNTER"] = {
       },
     },
   },
-  marksmanship = {
+  ["marksmanship"] = {
     bisGear = {
       {
         label = "Mythic+",
@@ -373,7 +373,7 @@ ClassCodexArchonGearData["HUNTER"] = {
       },
     },
   },
-  survival = {
+  ["survival"] = {
     bisGear = {
       {
         label = "Mythic+",

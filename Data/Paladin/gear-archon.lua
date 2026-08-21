@@ -2,7 +2,7 @@
 -- Source: archon.gg | scraped 2026-08-20T12:00:00Z
 ClassCodexArchonGearData = ClassCodexArchonGearData or {}
 ClassCodexArchonGearData["PALADIN"] = {
-  holy = {
+  ["holy"] = {
     bisGear = {
       {
         label = "Mythic+",
@@ -199,7 +199,7 @@ ClassCodexArchonGearData["PALADIN"] = {
       },
     },
   },
-  protection = {
+  ["protection"] = {
     bisGear = {
       {
         label = "Mythic+",
@@ -396,7 +396,7 @@ ClassCodexArchonGearData["PALADIN"] = {
       },
     },
   },
-  retribution = {
+  ["retribution"] = {
     bisGear = {
       {
         label = "Mythic+",

@@ -2,7 +2,7 @@
 -- Source: archon.gg | scraped 2026-08-20T12:00:00Z
 ClassCodexArchonData = ClassCodexArchonData or {}
 ClassCodexArchonData["DEMONHUNTER"] = {
-  devourer = {
+  ["devourer"] = {
     label = "Devourer Demon Hunter",
     contextOrder = {
       "mythic-plus:10:all-dungeons",
@@ -294,7 +294,7 @@ ClassCodexArchonData["DEMONHUNTER"] = {
       },
     },
   },
-  havoc = {
+  ["havoc"] = {
     label = "Havoc Demon Hunter",
     contextOrder = {
       "mythic-plus:10:all-dungeons",
@@ -586,7 +586,7 @@ ClassCodexArchonData["DEMONHUNTER"] = {
       },
     },
   },
-  vengeance = {
+  ["vengeance"] = {
     label = "Vengeance Demon Hunter",
     contextOrder = {
       "mythic-plus:10:all-dungeons",

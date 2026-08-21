@@ -2,7 +2,7 @@
 -- Source: archon.gg | scraped 2026-08-20T12:00:00Z
 ClassCodexArchonGearData = ClassCodexArchonGearData or {}
 ClassCodexArchonGearData["MAGE"] = {
-  arcane = {
+  ["arcane"] = {
     bisGear = {
       {
         label = "Mythic+",
@@ -186,7 +186,7 @@ ClassCodexArchonGearData["MAGE"] = {
       },
     },
   },
-  fire = {
+  ["fire"] = {
     bisGear = {
       {
         label = "Mythic+",
@@ -370,7 +370,7 @@ ClassCodexArchonGearData["MAGE"] = {
       },
     },
   },
-  frost = {
+  ["frost"] = {
     bisGear = {
       {
         label = "Mythic+",

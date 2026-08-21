@@ -2,7 +2,7 @@
 -- Source: archon.gg | scraped 2026-08-20T12:00:00Z
 ClassCodexArchonStats = ClassCodexArchonStats or {}
 ClassCodexArchonStats["MONK"] = {
-  brewmaster = {
+  ["brewmaster"] = {
     ["Mythic+"] = {
       targets = {
         crit = 986,
@@ -11,7 +11,7 @@ ClassCodexArchonStats["MONK"] = {
         versatility = 536,
       },
     },
-    Raid = {
+    ["Raid"] = {
       targets = {
         crit = 1157,
         haste = 314,
@@ -20,7 +20,7 @@ ClassCodexArchonStats["MONK"] = {
       },
     },
   },
-  mistweaver = {
+  ["mistweaver"] = {
     ["Mythic+"] = {
       targets = {
         crit = 783,
@@ -29,7 +29,7 @@ ClassCodexArchonStats["MONK"] = {
         versatility = 246,
       },
     },
-    Raid = {
+    ["Raid"] = {
       targets = {
         crit = 827,
         haste = 1332,
@@ -38,7 +38,7 @@ ClassCodexArchonStats["MONK"] = {
       },
     },
   },
-  windwalker = {
+  ["windwalker"] = {
     ["Mythic+"] = {
       targets = {
         crit = 773,
@@ -47,7 +47,7 @@ ClassCodexArchonStats["MONK"] = {
         versatility = 201,
       },
     },
-    Raid = {
+    ["Raid"] = {
       targets = {
         crit = 769,
         haste = 904,

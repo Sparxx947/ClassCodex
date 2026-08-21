@@ -2,7 +2,7 @@
 -- Source: archon.gg | scraped 2026-08-20T12:00:00Z
 ClassCodexArchonData = ClassCodexArchonData or {}
 ClassCodexArchonData["WARRIOR"] = {
-  arms = {
+  ["arms"] = {
     label = "Arms Warrior",
     contextOrder = {
       "mythic-plus:10:all-dungeons",
@@ -294,7 +294,7 @@ ClassCodexArchonData["WARRIOR"] = {
       },
     },
   },
-  fury = {
+  ["fury"] = {
     label = "Fury Warrior",
     contextOrder = {
       "mythic-plus:10:all-dungeons",
@@ -586,7 +586,7 @@ ClassCodexArchonData["WARRIOR"] = {
       },
     },
   },
-  protection = {
+  ["protection"] = {
     label = "Protection Warrior",
     contextOrder = {
       "mythic-plus:10:all-dungeons",

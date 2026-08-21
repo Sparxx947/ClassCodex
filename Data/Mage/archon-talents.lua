@@ -2,7 +2,7 @@
 -- Source: archon.gg | scraped 2026-08-20T12:00:00Z
 ClassCodexArchonData = ClassCodexArchonData or {}
 ClassCodexArchonData["MAGE"] = {
-  arcane = {
+  ["arcane"] = {
     label = "Arcane Mage",
     contextOrder = {
       "mythic-plus:10:all-dungeons",
@@ -294,7 +294,7 @@ ClassCodexArchonData["MAGE"] = {
       },
     },
   },
-  fire = {
+  ["fire"] = {
     label = "Fire Mage",
     contextOrder = {
       "mythic-plus:10:all-dungeons",
@@ -586,7 +586,7 @@ ClassCodexArchonData["MAGE"] = {
       },
     },
   },
-  frost = {
+  ["frost"] = {
     label = "Frost Mage",
     contextOrder = {
       "mythic-plus:10:all-dungeons",

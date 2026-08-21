@@ -2,7 +2,7 @@
 -- Source: archon.gg | scraped 2026-08-20T12:00:00Z
 ClassCodexArchonStats = ClassCodexArchonStats or {}
 ClassCodexArchonStats["DEMONHUNTER"] = {
-  devourer = {
+  ["devourer"] = {
     ["Mythic+"] = {
       targets = {
         crit = 561,
@@ -11,7 +11,7 @@ ClassCodexArchonStats["DEMONHUNTER"] = {
         versatility = 146,
       },
     },
-    Raid = {
+    ["Raid"] = {
       targets = {
         crit = 630,
         haste = 900,
@@ -20,7 +20,7 @@ ClassCodexArchonStats["DEMONHUNTER"] = {
       },
     },
   },
-  havoc = {
+  ["havoc"] = {
     ["Mythic+"] = {
       targets = {
         crit = 1150,
@@ -29,7 +29,7 @@ ClassCodexArchonStats["DEMONHUNTER"] = {
         versatility = 154,
       },
     },
-    Raid = {
+    ["Raid"] = {
       targets = {
         crit = 1146,
         haste = 379,
@@ -38,7 +38,7 @@ ClassCodexArchonStats["DEMONHUNTER"] = {
       },
     },
   },
-  vengeance = {
+  ["vengeance"] = {
     ["Mythic+"] = {
       targets = {
         crit = 728,
@@ -47,7 +47,7 @@ ClassCodexArchonStats["DEMONHUNTER"] = {
         versatility = 248,
       },
     },
-    Raid = {
+    ["Raid"] = {
       targets = {
         crit = 722,
         haste = 1047,

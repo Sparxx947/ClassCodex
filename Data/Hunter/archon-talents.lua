@@ -294,7 +294,7 @@ ClassCodexArchonData["HUNTER"] = {
       },
     },
   },
-  marksmanship = {
+  ["marksmanship"] = {
     label = "Marksmanship Hunter",
     contextOrder = {
       "mythic-plus:10:all-dungeons",
@@ -586,7 +586,7 @@ ClassCodexArchonData["HUNTER"] = {
       },
     },
   },
-  survival = {
+  ["survival"] = {
     label = "Survival Hunter",
     contextOrder = {
       "mythic-plus:10:all-dungeons",

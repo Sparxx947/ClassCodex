@@ -2,7 +2,7 @@
 -- Source: archon.gg | scraped 2026-08-20T12:00:00Z
 ClassCodexArchonData = ClassCodexArchonData or {}
 ClassCodexArchonData["MONK"] = {
-  brewmaster = {
+  ["brewmaster"] = {
     label = "Brewmaster Monk",
     contextOrder = {
       "mythic-plus:10:all-dungeons",
@@ -294,7 +294,7 @@ ClassCodexArchonData["MONK"] = {
       },
     },
   },
-  mistweaver = {
+  ["mistweaver"] = {
     label = "Mistweaver Monk",
     contextOrder = {
       "mythic-plus:10:all-dungeons",
@@ -586,7 +586,7 @@ ClassCodexArchonData["MONK"] = {
       },
     },
   },
-  windwalker = {
+  ["windwalker"] = {
     label = "Windwalker Monk",
     contextOrder = {
       "mythic-plus:10:all-dungeons",

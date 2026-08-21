@@ -2,7 +2,7 @@
 -- Source: archon.gg | scraped 2026-08-20T12:00:00Z
 ClassCodexArchonStats = ClassCodexArchonStats or {}
 ClassCodexArchonStats["MAGE"] = {
-  arcane = {
+  ["arcane"] = {
     ["Mythic+"] = {
       targets = {
         crit = 687,
@@ -11,7 +11,7 @@ ClassCodexArchonStats["MAGE"] = {
         versatility = 247,
       },
     },
-    Raid = {
+    ["Raid"] = {
       targets = {
         crit = 682,
         haste = 972,
@@ -20,7 +20,7 @@ ClassCodexArchonStats["MAGE"] = {
       },
     },
   },
-  fire = {
+  ["fire"] = {
     ["Mythic+"] = {
       targets = {
         crit = 226,
@@ -29,7 +29,7 @@ ClassCodexArchonStats["MAGE"] = {
         versatility = 186,
       },
     },
-    Raid = {
+    ["Raid"] = {
       targets = {
         crit = 218,
         haste = 1305,
@@ -38,7 +38,7 @@ ClassCodexArchonStats["MAGE"] = {
       },
     },
   },
-  frost = {
+  ["frost"] = {
     ["Mythic+"] = {
       targets = {
         crit = 918,
@@ -47,7 +47,7 @@ ClassCodexArchonStats["MAGE"] = {
         versatility = 140,
       },
     },
-    Raid = {
+    ["Raid"] = {
       targets = {
         crit = 922,
         haste = 705,

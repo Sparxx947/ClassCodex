@@ -2,7 +2,7 @@
 -- Source: archon.gg | scraped 2026-08-20T12:00:00Z
 ClassCodexArchonStats = ClassCodexArchonStats or {}
 ClassCodexArchonStats["WARLOCK"] = {
-  affliction = {
+  ["affliction"] = {
     ["Mythic+"] = {
       targets = {
         crit = 853,
@@ -11,7 +11,7 @@ ClassCodexArchonStats["WARLOCK"] = {
         versatility = 137,
       },
     },
-    Raid = {
+    ["Raid"] = {
       targets = {
         crit = 880,
         haste = 925,
@@ -20,7 +20,7 @@ ClassCodexArchonStats["WARLOCK"] = {
       },
     },
   },
-  demonology = {
+  ["demonology"] = {
     ["Mythic+"] = {
       targets = {
         crit = 981,
@@ -29,7 +29,7 @@ ClassCodexArchonStats["WARLOCK"] = {
         versatility = 132,
       },
     },
-    Raid = {
+    ["Raid"] = {
       targets = {
         crit = 979,
         haste = 856,
@@ -38,7 +38,7 @@ ClassCodexArchonStats["WARLOCK"] = {
       },
     },
   },
-  destruction = {
+  ["destruction"] = {
     ["Mythic+"] = {
       targets = {
         crit = 893,
@@ -47,7 +47,7 @@ ClassCodexArchonStats["WARLOCK"] = {
         versatility = 148,
       },
     },
-    Raid = {
+    ["Raid"] = {
       targets = {
         crit = 927,
         haste = 835,

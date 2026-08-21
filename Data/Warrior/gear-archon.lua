@@ -2,7 +2,7 @@
 -- Source: archon.gg | scraped 2026-08-20T12:00:00Z
 ClassCodexArchonGearData = ClassCodexArchonGearData or {}
 ClassCodexArchonGearData["WARRIOR"] = {
-  arms = {
+  ["arms"] = {
     bisGear = {
       {
         label = "Mythic+",
@@ -186,7 +186,7 @@ ClassCodexArchonGearData["WARRIOR"] = {
       },
     },
   },
-  fury = {
+  ["fury"] = {
     bisGear = {
       {
         label = "Mythic+",
@@ -379,7 +379,7 @@ ClassCodexArchonGearData["WARRIOR"] = {
       },
     },
   },
-  protection = {
+  ["protection"] = {
     bisGear = {
       {
         label = "Mythic+",

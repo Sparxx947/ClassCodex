@@ -2,7 +2,7 @@
 -- Source: archon.gg | scraped 2026-08-20T12:00:00Z
 ClassCodexArchonData = ClassCodexArchonData or {}
 ClassCodexArchonData["DRUID"] = {
-  balance = {
+  ["balance"] = {
     label = "Balance Druid",
     contextOrder = {
       "mythic-plus:10:all-dungeons",
@@ -294,7 +294,7 @@ ClassCodexArchonData["DRUID"] = {
       },
     },
   },
-  feral = {
+  ["feral"] = {
     label = "Feral Druid",
     contextOrder = {
       "mythic-plus:10:all-dungeons",
@@ -586,7 +586,7 @@ ClassCodexArchonData["DRUID"] = {
       },
     },
   },
-  guardian = {
+  ["guardian"] = {
     label = "Guardian Druid",
     contextOrder = {
       "mythic-plus:10:all-dungeons",
@@ -878,7 +878,7 @@ ClassCodexArchonData["DRUID"] = {
       },
     },
   },
-  restoration = {
+  ["restoration"] = {
     label = "Restoration Druid",
     contextOrder = {
       "mythic-plus:10:all-dungeons",

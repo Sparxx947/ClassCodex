@@ -2,7 +2,7 @@
 -- Source: archon.gg | scraped 2026-08-20T12:00:00Z
 ClassCodexArchonStats = ClassCodexArchonStats or {}
 ClassCodexArchonStats["SHAMAN"] = {
-  elemental = {
+  ["elemental"] = {
     ["Mythic+"] = {
       targets = {
         crit = 717,
@@ -11,7 +11,7 @@ ClassCodexArchonStats["SHAMAN"] = {
         versatility = 191,
       },
     },
-    Raid = {
+    ["Raid"] = {
       targets = {
         crit = 697,
         haste = 673,
@@ -20,7 +20,7 @@ ClassCodexArchonStats["SHAMAN"] = {
       },
     },
   },
-  enhancement = {
+  ["enhancement"] = {
     ["Mythic+"] = {
       targets = {
         crit = 463,
@@ -29,7 +29,7 @@ ClassCodexArchonStats["SHAMAN"] = {
         versatility = 163,
       },
     },
-    Raid = {
+    ["Raid"] = {
       targets = {
         crit = 449,
         haste = 1006,
@@ -38,7 +38,7 @@ ClassCodexArchonStats["SHAMAN"] = {
       },
     },
   },
-  restoration = {
+  ["restoration"] = {
     ["Mythic+"] = {
       targets = {
         crit = 971,
@@ -47,7 +47,7 @@ ClassCodexArchonStats["SHAMAN"] = {
         versatility = 409,
       },
     },
-    Raid = {
+    ["Raid"] = {
       targets = {
         crit = 1076,
         haste = 528,

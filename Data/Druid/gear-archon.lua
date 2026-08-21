@@ -2,7 +2,7 @@
 -- Source: archon.gg | scraped 2026-08-20T12:00:00Z
 ClassCodexArchonGearData = ClassCodexArchonGearData or {}
 ClassCodexArchonGearData["DRUID"] = {
-  balance = {
+  ["balance"] = {
     bisGear = {
       {
         label = "Mythic+",
@@ -199,7 +199,7 @@ ClassCodexArchonGearData["DRUID"] = {
       },
     },
   },
-  feral = {
+  ["feral"] = {
     bisGear = {
       {
         label = "Mythic+",
@@ -385,7 +385,7 @@ ClassCodexArchonGearData["DRUID"] = {
       },
     },
   },
-  guardian = {
+  ["guardian"] = {
     bisGear = {
       {
         label = "Mythic+",
@@ -573,7 +573,7 @@ ClassCodexArchonGearData["DRUID"] = {
       },
     },
   },
-  restoration = {
+  ["restoration"] = {
     bisGear = {
       {
         label = "Mythic+",

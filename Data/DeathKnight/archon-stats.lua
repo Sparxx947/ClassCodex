@@ -2,7 +2,7 @@
 -- Source: archon.gg | scraped 2026-08-20T12:00:00Z
 ClassCodexArchonStats = ClassCodexArchonStats or {}
 ClassCodexArchonStats["DEATHKNIGHT"] = {
-  blood = {
+  ["blood"] = {
     ["Mythic+"] = {
       targets = {
         crit = 715,
@@ -11,7 +11,7 @@ ClassCodexArchonStats["DEATHKNIGHT"] = {
         versatility = 313,
       },
     },
-    Raid = {
+    ["Raid"] = {
       targets = {
         crit = 742,
         haste = 971,
@@ -20,7 +20,7 @@ ClassCodexArchonStats["DEATHKNIGHT"] = {
       },
     },
   },
-  frost = {
+  ["frost"] = {
     ["Mythic+"] = {
       targets = {
         crit = 1003,
@@ -29,7 +29,7 @@ ClassCodexArchonStats["DEATHKNIGHT"] = {
         versatility = 181,
       },
     },
-    Raid = {
+    ["Raid"] = {
       targets = {
         crit = 1065,
         haste = 482,
@@ -38,7 +38,7 @@ ClassCodexArchonStats["DEATHKNIGHT"] = {
       },
     },
   },
-  unholy = {
+  ["unholy"] = {
     ["Mythic+"] = {
       targets = {
         crit = 1020,
@@ -47,7 +47,7 @@ ClassCodexArchonStats["DEATHKNIGHT"] = {
         versatility = 145,
       },
     },
-    Raid = {
+    ["Raid"] = {
       targets = {
         crit = 1079,
         haste = 375,

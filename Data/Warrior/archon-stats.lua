@@ -2,7 +2,7 @@
 -- Source: archon.gg | scraped 2026-08-20T12:00:00Z
 ClassCodexArchonStats = ClassCodexArchonStats or {}
 ClassCodexArchonStats["WARRIOR"] = {
-  arms = {
+  ["arms"] = {
     ["Mythic+"] = {
       targets = {
         crit = 977,
@@ -11,7 +11,7 @@ ClassCodexArchonStats["WARRIOR"] = {
         versatility = 195,
       },
     },
-    Raid = {
+    ["Raid"] = {
       targets = {
         crit = 997,
         haste = 1025,
@@ -20,7 +20,7 @@ ClassCodexArchonStats["WARRIOR"] = {
       },
     },
   },
-  fury = {
+  ["fury"] = {
     ["Mythic+"] = {
       targets = {
         crit = 570,
@@ -29,7 +29,7 @@ ClassCodexArchonStats["WARRIOR"] = {
         versatility = 160,
       },
     },
-    Raid = {
+    ["Raid"] = {
       targets = {
         crit = 538,
         haste = 1069,
@@ -38,7 +38,7 @@ ClassCodexArchonStats["WARRIOR"] = {
       },
     },
   },
-  protection = {
+  ["protection"] = {
     ["Mythic+"] = {
       targets = {
         crit = 726,
@@ -47,7 +47,7 @@ ClassCodexArchonStats["WARRIOR"] = {
         versatility = 227,
       },
     },
-    Raid = {
+    ["Raid"] = {
       targets = {
         crit = 656,
         haste = 1131,

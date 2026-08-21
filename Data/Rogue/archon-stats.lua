@@ -2,7 +2,7 @@
 -- Source: archon.gg | scraped 2026-08-20T12:00:00Z
 ClassCodexArchonStats = ClassCodexArchonStats or {}
 ClassCodexArchonStats["ROGUE"] = {
-  assassination = {
+  ["assassination"] = {
     ["Mythic+"] = {
       targets = {
         crit = 989,
@@ -11,7 +11,7 @@ ClassCodexArchonStats["ROGUE"] = {
         versatility = 173,
       },
     },
-    Raid = {
+    ["Raid"] = {
       targets = {
         crit = 971,
         haste = 880,
@@ -20,7 +20,7 @@ ClassCodexArchonStats["ROGUE"] = {
       },
     },
   },
-  outlaw = {
+  ["outlaw"] = {
     ["Mythic+"] = {
       targets = {
         crit = 1080,
@@ -29,7 +29,7 @@ ClassCodexArchonStats["ROGUE"] = {
         versatility = 246,
       },
     },
-    Raid = {
+    ["Raid"] = {
       targets = {
         crit = 1205,
         haste = 911,
@@ -38,7 +38,7 @@ ClassCodexArchonStats["ROGUE"] = {
       },
     },
   },
-  subtlety = {
+  ["subtlety"] = {
     ["Mythic+"] = {
       targets = {
         crit = 624,
@@ -47,7 +47,7 @@ ClassCodexArchonStats["ROGUE"] = {
         versatility = 178,
       },
     },
-    Raid = {
+    ["Raid"] = {
       targets = {
         crit = 576,
         haste = 862,

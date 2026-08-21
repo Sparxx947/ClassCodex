@@ -2,7 +2,7 @@
 -- Source: archon.gg | scraped 2026-08-20T12:00:00Z
 ClassCodexArchonGearData = ClassCodexArchonGearData or {}
 ClassCodexArchonGearData["DEATHKNIGHT"] = {
-  blood = {
+  ["blood"] = {
     bisGear = {
       {
         label = "Mythic+",
@@ -186,7 +186,7 @@ ClassCodexArchonGearData["DEATHKNIGHT"] = {
       },
     },
   },
-  frost = {
+  ["frost"] = {
     bisGear = {
       {
         label = "Mythic+",
@@ -385,7 +385,7 @@ ClassCodexArchonGearData["DEATHKNIGHT"] = {
       },
     },
   },
-  unholy = {
+  ["unholy"] = {
     bisGear = {
       {
         label = "Mythic+",

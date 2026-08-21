@@ -2,7 +2,7 @@
 -- Source: archon.gg | scraped 2026-08-20T12:00:00Z
 ClassCodexArchonData = ClassCodexArchonData or {}
 ClassCodexArchonData["ROGUE"] = {
-  assassination = {
+  ["assassination"] = {
     label = "Assassination Rogue",
     contextOrder = {
       "mythic-plus:10:all-dungeons",
@@ -294,7 +294,7 @@ ClassCodexArchonData["ROGUE"] = {
       },
     },
   },
-  outlaw = {
+  ["outlaw"] = {
     label = "Outlaw Rogue",
     contextOrder = {
       "mythic-plus:10:all-dungeons",
@@ -586,7 +586,7 @@ ClassCodexArchonData["ROGUE"] = {
       },
     },
   },
-  subtlety = {
+  ["subtlety"] = {
     label = "Subtlety Rogue",
     contextOrder = {
       "mythic-plus:10:all-dungeons",

@@ -2,7 +2,7 @@
 -- Source: archon.gg | scraped 2026-08-20T12:00:00Z
 ClassCodexArchonData = ClassCodexArchonData or {}
 ClassCodexArchonData["PALADIN"] = {
-  holy = {
+  ["holy"] = {
     label = "Holy Paladin",
     contextOrder = {
       "mythic-plus:10:all-dungeons",
@@ -294,7 +294,7 @@ ClassCodexArchonData["PALADIN"] = {
       },
     },
   },
-  protection = {
+  ["protection"] = {
     label = "Protection Paladin",
     contextOrder = {
       "mythic-plus:10:all-dungeons",
@@ -586,7 +586,7 @@ ClassCodexArchonData["PALADIN"] = {
       },
     },
   },
-  retribution = {
+  ["retribution"] = {
     label = "Retribution Paladin",
     contextOrder = {
       "mythic-plus:10:all-dungeons",

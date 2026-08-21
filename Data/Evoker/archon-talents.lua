@@ -2,7 +2,7 @@
 -- Source: archon.gg | scraped 2026-08-20T12:00:00Z
 ClassCodexArchonData = ClassCodexArchonData or {}
 ClassCodexArchonData["EVOKER"] = {
-  augmentation = {
+  ["augmentation"] = {
     label = "Augmentation Evoker",
     contextOrder = {
       "mythic-plus:10:all-dungeons",
@@ -294,7 +294,7 @@ ClassCodexArchonData["EVOKER"] = {
       },
     },
   },
-  devastation = {
+  ["devastation"] = {
     label = "Devastation Evoker",
     contextOrder = {
       "mythic-plus:10:all-dungeons",
@@ -586,7 +586,7 @@ ClassCodexArchonData["EVOKER"] = {
       },
     },
   },
-  preservation = {
+  ["preservation"] = {
     label = "Preservation Evoker",
     contextOrder = {
       "mythic-plus:10:all-dungeons",

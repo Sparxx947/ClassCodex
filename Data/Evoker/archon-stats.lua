@@ -2,7 +2,7 @@
 -- Source: archon.gg | scraped 2026-08-20T12:00:00Z
 ClassCodexArchonStats = ClassCodexArchonStats or {}
 ClassCodexArchonStats["EVOKER"] = {
-  augmentation = {
+  ["augmentation"] = {
     ["Mythic+"] = {
       targets = {
         crit = 926,
@@ -11,7 +11,7 @@ ClassCodexArchonStats["EVOKER"] = {
         versatility = 157,
       },
     },
-    Raid = {
+    ["Raid"] = {
       targets = {
         crit = 962,
         haste = 805,
@@ -20,7 +20,7 @@ ClassCodexArchonStats["EVOKER"] = {
       },
     },
   },
-  devastation = {
+  ["devastation"] = {
     ["Mythic+"] = {
       targets = {
         crit = 1076,
@@ -29,7 +29,7 @@ ClassCodexArchonStats["EVOKER"] = {
         versatility = 150,
       },
     },
-    Raid = {
+    ["Raid"] = {
       targets = {
         crit = 1089,
         haste = 831,
@@ -38,7 +38,7 @@ ClassCodexArchonStats["EVOKER"] = {
       },
     },
   },
-  preservation = {
+  ["preservation"] = {
     ["Mythic+"] = {
       targets = {
         crit = 766,
@@ -47,7 +47,7 @@ ClassCodexArchonStats["EVOKER"] = {
         versatility = 187,
       },
     },
-    Raid = {
+    ["Raid"] = {
       targets = {
         crit = 743,
         haste = 621,

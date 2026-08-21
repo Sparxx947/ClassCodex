@@ -2,7 +2,7 @@
 -- Source: archon.gg | scraped 2026-08-20T12:00:00Z
 ClassCodexArchonData = ClassCodexArchonData or {}
 ClassCodexArchonData["PRIEST"] = {
-  discipline = {
+  ["discipline"] = {
     label = "Discipline Priest",
     contextOrder = {
       "mythic-plus:10:all-dungeons",
@@ -294,7 +294,7 @@ ClassCodexArchonData["PRIEST"] = {
       },
     },
   },
-  holy = {
+  ["holy"] = {
     label = "Holy Priest",
     contextOrder = {
       "mythic-plus:10:all-dungeons",
@@ -586,7 +586,7 @@ ClassCodexArchonData["PRIEST"] = {
       },
     },
   },
-  shadow = {
+  ["shadow"] = {
     label = "Shadow Priest",
     contextOrder = {
       "mythic-plus:10:all-dungeons",

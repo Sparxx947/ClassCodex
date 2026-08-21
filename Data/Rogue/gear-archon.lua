@@ -2,7 +2,7 @@
 -- Source: archon.gg | scraped 2026-08-20T12:00:00Z
 ClassCodexArchonGearData = ClassCodexArchonGearData or {}
 ClassCodexArchonGearData["ROGUE"] = {
-  assassination = {
+  ["assassination"] = {
     bisGear = {
       {
         label = "Mythic+",
@@ -193,7 +193,7 @@ ClassCodexArchonGearData["ROGUE"] = {
       },
     },
   },
-  outlaw = {
+  ["outlaw"] = {
     bisGear = {
       {
         label = "Mythic+",
@@ -390,7 +390,7 @@ ClassCodexArchonGearData["ROGUE"] = {
       },
     },
   },
-  subtlety = {
+  ["subtlety"] = {
     bisGear = {
       {
         label = "Mythic+",

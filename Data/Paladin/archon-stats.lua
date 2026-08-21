@@ -2,7 +2,7 @@
 -- Source: archon.gg | scraped 2026-08-20T12:00:00Z
 ClassCodexArchonStats = ClassCodexArchonStats or {}
 ClassCodexArchonStats["PALADIN"] = {
-  holy = {
+  ["holy"] = {
     ["Mythic+"] = {
       targets = {
         crit = 573,
@@ -11,7 +11,7 @@ ClassCodexArchonStats["PALADIN"] = {
         versatility = 248,
       },
     },
-    Raid = {
+    ["Raid"] = {
       targets = {
         crit = 474,
         haste = 857,
@@ -20,7 +20,7 @@ ClassCodexArchonStats["PALADIN"] = {
       },
     },
   },
-  protection = {
+  ["protection"] = {
     ["Mythic+"] = {
       targets = {
         crit = 729,
@@ -29,7 +29,7 @@ ClassCodexArchonStats["PALADIN"] = {
         versatility = 256,
       },
     },
-    Raid = {
+    ["Raid"] = {
       targets = {
         crit = 706,
         haste = 1042,
@@ -38,7 +38,7 @@ ClassCodexArchonStats["PALADIN"] = {
       },
     },
   },
-  retribution = {
+  ["retribution"] = {
     ["Mythic+"] = {
       targets = {
         crit = 816,
@@ -47,7 +47,7 @@ ClassCodexArchonStats["PALADIN"] = {
         versatility = 154,
       },
     },
-    Raid = {
+    ["Raid"] = {
       targets = {
         crit = 853,
         haste = 715,

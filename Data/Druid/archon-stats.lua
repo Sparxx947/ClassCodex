@@ -2,7 +2,7 @@
 -- Source: archon.gg | scraped 2026-08-20T12:00:00Z
 ClassCodexArchonStats = ClassCodexArchonStats or {}
 ClassCodexArchonStats["DRUID"] = {
-  balance = {
+  ["balance"] = {
     ["Mythic+"] = {
       targets = {
         crit = 669,
@@ -11,7 +11,7 @@ ClassCodexArchonStats["DRUID"] = {
         versatility = 183,
       },
     },
-    Raid = {
+    ["Raid"] = {
       targets = {
         crit = 672,
         haste = 761,
@@ -20,7 +20,7 @@ ClassCodexArchonStats["DRUID"] = {
       },
     },
   },
-  feral = {
+  ["feral"] = {
     ["Mythic+"] = {
       targets = {
         crit = 595,
@@ -29,7 +29,7 @@ ClassCodexArchonStats["DRUID"] = {
         versatility = 178,
       },
     },
-    Raid = {
+    ["Raid"] = {
       targets = {
         crit = 584,
         haste = 834,
@@ -38,7 +38,7 @@ ClassCodexArchonStats["DRUID"] = {
       },
     },
   },
-  guardian = {
+  ["guardian"] = {
     ["Mythic+"] = {
       targets = {
         crit = 517,
@@ -47,7 +47,7 @@ ClassCodexArchonStats["DRUID"] = {
         versatility = 373,
       },
     },
-    Raid = {
+    ["Raid"] = {
       targets = {
         crit = 517,
         haste = 1113,
@@ -56,7 +56,7 @@ ClassCodexArchonStats["DRUID"] = {
       },
     },
   },
-  restoration = {
+  ["restoration"] = {
     ["Mythic+"] = {
       targets = {
         crit = 274,
@@ -65,7 +65,7 @@ ClassCodexArchonStats["DRUID"] = {
         versatility = 195,
       },
     },
-    Raid = {
+    ["Raid"] = {
       targets = {
         crit = 251,
         haste = 1275,

@@ -2,7 +2,7 @@
 -- Source: archon.gg | scraped 2026-08-20T12:00:00Z
 ClassCodexArchonGearData = ClassCodexArchonGearData or {}
 ClassCodexArchonGearData["PRIEST"] = {
-  discipline = {
+  ["discipline"] = {
     bisGear = {
       {
         label = "Mythic+",
@@ -200,7 +200,7 @@ ClassCodexArchonGearData["PRIEST"] = {
       },
     },
   },
-  holy = {
+  ["holy"] = {
     bisGear = {
       {
         label = "Mythic+",
@@ -396,7 +396,7 @@ ClassCodexArchonGearData["PRIEST"] = {
       },
     },
   },
-  shadow = {
+  ["shadow"] = {
     bisGear = {
       {
         label = "Mythic+",

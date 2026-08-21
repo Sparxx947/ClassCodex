@@ -2,7 +2,7 @@
 -- Source: archon.gg | scraped 2026-08-20T12:00:00Z
 ClassCodexArchonGearData = ClassCodexArchonGearData or {}
 ClassCodexArchonGearData["SHAMAN"] = {
-  elemental = {
+  ["elemental"] = {
     bisGear = {
       {
         label = "Mythic+",
@@ -200,7 +200,7 @@ ClassCodexArchonGearData["SHAMAN"] = {
       },
     },
   },
-  enhancement = {
+  ["enhancement"] = {
     bisGear = {
       {
         label = "Mythic+",
@@ -392,7 +392,7 @@ ClassCodexArchonGearData["SHAMAN"] = {
       },
     },
   },
-  restoration = {
+  ["restoration"] = {
     bisGear = {
       {
         label = "Mythic+",

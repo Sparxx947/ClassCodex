@@ -2,7 +2,7 @@
 -- Source: archon.gg | scraped 2026-08-20T12:00:00Z
 ClassCodexArchonData = ClassCodexArchonData or {}
 ClassCodexArchonData["SHAMAN"] = {
-  elemental = {
+  ["elemental"] = {
     label = "Elemental Shaman",
     contextOrder = {
       "mythic-plus:10:all-dungeons",
@@ -294,7 +294,7 @@ ClassCodexArchonData["SHAMAN"] = {
       },
     },
   },
-  enhancement = {
+  ["enhancement"] = {
     label = "Enhancement Shaman",
     contextOrder = {
       "mythic-plus:10:all-dungeons",
@@ -586,7 +586,7 @@ ClassCodexArchonData["SHAMAN"] = {
       },
     },
   },
-  restoration = {
+  ["restoration"] = {
     label = "Restoration Shaman",
     contextOrder = {
       "mythic-plus:10:all-dungeons",

@@ -2,7 +2,7 @@
 -- Source: archon.gg | scraped 2026-08-20T12:00:00Z
 ClassCodexArchonGearData = ClassCodexArchonGearData or {}
 ClassCodexArchonGearData["EVOKER"] = {
-  augmentation = {
+  ["augmentation"] = {
     bisGear = {
       {
         label = "Mythic+",
@@ -198,7 +198,7 @@ ClassCodexArchonGearData["EVOKER"] = {
       },
     },
   },
-  devastation = {
+  ["devastation"] = {
     bisGear = {
       {
         label = "Mythic+",
@@ -394,7 +394,7 @@ ClassCodexArchonGearData["EVOKER"] = {
       },
     },
   },
-  preservation = {
+  ["preservation"] = {
     bisGear = {
       {
         label = "Mythic+",

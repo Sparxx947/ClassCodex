@@ -2,7 +2,7 @@
 -- Source: archon.gg | scraped 2026-08-20T12:00:00Z
 ClassCodexArchonGearData = ClassCodexArchonGearData or {}
 ClassCodexArchonGearData["MONK"] = {
-  brewmaster = {
+  ["brewmaster"] = {
     bisGear = {
       {
         label = "Mythic+",
@@ -186,7 +186,7 @@ ClassCodexArchonGearData["MONK"] = {
       },
     },
   },
-  mistweaver = {
+  ["mistweaver"] = {
     bisGear = {
       {
         label = "Mythic+",
@@ -380,7 +380,7 @@ ClassCodexArchonGearData["MONK"] = {
       },
     },
   },
-  windwalker = {
+  ["windwalker"] = {
     bisGear = {
       {
         label = "Mythic+",
