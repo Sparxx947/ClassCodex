@@ -930,14 +930,21 @@ local function FormatArchonRow(ctx, build, isActive, isAuto)
 end
 
 -- Translate a contextKey into a scope token used by the scope dropdown.
--- "mythic-plus:high-keys:..."  -> "mplus"
--- "raid:heroic:..."            -> "raidHeroic"
--- "raid:mythic:..."            -> "raidMythic"
+-- "mythic-plus:10:..."  -> "mplus"      (the bracket slug is season data)
+-- "raid:mythic:..."     -> "raidMythic"
+-- "raid:heroic:..."     -> "raidHeroic"
+-- "raid:normal:..."     -> "raidHeroic" (see below)
+--
+-- Anything raid-shaped that isn't Mythic lands in the Heroic scope,
+-- matching how ns.GroupArchonContexts buckets it. Early in a season the
+-- data can carry Normal entries for bosses Heroic hasn't published yet;
+-- they belong on the same tab rather than nowhere. Their own
+-- difficultyLabel is what the row shows, so nothing is mislabelled.
 local function ScopeForContextKey(contextKey)
     if not contextKey then return nil end
     if contextKey:find("^mythic%-plus:") then return "mplus" end
     if contextKey:find("^raid:mythic:") then return "raidMythic" end
-    if contextKey:find("^raid:heroic:") then return "raidHeroic" end
+    if contextKey:find("^raid:") then return "raidHeroic" end
     return nil
 end
 
