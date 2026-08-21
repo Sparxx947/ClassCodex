@@ -3,6 +3,7 @@
 ClassCodexMurlokPvp = ClassCodexMurlokPvp or {}
 ClassCodexMurlokPvp["HUNTER"] = {
   ["beast-mastery"] = {
+    bracket = "solo",
     statPriority = {
       {
         key = "versatility",
@@ -134,6 +135,7 @@ ClassCodexMurlokPvp["HUNTER"] = {
     },
   },
   ["marksmanship"] = {
+    bracket = "solo",
     statPriority = {
       {
         key = "versatility",
@@ -259,6 +261,7 @@ ClassCodexMurlokPvp["HUNTER"] = {
     },
   },
   ["survival"] = {
+    bracket = "solo",
     statPriority = {
       {
         key = "versatility",

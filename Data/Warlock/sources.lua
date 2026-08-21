@@ -12,7 +12,7 @@ ClassCodexSources["WARLOCK"] = {
     wowhead = { guide = "https://www.wowhead.com/guide/classes/warlock/demonology/midnight-season-2", bis = "https://www.wowhead.com/guide/classes/warlock/demonology/bis-gear" },
     icyveins = { bis = "https://www.icy-veins.com/wow/demonology-warlock-pve-dps-gear-best-in-slot", talents = "https://www.icy-veins.com/wow/demonology-warlock-pve-dps-spec-builds-talents", leveling = "https://www.icy-veins.com/wow/demonology-warlock-leveling-guide" },
     archon = { build = "https://www.archon.gg/wow/builds/demonology/warlock/mythic-plus/overview/10/all-dungeons/this-week" },
-    murlok = { pvp = "https://murlok.io/warlock/demonology/solo" },
+    murlok = { pvp = "https://murlok.io/warlock/demonology/3v3" },
   },
   ["destruction"] = {
     wowhead = { guide = "https://www.wowhead.com/guide/classes/warlock/destruction/midnight-season-2", bis = "https://www.wowhead.com/guide/classes/warlock/destruction/bis-gear" },

@@ -6,7 +6,7 @@ ClassCodexSources["EVOKER"] = {
     wowhead = { guide = "https://www.wowhead.com/guide/classes/evoker/augmentation/midnight-season-2", bis = "https://www.wowhead.com/guide/classes/evoker/augmentation/bis-gear" },
     icyveins = { bis = "https://www.icy-veins.com/wow/augmentation-evoker-pve-dps-gear-best-in-slot", talents = "https://www.icy-veins.com/wow/augmentation-evoker-pve-dps-spec-builds-talents", leveling = "https://www.icy-veins.com/wow/augmentation-evoker-leveling-guide" },
     archon = { build = "https://www.archon.gg/wow/builds/augmentation/evoker/mythic-plus/overview/10/all-dungeons/this-week" },
-    murlok = { pvp = "https://murlok.io/evoker/augmentation/solo" },
+    murlok = { pvp = "https://murlok.io/evoker/augmentation/blitz" },
   },
   ["devastation"] = {
     wowhead = { guide = "https://www.wowhead.com/guide/classes/evoker/devastation/midnight-season-2", bis = "https://www.wowhead.com/guide/classes/evoker/devastation/bis-gear" },

@@ -3,6 +3,7 @@
 ClassCodexMurlokPvp = ClassCodexMurlokPvp or {}
 ClassCodexMurlokPvp["PRIEST"] = {
   ["discipline"] = {
+    bracket = "solo",
     statPriority = {
       {
         key = "versatility",
@@ -126,6 +127,7 @@ ClassCodexMurlokPvp["PRIEST"] = {
     },
   },
   ["holy"] = {
+    bracket = "solo",
     statPriority = {
       {
         key = "versatility",
@@ -274,6 +276,7 @@ ClassCodexMurlokPvp["PRIEST"] = {
     },
   },
   ["shadow"] = {
+    bracket = "solo",
     statPriority = {
       {
         key = "versatility",

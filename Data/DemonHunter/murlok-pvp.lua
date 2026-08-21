@@ -3,6 +3,7 @@
 ClassCodexMurlokPvp = ClassCodexMurlokPvp or {}
 ClassCodexMurlokPvp["DEMONHUNTER"] = {
   ["devourer"] = {
+    bracket = "solo",
     statPriority = {
       {
         key = "haste",
@@ -102,6 +103,7 @@ ClassCodexMurlokPvp["DEMONHUNTER"] = {
     },
   },
   ["havoc"] = {
+    bracket = "solo",
     statPriority = {
       {
         key = "mastery",
@@ -223,6 +225,7 @@ ClassCodexMurlokPvp["DEMONHUNTER"] = {
     },
   },
   ["vengeance"] = {
+    bracket = "blitz",
     statPriority = {
       {
         key = "versatility",

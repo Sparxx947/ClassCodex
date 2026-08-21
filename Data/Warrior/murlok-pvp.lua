@@ -3,6 +3,7 @@
 ClassCodexMurlokPvp = ClassCodexMurlokPvp or {}
 ClassCodexMurlokPvp["WARRIOR"] = {
   ["arms"] = {
+    bracket = "solo",
     statPriority = {
       {
         key = "versatility",
@@ -125,6 +126,7 @@ ClassCodexMurlokPvp["WARRIOR"] = {
     },
   },
   ["fury"] = {
+    bracket = "solo",
     statPriority = {
       {
         key = "versatility",
@@ -246,6 +248,149 @@ ClassCodexMurlokPvp["WARRIOR"] = {
         },
       },
       Wrist = {
+        {
+          itemId = 237908,
+        },
+        {
+          itemId = 270469,
+        },
+      },
+    },
+  },
+  ["protection"] = {
+    bracket = "blitz",
+    statPriority = {
+      {
+        key = "versatility",
+        rating = 1315,
+      },
+      {
+        key = "mastery",
+        rating = 382,
+      },
+      {
+        key = "haste",
+        rating = 250,
+      },
+      {
+        key = "crit",
+        rating = 164,
+      },
+    },
+    bisGear = {
+      Back = {
+        {
+          itemId = 239678,
+        },
+        {
+          itemId = 270539,
+        },
+        {
+          itemId = 270541,
+        },
+      },
+      Chest = {
+        {
+          itemId = 0,
+        },
+      },
+      Feet = {
+        {
+          itemId = 0,
+        },
+      },
+      Hands = {
+        {
+          itemId = 270478,
+        },
+        {
+          itemId = 270810,
+        },
+        {
+          itemId = 270377,
+        },
+      },
+      Head = {
+        {
+          itemId = 0,
+        },
+      },
+      Legs = {
+        {
+          itemId = 244641,
+        },
+      },
+      ["Main Hand"] = {
+        {
+          itemId = 0,
+        },
+      },
+      Neck = {
+        {
+          itemId = 240952,
+        },
+        {
+          itemId = 270533,
+        },
+        {
+          itemId = 270534,
+        },
+      },
+      ["Off Hand"] = {
+        {
+          itemId = 270445,
+        },
+        {
+          itemId = 270404,
+        },
+      },
+      Prismatic = {
+        {
+          itemId = 0,
+        },
+        {
+          itemId = 241144,
+        },
+        {
+          itemId = 240916,
+        },
+      },
+      Rings = {
+        {
+          itemId = 0,
+        },
+      },
+      Shoulders = {
+        {
+          itemId = 0,
+        },
+      },
+      Trinkets = {
+        {
+          itemId = 270556,
+        },
+        {
+          itemId = 270555,
+        },
+        {
+          itemId = 270602,
+        },
+      },
+      Waist = {
+        {
+          itemId = 270471,
+        },
+        {
+          itemId = 237907,
+        },
+        {
+          itemId = 270470,
+        },
+      },
+      Wrist = {
+        {
+          itemId = 244742,
+        },
         {
           itemId = 237908,
         },

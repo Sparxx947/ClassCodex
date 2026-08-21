@@ -12,7 +12,7 @@ ClassCodexSources["PALADIN"] = {
     wowhead = { guide = "https://www.wowhead.com/guide/classes/paladin/protection/midnight-season-2", bis = "https://www.wowhead.com/guide/classes/paladin/protection/bis-gear" },
     icyveins = { bis = "https://www.icy-veins.com/wow/protection-paladin-pve-tank-gear-best-in-slot", talents = "https://www.icy-veins.com/wow/protection-paladin-pve-tank-spec-builds-talents", leveling = "https://www.icy-veins.com/wow/protection-paladin-leveling-guide" },
     archon = { build = "https://www.archon.gg/wow/builds/protection/paladin/mythic-plus/overview/10/all-dungeons/this-week" },
-    murlok = { pvp = "https://murlok.io/paladin/protection/solo" },
+    murlok = { pvp = "https://murlok.io/paladin/protection/blitz" },
   },
   ["retribution"] = {
     wowhead = { guide = "https://www.wowhead.com/guide/classes/paladin/retribution/midnight-season-2", bis = "https://www.wowhead.com/guide/classes/paladin/retribution/bis-gear" },

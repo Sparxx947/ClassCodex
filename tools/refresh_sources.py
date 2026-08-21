@@ -10,10 +10,11 @@ Murlok, Wowhead's BiS page). Two do not:
     ("high-keys" -> "10"). The current slug is read out of the freshly
     scraped Data/*/archon-talents.lua rather than guessed.
 
-Every rebuilt link is then requested. Wowhead answers 403 to any
-non-browser client — that is its bot protection, not a broken link, so
-Wowhead links are reported as unverified instead of counted as failures.
-Use --verify-file to feed in statuses collected from a real browser.
+Every rebuilt link is then requested. Wowhead's WAF rejects clients that
+do not send a full browser header set; ccutil sends them, so all 280
+links verify directly. The 403 path is kept as a distinct outcome rather
+than a failure, because if Wowhead tightens that again a 403 says
+"blocked", not "gone", and the two must not be confused.
 
 Usage:
     python3 tools/refresh_sources.py --wowhead-season midnight-season-2

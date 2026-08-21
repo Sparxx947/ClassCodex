@@ -2,7 +2,119 @@
 -- Source: murlok.io
 ClassCodexMurlokPvp = ClassCodexMurlokPvp or {}
 ClassCodexMurlokPvp["EVOKER"] = {
+  ["augmentation"] = {
+    bracket = "blitz",
+    statPriority = {
+      {
+        key = "versatility",
+        rating = 1181,
+      },
+      {
+        key = "haste",
+        rating = 1073,
+      },
+      {
+        key = "mastery",
+        rating = 52,
+      },
+      {
+        key = "crit",
+        rating = 36,
+      },
+    },
+    bisGear = {
+      Back = {
+        {
+          itemId = 270540,
+        },
+        {
+          itemId = 255914,
+        },
+      },
+      Chest = {
+        {
+          itemId = 0,
+        },
+      },
+      Feet = {
+        {
+          itemId = 0,
+        },
+      },
+      Hands = {
+        {
+          itemId = 270494,
+        },
+        {
+          itemId = 270730,
+        },
+      },
+      Head = {
+        {
+          itemId = 0,
+        },
+      },
+      Legs = {
+        {
+          itemId = 240133,
+        },
+      },
+      ["Main Hand"] = {
+        {
+          itemId = 0,
+        },
+      },
+      Neck = {
+        {
+          itemId = 240952,
+        },
+      },
+      Prismatic = {
+        {
+          itemId = 240894,
+        },
+        {
+          itemId = 241143,
+        },
+        {
+          itemId = 240888,
+        },
+      },
+      Rings = {
+        {
+          itemId = 0,
+        },
+      },
+      Shoulders = {
+        {
+          itemId = 0,
+        },
+      },
+      Trinkets = {
+        {
+          itemId = 270558,
+        },
+        {
+          itemId = 270556,
+        },
+      },
+      Waist = {
+        {
+          itemId = 270487,
+        },
+      },
+      Wrist = {
+        {
+          itemId = 270484,
+        },
+        {
+          itemId = 244568,
+        },
+      },
+    },
+  },
   ["devastation"] = {
+    bracket = "solo",
     statPriority = {
       {
         key = "versatility",
@@ -100,6 +212,7 @@ ClassCodexMurlokPvp["EVOKER"] = {
     },
   },
   ["preservation"] = {
+    bracket = "solo",
     statPriority = {
       {
         key = "versatility",

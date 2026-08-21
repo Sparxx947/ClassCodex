@@ -44,6 +44,12 @@ _SRC = re.compile(r'\["([a-z-]+)"\] = \{.*?murlok = \{ pvp = "([^"]+)"', re.S)
 # few, and past three the tail is noise.
 MAX_ITEMS_PER_SLOT = 3
 
+# Solo Shuffle has no tank bracket, and some specs are too rare in it to
+# produce a sample. Those pages still exist and still return 200 — they
+# just come back with navigation and nothing else — so the fallback has
+# to be driven by whether a page carries data, not by its status code.
+BRACKETS = ("solo", "3v3", "blitz", "2v2", "rbg")
+
 
 def parse_stats(page: str) -> list[dict]:
     out: list[dict] = []
@@ -86,20 +92,70 @@ def targets() -> list[dict]:
 
 def scrape_spec(target: dict) -> dict:
     name = f"{target['classDir']}/{target['specKey']}"
-    try:
-        page = fetch(target["url"])
-    except urllib.error.HTTPError as exc:
-        log(f"  ! {name}: HTTP {exc.code}")
-        return {}
-    data: dict = {}
-    stats = parse_stats(page)
-    if stats:
-        data["statPriority"] = stats
-    gear = parse_gear(page)
-    if gear:
-        data["bisGear"] = dict(sorted(gear.items()))
-    log(f"  {name}: {len(stats)} stats, {len(gear)} slots")
-    return data
+    base = target["url"].rsplit("/", 1)[0]
+    wanted = target["url"].rsplit("/", 1)[-1]
+    order = [wanted] + [b for b in BRACKETS if b != wanted]
+
+    for bracket in order:
+        url = f"{base}/{bracket}"
+        try:
+            page = fetch(url)
+        except urllib.error.HTTPError as exc:
+            if exc.code != 404:
+                log(f"  ! {name} {bracket}: HTTP {exc.code}")
+            continue
+        stats = parse_stats(page)
+        gear = parse_gear(page)
+        if not stats and not gear:
+            continue
+        data: dict = {"bracket": bracket}
+        if stats:
+            data["statPriority"] = stats
+        if gear:
+            data["bisGear"] = dict(sorted(gear.items()))
+        note = "" if bracket == wanted else f"  (fell back from {wanted})"
+        log(f"  {name}: {len(stats)} stats, {len(gear)} slots "
+            f"[{bracket}]{note}")
+        data["_url"] = url
+        return data
+
+    log(f"  ! {name}: no bracket carries data")
+    return {}
+
+
+_MURLOK_LINK = re.compile(r'(murlok = \{ pvp = ")([^"]+)(" \})')
+
+
+def update_source_links(class_dir: str, specs: dict[str, dict]) -> int:
+    """Repoint sources.lua at whichever bracket actually has data.
+
+    Kept here rather than in refresh_sources.py because only this tool
+    can tell an empty murlok page from a populated one, and linking a
+    tank at a Solo Shuffle page sends the player somewhere blank.
+    """
+    path = DATA / class_dir / "sources.lua"
+    text = path.read_text(encoding="utf-8")
+    changed = 0
+    for spec, data in specs.items():
+        url = data.get("_url")
+        if not url:
+            continue
+        start = text.find(f'["{spec}"] = {{')
+        if start < 0:
+            continue
+        # The next spec block, found on its full line prefix. Searching
+        # for a bare '"] = {' would match this spec's own closing quote
+        # whenever the slug is short enough, truncating the chunk to
+        # nothing — silently skipping every six-letter spec.
+        end = text.find('\n  ["', start + 1)
+        chunk = text[start:end if end > 0 else len(text)]
+        new_chunk, hits = _MURLOK_LINK.subn(rf"\g<1>{url}\g<3>", chunk)
+        if hits and new_chunk != chunk:
+            text = text[:start] + new_chunk + text[start + len(chunk):]
+            changed += 1
+    if changed:
+        path.write_text(text, encoding="utf-8")
+    return changed
 
 
 def main() -> int:
@@ -122,10 +178,13 @@ def main() -> int:
                 by_class.setdefault(t["classDir"], {})[t["specKey"]] = data
 
     for class_dir, specs in sorted(by_class.items()):
+        relinked = update_source_links(class_dir, specs)
+        payload = {spec: {k: v for k, v in data.items() if k != "_url"}
+                   for spec, data in sorted(specs.items())}
         write_lua(DATA / class_dir / "murlok-pvp.lua", "ClassCodexMurlokPvp",
-                  CLASS_DIRS[class_dir], dict(sorted(specs.items())),
-                  header="Source: murlok.io")
-        log(f"wrote Data/{class_dir}/murlok-pvp.lua")
+                  CLASS_DIRS[class_dir], payload, header="Source: murlok.io")
+        note = f", {relinked} link(s) repointed" if relinked else ""
+        log(f"wrote Data/{class_dir}/murlok-pvp.lua{note}")
     return 0
 
 

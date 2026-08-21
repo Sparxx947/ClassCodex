@@ -3,6 +3,7 @@
 ClassCodexMurlokPvp = ClassCodexMurlokPvp or {}
 ClassCodexMurlokPvp["MONK"] = {
   ["mistweaver"] = {
+    bracket = "solo",
     statPriority = {
       {
         key = "versatility",
@@ -115,6 +116,7 @@ ClassCodexMurlokPvp["MONK"] = {
     },
   },
   ["windwalker"] = {
+    bracket = "solo",
     statPriority = {
       {
         key = "versatility",

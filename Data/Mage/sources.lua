@@ -6,7 +6,7 @@ ClassCodexSources["MAGE"] = {
     wowhead = { guide = "https://www.wowhead.com/guide/classes/mage/arcane/midnight-season-2", bis = "https://www.wowhead.com/guide/classes/mage/arcane/bis-gear" },
     icyveins = { bis = "https://www.icy-veins.com/wow/arcane-mage-pve-dps-gear-best-in-slot", talents = "https://www.icy-veins.com/wow/arcane-mage-pve-dps-spec-builds-talents", leveling = "https://www.icy-veins.com/wow/arcane-mage-leveling-guide" },
     archon = { build = "https://www.archon.gg/wow/builds/arcane/mage/mythic-plus/overview/10/all-dungeons/this-week" },
-    murlok = { pvp = "https://murlok.io/mage/arcane/solo" },
+    murlok = { pvp = "https://murlok.io/mage/arcane/3v3" },
   },
   ["fire"] = {
     wowhead = { guide = "https://www.wowhead.com/guide/classes/mage/fire/midnight-season-2", bis = "https://www.wowhead.com/guide/classes/mage/fire/bis-gear" },

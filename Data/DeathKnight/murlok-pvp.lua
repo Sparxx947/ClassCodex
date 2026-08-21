@@ -2,7 +2,218 @@
 -- Source: murlok.io
 ClassCodexMurlokPvp = ClassCodexMurlokPvp or {}
 ClassCodexMurlokPvp["DEATHKNIGHT"] = {
+  ["blood"] = {
+    bracket = "blitz",
+    statPriority = {
+      {
+        key = "versatility",
+        rating = 1148,
+      },
+      {
+        key = "haste",
+        rating = 733,
+      },
+      {
+        key = "mastery",
+        rating = 443,
+      },
+      {
+        key = "leech",
+        rating = 124,
+      },
+      {
+        key = "crit",
+        rating = 22,
+      },
+    },
+    bisGear = {
+      Back = {
+        {
+          itemId = 270539,
+        },
+        {
+          itemId = 270540,
+        },
+      },
+      Chest = {
+        {
+          itemId = 0,
+        },
+      },
+      Feet = {
+        {
+          itemId = 0,
+        },
+      },
+      Hands = {
+        {
+          itemId = 271475,
+        },
+      },
+      Head = {
+        {
+          itemId = 0,
+        },
+      },
+      Legs = {
+        {
+          itemId = 244641,
+        },
+      },
+      ["Main Hand"] = {
+        {
+          itemId = 0,
+        },
+      },
+      Neck = {
+        {
+          itemId = 240952,
+        },
+      },
+      Prismatic = {
+        {
+          itemId = 240888,
+        },
+        {
+          itemId = 240894,
+        },
+        {
+          itemId = 241144,
+        },
+      },
+      Rings = {
+        {
+          itemId = 0,
+        },
+      },
+      Shoulders = {
+        {
+          itemId = 0,
+        },
+      },
+      Trinkets = {
+        {
+          itemId = 270558,
+        },
+        {
+          itemId = 270556,
+        },
+      },
+      Waist = {
+        {
+          itemId = 270471,
+        },
+        {
+          itemId = 270381,
+        },
+      },
+      Wrist = {
+        {
+          itemId = 270468,
+        },
+        {
+          itemId = 270469,
+        },
+      },
+    },
+  },
+  ["frost"] = {
+    bracket = "3v3",
+    statPriority = {
+      {
+        key = "versatility",
+        rating = 1174,
+      },
+      {
+        key = "mastery",
+        rating = 779,
+      },
+      {
+        key = "haste",
+        rating = 212,
+      },
+    },
+    bisGear = {
+      Back = {
+        {
+          itemId = 270539,
+        },
+      },
+      Chest = {
+        {
+          itemId = 270482,
+        },
+      },
+      Feet = {
+        {
+          itemId = 237902,
+        },
+      },
+      Hands = {
+        {
+          itemId = 270778,
+        },
+      },
+      Head = {
+        {
+          itemId = 270477,
+        },
+      },
+      Legs = {
+        {
+          itemId = 270475,
+        },
+      },
+      ["Main Hand"] = {
+        {
+          itemId = 0,
+        },
+      },
+      Neck = {
+        {
+          itemId = 270532,
+        },
+      },
+      Prismatic = {
+        {
+          itemId = 240902,
+        },
+      },
+      Rings = {
+        {
+          itemId = 240951,
+        },
+        {
+          itemId = 270535,
+        },
+      },
+      Shoulders = {
+        {
+          itemId = 270472,
+        },
+      },
+      Trinkets = {
+        {
+          itemId = 270559,
+        },
+        {
+          itemId = 270556,
+        },
+      },
+      Waist = {
+        {
+          itemId = 270471,
+        },
+      },
+      Wrist = {
+        {
+          itemId = 270469,
+        },
+      },
+    },
+  },
   ["unholy"] = {
+    bracket = "solo",
     statPriority = {
       {
         key = "versatility",

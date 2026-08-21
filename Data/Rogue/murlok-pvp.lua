@@ -3,6 +3,7 @@
 ClassCodexMurlokPvp = ClassCodexMurlokPvp or {}
 ClassCodexMurlokPvp["ROGUE"] = {
   ["assassination"] = {
+    bracket = "solo",
     statPriority = {
       {
         key = "versatility",
@@ -121,6 +122,7 @@ ClassCodexMurlokPvp["ROGUE"] = {
     },
   },
   ["outlaw"] = {
+    bracket = "solo",
     statPriority = {
       {
         key = "versatility",
@@ -220,6 +222,7 @@ ClassCodexMurlokPvp["ROGUE"] = {
     },
   },
   ["subtlety"] = {
+    bracket = "solo",
     statPriority = {
       {
         key = "versatility",

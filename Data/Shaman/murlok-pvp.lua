@@ -3,6 +3,7 @@
 ClassCodexMurlokPvp = ClassCodexMurlokPvp or {}
 ClassCodexMurlokPvp["SHAMAN"] = {
   ["elemental"] = {
+    bracket = "solo",
     statPriority = {
       {
         key = "versatility",
@@ -118,6 +119,7 @@ ClassCodexMurlokPvp["SHAMAN"] = {
     },
   },
   ["enhancement"] = {
+    bracket = "solo",
     statPriority = {
       {
         key = "versatility",
@@ -238,6 +240,7 @@ ClassCodexMurlokPvp["SHAMAN"] = {
     },
   },
   ["restoration"] = {
+    bracket = "solo",
     statPriority = {
       {
         key = "versatility",

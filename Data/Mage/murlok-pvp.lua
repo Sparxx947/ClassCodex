@@ -2,7 +2,115 @@
 -- Source: murlok.io
 ClassCodexMurlokPvp = ClassCodexMurlokPvp or {}
 ClassCodexMurlokPvp["MAGE"] = {
+  ["arcane"] = {
+    bracket = "3v3",
+    statPriority = {
+      {
+        key = "versatility",
+        rating = 1174,
+      },
+      {
+        key = "haste",
+        rating = 951,
+      },
+      {
+        key = "mastery",
+        rating = 60,
+      },
+    },
+    bisGear = {
+      Back = {
+        {
+          itemId = 270540,
+        },
+      },
+      Chest = {
+        {
+          itemId = 0,
+        },
+      },
+      Feet = {
+        {
+          itemId = 0,
+        },
+      },
+      Hands = {
+        {
+          itemId = 271565,
+        },
+        {
+          itemId = 270527,
+        },
+      },
+      Head = {
+        {
+          itemId = 0,
+        },
+      },
+      Legs = {
+        {
+          itemId = 240133,
+        },
+      },
+      ["Main Hand"] = {
+        {
+          itemId = 0,
+        },
+      },
+      Neck = {
+        {
+          itemId = 270534,
+        },
+        {
+          itemId = 240952,
+        },
+      },
+      Prismatic = {
+        {
+          itemId = 240894,
+        },
+        {
+          itemId = 241143,
+        },
+        {
+          itemId = 240902,
+        },
+      },
+      Rings = {
+        {
+          itemId = 0,
+        },
+      },
+      Shoulders = {
+        {
+          itemId = 0,
+        },
+      },
+      Trinkets = {
+        {
+          itemId = 270558,
+        },
+        {
+          itemId = 270556,
+        },
+      },
+      Waist = {
+        {
+          itemId = 270519,
+        },
+      },
+      Wrist = {
+        {
+          itemId = 270516,
+        },
+        {
+          itemId = 239677,
+        },
+      },
+    },
+  },
   ["fire"] = {
+    bracket = "solo",
     statPriority = {
       {
         key = "versatility",
@@ -112,6 +220,7 @@ ClassCodexMurlokPvp["MAGE"] = {
     },
   },
   ["frost"] = {
+    bracket = "solo",
     statPriority = {
       {
         key = "versatility",

@@ -3,6 +3,7 @@
 ClassCodexMurlokPvp = ClassCodexMurlokPvp or {}
 ClassCodexMurlokPvp["WARLOCK"] = {
   ["affliction"] = {
+    bracket = "solo",
     statPriority = {
       {
         key = "versatility",
@@ -118,7 +119,118 @@ ClassCodexMurlokPvp["WARLOCK"] = {
       },
     },
   },
+  ["demonology"] = {
+    bracket = "3v3",
+    statPriority = {
+      {
+        key = "versatility",
+        rating = 1141,
+      },
+      {
+        key = "haste",
+        rating = 982,
+      },
+      {
+        key = "mastery",
+        rating = 67,
+      },
+    },
+    bisGear = {
+      Back = {
+        {
+          itemId = 239678,
+        },
+        {
+          itemId = 270540,
+        },
+      },
+      Chest = {
+        {
+          itemId = 0,
+        },
+      },
+      Feet = {
+        {
+          itemId = 0,
+        },
+      },
+      Hands = {
+        {
+          itemId = 270527,
+        },
+      },
+      Head = {
+        {
+          itemId = 0,
+        },
+      },
+      Legs = {
+        {
+          itemId = 240133,
+        },
+      },
+      ["Main Hand"] = {
+        {
+          itemId = 0,
+        },
+      },
+      Neck = {
+        {
+          itemId = 270534,
+        },
+      },
+      Prismatic = {
+        {
+          itemId = 240894,
+        },
+        {
+          itemId = 0,
+        },
+        {
+          itemId = 241143,
+        },
+      },
+      Rings = {
+        {
+          itemId = 0,
+        },
+      },
+      Shoulders = {
+        {
+          itemId = 0,
+        },
+      },
+      Trinkets = {
+        {
+          itemId = 270556,
+        },
+        {
+          itemId = 270559,
+        },
+        {
+          itemId = 270558,
+        },
+      },
+      Waist = {
+        {
+          itemId = 239682,
+        },
+        {
+          itemId = 270519,
+        },
+      },
+      Wrist = {
+        {
+          itemId = 244739,
+        },
+        {
+          itemId = 270516,
+        },
+      },
+    },
+  },
   ["destruction"] = {
+    bracket = "solo",
     statPriority = {
       {
         key = "haste",

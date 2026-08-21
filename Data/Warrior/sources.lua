@@ -18,6 +18,6 @@ ClassCodexSources["WARRIOR"] = {
     wowhead = { guide = "https://www.wowhead.com/guide/classes/warrior/protection/midnight-season-2", bis = "https://www.wowhead.com/guide/classes/warrior/protection/bis-gear" },
     icyveins = { bis = "https://www.icy-veins.com/wow/protection-warrior-pve-tank-gear-best-in-slot", talents = "https://www.icy-veins.com/wow/protection-warrior-pve-tank-spec-builds-talents", leveling = "https://www.icy-veins.com/wow/protection-warrior-leveling-guide" },
     archon = { build = "https://www.archon.gg/wow/builds/protection/warrior/mythic-plus/overview/10/all-dungeons/this-week" },
-    murlok = { pvp = "https://murlok.io/warrior/protection/solo" },
+    murlok = { pvp = "https://murlok.io/warrior/protection/blitz" },
   },
 }

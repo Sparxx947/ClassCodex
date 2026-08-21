@@ -3,6 +3,7 @@
 ClassCodexMurlokPvp = ClassCodexMurlokPvp or {}
 ClassCodexMurlokPvp["PALADIN"] = {
   ["holy"] = {
+    bracket = "solo",
     statPriority = {
       {
         key = "versatility",
@@ -133,7 +134,132 @@ ClassCodexMurlokPvp["PALADIN"] = {
       },
     },
   },
+  ["protection"] = {
+    bracket = "blitz",
+    statPriority = {
+      {
+        key = "versatility",
+        rating = 1222,
+      },
+      {
+        key = "mastery",
+        rating = 614,
+      },
+      {
+        key = "haste",
+        rating = 380,
+      },
+      {
+        key = "crit",
+        rating = 28,
+      },
+    },
+    bisGear = {
+      Back = {
+        {
+          itemId = 239678,
+        },
+        {
+          itemId = 270539,
+        },
+      },
+      Chest = {
+        {
+          itemId = 0,
+        },
+      },
+      ["Eversong Diamond"] = {
+        {
+          itemId = 240983,
+        },
+      },
+      Feet = {
+        {
+          itemId = 0,
+        },
+      },
+      Hands = {
+        {
+          itemId = 270478,
+        },
+      },
+      Head = {
+        {
+          itemId = 0,
+        },
+      },
+      Legs = {
+        {
+          itemId = 244641,
+        },
+      },
+      ["Main Hand"] = {
+        {
+          itemId = 0,
+        },
+      },
+      Neck = {
+        {
+          itemId = 240952,
+        },
+        {
+          itemId = 270532,
+        },
+      },
+      ["Off Hand"] = {
+        {
+          itemId = 270445,
+        },
+      },
+      Prismatic = {
+        {
+          itemId = 240894,
+        },
+        {
+          itemId = 241144,
+        },
+        {
+          itemId = 240902,
+        },
+      },
+      Rings = {
+        {
+          itemId = 0,
+        },
+      },
+      Shoulders = {
+        {
+          itemId = 0,
+        },
+      },
+      Trinkets = {
+        {
+          itemId = 270558,
+        },
+        {
+          itemId = 270556,
+        },
+      },
+      Waist = {
+        {
+          itemId = 270471,
+        },
+        {
+          itemId = 270381,
+        },
+      },
+      Wrist = {
+        {
+          itemId = 237908,
+        },
+        {
+          itemId = 270469,
+        },
+      },
+    },
+  },
   ["retribution"] = {
+    bracket = "solo",
     statPriority = {
       {
         key = "versatility",
