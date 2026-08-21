@@ -6,12 +6,10 @@ local L = ns.L
 
 -- Tab labels
 L["tab.guide"] = "Guía"
-L["tab.enchants_gems"] = "Encantamientos y Gemas"
 L["tab.enchants"] = "Encantamientos"
 L["tab.gems"] = "Gemas"
 L["tab.consumables"] = "Consumibles"
 L["tab.trinkets"] = "Abalorios"
-L["tab.crafts"] = "Fabricaciones"
 L["tab.bis_gear"] = "Mejor equipo"
 L["tab.best_in_slot"] = "Mejor equipo"
 L["bis.help.intro"] = "Equipo recomendado por ranura. Usa el menú de fuente para comparar guías."
@@ -52,16 +50,7 @@ L["tooltip.bis_header"] = "Mejor equipo"
 L["tooltip.source"] = "Fuente"
 
 -- Rotation / stat contexts (Wowhead headings)
-L["rotation.single_target"] = "Objetivo único"
-L["rotation.multitarget"] = "Multi-objetivo"
-L["rotation.opener"] = "Apertura"
-L["rotation.aoe_opener"] = "Apertura en área"
-L["rotation.single_target_opener"] = "Apertura objetivo único"
-L["rotation.easy_mode"] = "Modo fácil"
-L["rotation.opener_cooldowns"] = "Apertura / Cooldowns"
 L["context.mythic_plus"] = "Mítico+"
-L["rotation.dps_priority"] = "Prioridad de DPS"
-L["rotation.healing_priority"] = "Prioridad de sanación"
 -- L["settings.header.general"] handled by the Settings section below ("General").
 
 -- Consumable labels
@@ -76,8 +65,6 @@ L["gem.primary"] = "Primaria"
 L["gem.secondary"] = "Secundaria"
 
 -- Craft section headers
-L["craft.early"] = "Fabricaciones iniciales"
-L["craft.bis"] = "Mejores fabricaciones"
 
 -- Talent build fallback
 L["talent.build"] = "Build"
@@ -88,19 +75,14 @@ L["empty.no_data"] = "No hay datos disponibles para esta especialización."
 L["empty.no_builds_details"] = "No hay builds disponibles — consulta Wowhead para más detalles."
 L["empty.no_builds_for"] = "No hay builds para %s — consulta Wowhead."
 L["empty.no_rotation_for_details"] = "No hay rotación para %s — consulta Wowhead para más detalles."
-L["empty.no_rotation_for"] = "No hay rotación para %s — consulta Wowhead."
 
 -- About panel
 L["about.title"] = "Acerca de Class Codex v%s"
 L["about.description"] = "Prioridades de atributos, talentos, rotación y equipo para tu especialización. Orientativas — simula con Raidbots para resultados precisos."
-L["about.links"] = "Enlaces:"
 L["about.help_hint"] = "Escribe /cc help para ver la lista de comandos."
 L["attribution.copy_url"] = "Haz clic para copiar el enlace"
 L["attribution.visit_source"] = "Visita la fuente: %s"
 L["attribution.visit_cta"] = "Descubre"
-L["attribution.source"] = "Fuente:"
-L["about.community"] = "Comunidad"
-L["about.role.compendium"] = "Explora todas las especs"
 L["about.role.settings"] = "Opciones y visualización"
 L["about.role.github"] = "Informar de un error o pedir ayuda"
 L["about.data_sources"] = "Fuentes de datos"
@@ -131,7 +113,6 @@ L["settings.header.panel"] = "Panel"
 L["settings.label.stat_priority_ranks"] = "Rankings de atributos"
 L["settings.label.wowhead_bis"] = "Info BiS Wowhead en descripciones"
 L["settings.label.icy_veins_bis"] = "Info BiS Icy Veins en descripciones"
-L["settings.label.bis_source"] = "Fuente BiS"
 L["settings.label.trinket_tier"] = "Nivel de abalorio en descripciones"
 L["settings.label.bis_scope"] = "Alcance del BiS en descripciones"
 L["settings.label.highlight_owned"] = "Resaltar equipo en posesión"
@@ -307,8 +288,6 @@ L["settings.label.horizontal_offset"] = "Desplazamiento horizontal"
 L["settings.tooltip.horizontal_offset"] = "Desplazamiento horizontal (píxeles) desde la esquina superior derecha del panel del personaje."
 L["settings.label.vertical_offset"] = "Desplazamiento vertical"
 L["settings.tooltip.vertical_offset"] = "Desplazamiento vertical (píxeles) desde la esquina superior derecha del panel del personaje."
-L["settings.label.reset_position"] = "Restablecer posición"
-L["settings.tooltip.reset_position"] = "Restablece el botón del equipo a su posición predeterminada."
 
 -- Footer
 L["footer.today"] = "Hoy"

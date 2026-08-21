@@ -6,12 +6,10 @@ local L = ns.L
 
 -- Tab labels
 L["tab.guide"] = "Гайд"
-L["tab.enchants_gems"] = "Чары и Камни"
 L["tab.enchants"] = "Чары"
 L["tab.gems"] = "Камни"
 L["tab.consumables"] = "Расходники"
 L["tab.trinkets"] = "Аксессуары"
-L["tab.crafts"] = "Крафт"
 L["tab.bis_gear"] = "Лучшая экипировка"
 L["tab.best_in_slot"] = "Лучшая экипировка"
 L["bis.help.intro"] = "Рекомендуемая экипировка для каждого слота. Используйте список источников для сравнения гайдов."
@@ -52,16 +50,7 @@ L["tooltip.bis_header"] = "Лучшая экипировка"
 L["tooltip.source"] = "Источник"
 
 -- Rotation / stat contexts (Wowhead headings)
-L["rotation.single_target"] = "Одиночная цель"
-L["rotation.multitarget"] = "Несколько целей"
-L["rotation.opener"] = "Открывающая ротация"
-L["rotation.aoe_opener"] = "АоЕ-открывающая"
-L["rotation.single_target_opener"] = "Открывающая для одной цели"
-L["rotation.easy_mode"] = "Простой режим"
-L["rotation.opener_cooldowns"] = "Открытие / Кулдауны"
 L["context.mythic_plus"] = "Эпохальный+"
-L["rotation.dps_priority"] = "Приоритет урона"
-L["rotation.healing_priority"] = "Приоритет лечения"
 -- L["settings.header.general"] handled by the Settings section below ("Общие").
 
 -- Consumable labels
@@ -76,8 +65,6 @@ L["gem.primary"] = "Основной"
 L["gem.secondary"] = "Вторичный"
 
 -- Craft section headers
-L["craft.early"] = "Ранний крафт"
-L["craft.bis"] = "Лучший крафт"
 
 -- Talent build fallback
 L["talent.build"] = "Билд"
@@ -88,19 +75,14 @@ L["empty.no_data"] = "Нет данных для этой специализац
 L["empty.no_builds_details"] = "Нет доступных билдов — подробности на Wowhead."
 L["empty.no_builds_for"] = "Нет билдов для %s — см. Wowhead."
 L["empty.no_rotation_for_details"] = "Нет ротации для %s — подробности на Wowhead."
-L["empty.no_rotation_for"] = "Нет ротации для %s — см. Wowhead."
 
 -- About panel
 L["about.title"] = "О Class Codex v%s"
 L["about.description"] = "Приоритеты характеристик, таланты, ротация и экипировка для вашей специализации. Общие рекомендации — для точности симулируйте в Raidbots."
-L["about.links"] = "Ссылки:"
 L["about.help_hint"] = "Введите /cc help, чтобы увидеть список команд."
 L["attribution.copy_url"] = "Нажмите, чтобы скопировать ссылку"
 L["attribution.visit_source"] = "Открыть источник: %s"
 L["attribution.visit_cta"] = "Открыть"
-L["attribution.source"] = "Источник:"
-L["about.community"] = "Сообщество"
-L["about.role.compendium"] = "Все специализации"
 L["about.role.settings"] = "Настройки и отображение"
 L["about.role.github"] = "Сообщить об ошибке или попросить помощи"
 L["about.data_sources"] = "Источники данных"
@@ -131,7 +113,6 @@ L["settings.header.panel"] = "Панель"
 L["settings.label.stat_priority_ranks"] = "Ранги приоритета характеристик"
 L["settings.label.wowhead_bis"] = "Инфо BiS Wowhead в подсказках"
 L["settings.label.icy_veins_bis"] = "Инфо BiS Icy Veins в подсказках"
-L["settings.label.bis_source"] = "Источник BiS"
 L["settings.label.trinket_tier"] = "Уровень аксессуаров в подсказках"
 L["settings.label.bis_scope"] = "Охват BiS в подсказках"
 L["settings.label.highlight_owned"] = "Выделять имеющееся снаряжение"
@@ -307,8 +288,6 @@ L["settings.label.horizontal_offset"] = "Смещение по горизонт�
 L["settings.tooltip.horizontal_offset"] = "Смещение по горизонтали (в пикселях) от правого верхнего угла окна персонажа."
 L["settings.label.vertical_offset"] = "Смещение по вертикали"
 L["settings.tooltip.vertical_offset"] = "Смещение по вертикали (в пикселях) от правого верхнего угла окна персонажа."
-L["settings.label.reset_position"] = "Сбросить положение"
-L["settings.tooltip.reset_position"] = "Возвращает кнопку снаряжения в положение по умолчанию."
 
 -- Footer
 L["footer.today"] = "Сегодня"

@@ -6,12 +6,10 @@ local L = ns.L
 
 -- Tab labels
 L["tab.guide"] = "指南"
-L["tab.enchants_gems"] = "附魔與寶石"
 L["tab.enchants"] = "附魔"
 L["tab.gems"] = "寶石"
 L["tab.consumables"] = "消耗品"
 L["tab.trinkets"] = "飾品"
-L["tab.crafts"] = "製造"
 L["tab.bis_gear"] = "最佳裝備"
 L["tab.best_in_slot"] = "最佳裝備"
 L["bis.help.intro"] = "每個部位的推薦裝備。使用來源下拉選單比較攻略。"
@@ -52,16 +50,7 @@ L["tooltip.bis_header"] = "最佳裝備"
 L["tooltip.source"] = "來源"
 
 -- Rotation / stat contexts (Wowhead headings)
-L["rotation.single_target"] = "單一目標"
-L["rotation.multitarget"] = "多目標"
-L["rotation.opener"] = "起手"
-L["rotation.aoe_opener"] = "範圍起手"
-L["rotation.single_target_opener"] = "單一目標起手"
-L["rotation.easy_mode"] = "簡易模式"
-L["rotation.opener_cooldowns"] = "起手 / 冷卻"
 L["context.mythic_plus"] = "傳奇+"
-L["rotation.dps_priority"] = "輸出優先順序"
-L["rotation.healing_priority"] = "治療優先順序"
 -- L["settings.header.general"] handled by the Settings section below ("一般").
 
 -- Consumable labels
@@ -76,8 +65,6 @@ L["gem.primary"] = "主寶石"
 L["gem.secondary"] = "副寶石"
 
 -- Craft section headers
-L["craft.early"] = "前期製造"
-L["craft.bis"] = "最佳製造"
 
 -- Talent build fallback
 L["talent.build"] = "配置"
@@ -88,19 +75,14 @@ L["empty.no_data"] = "此專精暫無資料。"
 L["empty.no_builds_details"] = "暫無可用配置 — 請查看 Wowhead 了解詳情。"
 L["empty.no_builds_for"] = "%s 暫無配置 — 請查看 Wowhead。"
 L["empty.no_rotation_for_details"] = "%s 暫無輸出循環 — 請查看 Wowhead 了解詳情。"
-L["empty.no_rotation_for"] = "%s 暫無輸出循環 — 請查看 Wowhead。"
 
 -- About panel
 L["about.title"] = "關於 Class Codex v%s"
 L["about.description"] = "為你目前專精提供屬性優先順序、天賦、輸出循環與裝備。僅供參考，精確結果請用 Raidbots 模擬。"
-L["about.links"] = "連結："
 L["about.help_hint"] = "輸入 /cc help 查看指令清單。"
 L["attribution.copy_url"] = "點擊複製連結"
 L["attribution.visit_source"] = "查看來源：%s"
 L["attribution.visit_cta"] = "查看"
-L["attribution.source"] = "來源："
-L["about.community"] = "社群"
-L["about.role.compendium"] = "瀏覽所有專精"
 L["about.role.settings"] = "選項與顯示"
 L["about.role.github"] = "回報問題或尋求協助"
 L["about.data_sources"] = "資料來源"
@@ -131,7 +113,6 @@ L["settings.header.panel"] = "面板"
 L["settings.label.stat_priority_ranks"] = "屬性優先排名"
 L["settings.label.wowhead_bis"] = "浮動提示Wowhead最佳裝備資訊"
 L["settings.label.icy_veins_bis"] = "浮動提示Icy Veins最佳裝備資訊"
-L["settings.label.bis_source"] = "最佳裝備來源"
 L["settings.label.trinket_tier"] = "浮動提示飾品等級"
 L["settings.label.bis_scope"] = "浮動提示 BiS 範圍"
 L["settings.label.highlight_owned"] = "標記已擁有裝備"
@@ -307,8 +288,6 @@ L["settings.label.horizontal_offset"] = "水平偏移"
 L["settings.tooltip.horizontal_offset"] = "相對於角色面板右上角的水平偏移(像素)。"
 L["settings.label.vertical_offset"] = "垂直偏移"
 L["settings.tooltip.vertical_offset"] = "相對於角色面板右上角的垂直偏移(像素)。"
-L["settings.label.reset_position"] = "重置位置"
-L["settings.tooltip.reset_position"] = "將裝備按鈕恢復到預設位置。"
 
 -- Footer
 L["footer.today"] = "今天"

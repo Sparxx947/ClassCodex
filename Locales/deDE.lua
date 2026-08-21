@@ -6,12 +6,10 @@ local L = ns.L
 
 -- Tab labels
 L["tab.guide"] = "Leitfaden"
-L["tab.enchants_gems"] = "Verzauberungen & Edelsteine"
 L["tab.enchants"] = "Verzauberungen"
 L["tab.gems"] = "Edelsteine"
 L["tab.consumables"] = "Verbrauchsmaterial"
 L["tab.trinkets"] = "Schmuckstücke"
-L["tab.crafts"] = "Herstellungen"
 L["tab.bis_gear"] = "Beste Ausrüstung"
 L["tab.best_in_slot"] = "Beste Ausrüstung"
 L["bis.help.intro"] = "Empfohlene Ausrüstung pro Slot. Über das Quellen-Dropdown kannst du Guides vergleichen."
@@ -52,16 +50,7 @@ L["tooltip.bis_header"] = "Beste Ausrüstung"
 L["tooltip.source"] = "Quelle"
 
 -- Rotation / stat contexts (Wowhead headings)
-L["rotation.single_target"] = "Einzelziel"
-L["rotation.multitarget"] = "Mehrere Ziele"
-L["rotation.opener"] = "Eröffnung"
-L["rotation.aoe_opener"] = "Flächeneröffnung"
-L["rotation.single_target_opener"] = "Einzelziel-Eröffnung"
-L["rotation.easy_mode"] = "Einfacher Modus"
-L["rotation.opener_cooldowns"] = "Eröffnung / Cooldowns"
 L["context.mythic_plus"] = "Mythisch+"
-L["rotation.dps_priority"] = "Schadenspriorität"
-L["rotation.healing_priority"] = "Heilpriorität"
 -- L["settings.header.general"] handled by the Settings section below ("Allgemein").
 
 -- Consumable labels
@@ -76,8 +65,6 @@ L["gem.primary"] = "Primär"
 L["gem.secondary"] = "Sekundär"
 
 -- Craft section headers
-L["craft.early"] = "Frühe Herstellungen"
-L["craft.bis"] = "Beste Herstellungen"
 
 -- Talent build fallback
 L["talent.build"] = "Build"
@@ -88,19 +75,14 @@ L["empty.no_data"] = "Keine Daten für diese Spezialisierung verfügbar."
 L["empty.no_builds_details"] = "Keine Builds verfügbar — siehe Wowhead für Details."
 L["empty.no_builds_for"] = "Keine Builds für %s — siehe Wowhead."
 L["empty.no_rotation_for_details"] = "Keine Rotation für %s — siehe Wowhead für Details."
-L["empty.no_rotation_for"] = "Keine Rotation für %s — siehe Wowhead."
 
 -- About panel
 L["about.title"] = "Über Class Codex v%s"
 L["about.description"] = "Werteprioritäten, Talente, Rotation und Ausrüstung für deine Spezialisierung. Allgemeine Richtlinien – für präzise Ergebnisse mit Raidbots simulieren."
-L["about.links"] = "Links:"
 L["about.help_hint"] = "Gib /cc help ein, um eine Liste der Befehle zu sehen."
 L["attribution.copy_url"] = "Klicken, um den Link zu kopieren"
 L["attribution.visit_source"] = "Quelle ansehen: %s"
 L["attribution.visit_cta"] = "Ansehen"
-L["attribution.source"] = "Quelle:"
-L["about.community"] = "Community"
-L["about.role.compendium"] = "Alle Specs durchsuchen"
 L["about.role.settings"] = "Optionen & Anzeige"
 L["about.role.github"] = "Fehler melden oder Hilfe suchen"
 L["about.data_sources"] = "Datenquellen"
@@ -131,7 +113,6 @@ L["settings.header.panel"] = "Panel"
 L["settings.label.stat_priority_ranks"] = "Wertepriorität-Ränge"
 L["settings.label.wowhead_bis"] = "Wowhead Beste-Ausrüstung-Info in Tooltips"
 L["settings.label.icy_veins_bis"] = "Icy Veins Beste-Ausrüstung-Info in Tooltips"
-L["settings.label.bis_source"] = "BiS-Datenquelle"
 L["settings.label.trinket_tier"] = "Schmuckstück-Stufen in Tooltips"
 L["settings.label.bis_scope"] = "BiS-Tooltip-Umfang"
 L["settings.label.highlight_owned"] = "Vorhandene Ausrüstung hervorheben"
@@ -307,8 +288,6 @@ L["settings.label.horizontal_offset"] = "Horizontaler Versatz"
 L["settings.tooltip.horizontal_offset"] = "Horizontaler Versatz (Pixel) von der oberen rechten Ecke des Charakterfensters."
 L["settings.label.vertical_offset"] = "Vertikaler Versatz"
 L["settings.tooltip.vertical_offset"] = "Vertikaler Versatz (Pixel) von der oberen rechten Ecke des Charakterfensters."
-L["settings.label.reset_position"] = "Position zurücksetzen"
-L["settings.tooltip.reset_position"] = "Stellt die Ausrüstungs-Schaltfläche an ihrer Standardposition wieder her."
 
 -- Footer
 L["footer.today"] = "Heute"
