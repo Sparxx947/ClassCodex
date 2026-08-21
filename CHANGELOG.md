@@ -3,6 +3,29 @@
 Notable changes to this continuation. The addon code is jfstn's work; only
 the changes listed here depart from upstream v0.36.3.
 
+## 0.38.2 — 2026-08-21
+
+### Added
+
+* Downloadable releases. A tagged push builds `ClassCodex-<version>.zip`
+  and publishes it, so installing no longer requires git — extract and
+  drop the `ClassCodex` folder into `Interface/AddOns/`.
+* `tools/check_policy.py` — checks the addon against Blizzard's add-on
+  policy on every push. The audit that found the original Patreon
+  violation was a one-off; this makes it repeatable, so the same thing
+  cannot come back through a careless edit or a merge from upstream.
+  Verified by running it against the unmodified upstream tree, where it
+  reports exactly the violation that was found by hand.
+
+### Changed
+
+* The Credits tab's locale key is `about.credits` rather than
+  `about.supporters`. The value already said "Credits"; the key still
+  said otherwise, which the policy check flagged. The internal tab key
+  stays `supporters` on purpose — it is persisted as
+  `ClassCodexCharDB.activeTab`, so renaming it would invalidate the
+  remembered tab for anyone who had it open.
+
 ## 0.38.1 — 2026-08-21
 
 ### Changed
