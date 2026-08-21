@@ -76,6 +76,7 @@ Individual scrapers, in the order `refresh_all.sh` runs them:
 | `refresh_wowhead_gear.py` | `gear-wowhead.lua` | BiS, enchants, gems, consumables, trinket tiers |
 | `refresh_icyveins.py` | `talents-icyveins`, `gear-icyveins` | |
 | `refresh_murlok.py` | `murlok-pvp.lua` | Rated PvP stats and gear |
+| `refresh_bnet.py` | `bnet-pvp-talents.lua` | Rated PvP loadouts per bracket. Needs Blizzard credentials, so `refresh_all.sh` skips it when none are set |
 
 Two checks run at the end of `refresh_all.sh`, and are worth running on
 their own after any change:
@@ -169,14 +170,11 @@ automation is applying a talent loadout you picked, through the public
 
 ## Known gaps
 
-* `bnet-pvp-talents.lua` still carries the upstream data from 2026-07-02.
-  It came from Blizzard's API by way of the PvP leaderboards. Whether that
-  route still works is genuinely unknown: the `loadouts` field carrying
-  `talent_loadout_code` disappeared from the character specializations
-  endpoint in patch 11.2, reported on the API bug forum on 2025-08-07 and
-  never answered. Confirming it either way needs credentials, so
-  `tools/probe_bnet.py` answers the question in one run before anyone
-  writes a scraper against an API that may not carry the data.
+* `bnet-pvp-talents.lua` needs Blizzard API credentials, so it is the one
+  file `refresh_all.sh` skips by default. `tools/probe_bnet.py` checks in
+  four requests that the API still exposes talent loadouts — it stopped
+  doing so in patch 11.2, and that is the first thing to verify if the
+  scraper ever comes back empty.
 * Brewmaster Monk has no murlok PvP data: the site has no sample in any
   bracket this early in the season. `check_data.py` reports it as a known
   gap rather than failing on it.

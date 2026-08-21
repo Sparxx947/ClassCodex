@@ -20,7 +20,7 @@ tell a deliberate choice from an accident.
 | `<Class>/talents-icyveins.lua` | `ClassCodexIcyVeinsTalentData` | `refresh_icyveins.py` | Icy Veins talent page |
 | `<Class>/gear-icyveins.lua` | `ClassCodexIcyVeinsData` | `refresh_icyveins.py` | Icy Veins BiS page |
 | `<Class>/murlok-pvp.lua` | `ClassCodexMurlokPvp` | `refresh_murlok.py` | murlok.io rated PvP |
-| `<Class>/bnet-pvp-talents.lua` | `ClassCodexBnetPvpTalents` | *(not automated)* | Blizzard API — see below |
+| `<Class>/bnet-pvp-talents.lua` | `ClassCodexBnetPvpTalents` | `refresh_bnet.py` | Blizzard API (needs credentials) |
 | `EmbellishmentEffects.lua` | `ClassCodexEmbellishments` | *(not automated)* | SimC bonus-id table joined with Wowhead |
 
 ## How each site is read
@@ -113,12 +113,59 @@ bars, gear from the per-slot lists. Secondaries with a rating of zero are
 dropped: a zero is not a priority. At most three items per slot are kept —
 past that the tail is noise.
 
-### Blizzard (not automated)
+### Blizzard API
 
-`bnet-pvp-talents.lua` holds rated-PvP loadouts per bracket. Producing it
-means walking the PvP leaderboards through Blizzard's API and reading each
-listed character's loadout, which needs API credentials and a very large
-number of requests. The file still carries upstream's 2026-07-02 data.
+`bnet-pvp-talents.lua` holds rated-PvP loadouts per bracket: what the
+top-rated players of each spec actually run. There is no aggregate
+endpoint, so it walks the PvP leaderboards and reads each listed
+character's profile — roughly 2,400 requests, by far the heaviest
+scraper here. Responses are cached like everything else.
+
+The `loadouts` array carrying `talent_loadout_code` went missing from the
+character specializations endpoint in patch 11.2 (reported 2025-08-07,
+never answered by Blizzard). It is back as of season 42 — `probe_bnet.py`
+confirms that in four requests, and is the thing to run first if this
+scraper ever comes back empty.
+
+Two shapes of leaderboard:
+
+* `shuffle-<class>-<spec>` and `blitz-<class>-<spec>` name the spec, so
+  nothing has to be inferred.
+* `2v2`, `3v3` and `rbg` mix every spec, so each entry's spec comes from
+  the profile that is fetched anyway.
+
+**The trap worth knowing about:** a player listed on
+`shuffle-hunter-beastmastery` may be logged out as Marksmanship. Reading
+their *active* spec files a Marksmanship loadout — Sentinel hero talent
+and all — under Beast Mastery. The scraper matches the group whose spec
+is the one the leaderboard is for, and takes the hero talent from that
+loadout's `selected_hero_talent_tree` rather than from the character's
+`active_hero_talent_tree`, for the same reason.
+
+One build is kept per hero talent, from the highest-ranked player running
+it: an "averaged" loadout code would be a code nobody plays. Talent sets
+are genuinely comparable, so those are counted and the five most common
+are kept.
+
+**Coverage is not uniform, and the reason matters.** `shuffle` and
+`blitz` reach all 40 specs because their leaderboards are per spec. The
+mixed brackets cannot: a spec nobody queues in simply does not appear.
+Sampling only the top of those boards makes it worse — the specs that
+drop out first are the rare ones, which are exactly the ones whose data
+is hardest to get anywhere else — so the whole board is read rather than
+a slice of it.
+
+Even then there is a ceiling, and it is worth knowing before someone
+treats it as a bug: the EU rated battleground board carries about **172
+entries in total**. Whatever fraction of the 40 specs appears in those
+172 players is all the RBG data that exists. 2v2 and 3v3 are far larger
+(roughly 5,000 and 3,600) and cover correspondingly more.
+
+Credentials come from `~/.config/bnet/credentials` or the environment
+(see `ccutil.bnet_credentials`). The file must not be readable beyond its
+owner — the tools refuse it rather than warning. Nothing prints the
+values, and `.gitignore` blocks `credentials` and `*.secret` in every
+directory.
 
 ## Conventions in the generated Lua
 
