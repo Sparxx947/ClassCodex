@@ -836,8 +836,8 @@ craftsTab:SetPoint("TOPLEFT", enhancementsTab, "BOTTOMLEFT", 0, -SIDE_TAB_GAP)
 sideTabs[#sideTabs + 1] = craftsTab
 
 local supporters = {}
-supporters.tab = CreateSideTab(panel, "Interface\\Icons\\Spell_Holy_PrayerOfHealing", L["about.supporters"], "supporters") -- exact same texture path as the Patreon button
-supporters.tab.noDesaturate = true -- keep this one in color so it visually matches the Patreon button
+supporters.tab = CreateSideTab(panel, "Interface\\Icons\\INV_Misc_Book_09", L["about.supporters"], "supporters")
+supporters.tab.noDesaturate = true -- kept in colour so the tab reads as a distinct destination
 supporters.tab.icon:SetDesaturated(false)
 bottomTabs[#bottomTabs + 1] = supporters.tab
 
@@ -1899,18 +1899,15 @@ local function UpdateFooterSource()
 end
 
 
--- Supporters tab content — extracted to Sections/Supporters.lua. The Patreon
--- button is created later (it shares the About-tab button factory) and
--- handed back to the module via SetPatreonButton.
-ns.Sections.Supporters.InitPanel({
+-- Credits tab content — lives in Sections/Credits.lua.
+ns.Sections.Credits.InitPanel({
     parent = contentFrame,
     contentWidth = PANEL_WIDTH - SIDE_TAB_W - CONTENT_INSET * 2 - 10,
 })
 
 -- About tab content — extracted to Sections/About.lua. The module owns the
 -- title, description, slash hint, all action buttons, the button factory,
--- and the lazy separators. It also creates and hands the shared Patreon
--- button to the Supporters tab.
+-- and the lazy separators.
 do
     local addonVersion = C_AddOns and C_AddOns.GetAddOnMetadata
         and C_AddOns.GetAddOnMetadata(addonName, "Version")
@@ -2323,11 +2320,11 @@ function ns:LayoutPanel()
         y = ns:LayoutGearingSections(y)
     end
 
-    -- Supporters tab — Sections/Supporters.lua owns layout when active.
+    -- Credits tab — Sections/Credits.lua owns layout when active.
     if activeTab == "supporters" then
-        y = ns.Sections.Supporters.LayoutPanel(y, { parent = contentFrame, inset = CONTENT_INSET })
+        y = ns.Sections.Credits.LayoutPanel(y, { parent = contentFrame, inset = CONTENT_INSET })
     else
-        ns.Sections.Supporters.HidePanel()
+        ns.Sections.Credits.HidePanel()
     end
 
     -- About tab — Sections/About.lua owns layout when active.
@@ -2393,7 +2390,7 @@ function ns:LayoutPanel()
                 prevTab = tab
             end
         end
-        -- Bottom side tabs (About, Supporters):
+        -- Bottom side tabs (About, Credits):
         --   Floating: anchor to the last top tab so they don't drift down when the
         --             panel expands to fit tall content.
         --   Docked:   anchor to panel bottom (CharacterFrame is fixed-height, so they

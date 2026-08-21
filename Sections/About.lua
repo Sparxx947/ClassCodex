@@ -7,7 +7,7 @@ local About = {}
 ns.Sections.About = About
 
 -------------------------------------------------------------------------------
--- Button factory (also used by Supporters for its Patreon button)
+-- Button factory for the About tab
 -------------------------------------------------------------------------------
 
 local function CreateAboutButton(parent, label, bgR, bgG, bgB, borderR, borderG, borderB)
@@ -89,16 +89,6 @@ function About.InitPanel(opts)
     panel.slashHint = slash
     panel.lastChild = slash
 
-    -- Shared Patreon button for the Supporters tab (its own full-width surface,
-    -- separate from the Community card below).
-    if ns.Sections.Supporters and ns.Sections.Supporters.SetPatreonButton then
-        local supPatreon = CreateAboutButton(opts.parent,
-            "|TInterface\\Icons\\Spell_Holy_PrayerOfHealing:12:12:0:0|t  " .. L["about.support_patreon"],
-            0.6, 0.25, 0.20, 0.98, 0.41, 0.33)
-        SetCopyOnClick(supPatreon, "https://www.patreon.com/classcodex")
-        ns.Sections.Supporters.SetPatreonButton(supPatreon)
-    end
-
     local function classSpec()
         local classToken = select(2, UnitClass("player"))
         local specKey = ns.GetSpecKey and ns.GetSpecKey() or nil
@@ -122,7 +112,7 @@ function About.InitPanel(opts)
         card:SetBackdropColor(0.12, 0.12, 0.12, 0.9)
 
         local c = o.color or { 0.5, 0.5, 0.55 }
-        -- Emphasized cards (Patreon) keep a faint accent-tinted border at rest
+        -- Emphasized cards keep a faint accent-tinted border at rest
         -- so they stand out a touch; everything else uses neutral grey.
         local restR, restG, restB, restA = 0.35, 0.35, 0.35, 0.8
         if o.emphasize then restR, restG, restB, restA = c[1], c[2], c[3], 0.55 end
@@ -207,14 +197,18 @@ function About.InitPanel(opts)
         return fs
     end
 
-    -- Class Codex (addon actions + community): Discord + Settings on one row,
-    -- Patreon alone on the next. The Compendium lives on the title bar now.
+    -- Class Codex (addon actions + community): issue tracker + settings.
+    -- Upstream had a Discord card and a Patreon card here. The Discord
+    -- belongs to the discontinued project, so it pointed at a room where
+    -- nobody answers; the Patreon both asked for money in-game (against
+    -- Blizzard policy rule 5) and asked for it on behalf of a project that
+    -- is no longer maintained. The Compendium lives on the title bar now.
     panel.addonLabel = sectionLabel("Class Codex")
     panel.addonCards = {
         copyCard({
-            texture = "Interface\\AddOns\\ClassCodex\\Textures\\discord", color = { 0.34, 0.40, 0.95 },
-            title = "Discord", role = L["about.role.discord"],
-            urlFn = function() return "https://discord.gg/WY7HQaVkRw" end,
+            texture = "Interface\\Icons\\INV_Misc_Note_01", color = { 0.55, 0.60, 0.68 },
+            title = "GitHub", role = L["about.role.github"],
+            urlFn = function() return "https://github.com/Sparxx947/ClassCodex/issues" end,
         }),
         CreateCard({
             texture = "Interface\\AddOns\\ClassCodex\\Textures\\gear", color = { 0.55, 0.55, 0.58 },
@@ -225,11 +219,6 @@ function About.InitPanel(opts)
                     Settings.OpenToCategory(ns.settingsCategory:GetID())
                 end
             end,
-        }),
-        copyCard({
-            texture = "Interface\\AddOns\\ClassCodex\\Textures\\patreon", color = { 0.98, 0.41, 0.33 },
-            title = "Patreon", role = L["about.role.patreon"], emphasize = true,
-            urlFn = function() return "https://www.patreon.com/classcodex" end,
         }),
     }
 

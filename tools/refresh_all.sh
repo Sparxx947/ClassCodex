@@ -29,6 +29,7 @@ echo "=== stamped Data/Generated.lua with $today ==="
 
 echo "=== checks ==="
 python3 tools/check_data.py
+python3 tools/check_locales.py
 
 if LUAC="${LUAC:-$(command -v luac5.1 || command -v luac || true)}"; [[ -n "$LUAC" ]]; then
     LUAC="$LUAC" tools/check_lua.sh

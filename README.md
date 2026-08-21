@@ -78,6 +78,9 @@ their own after any change:
 * `tools/check_data.py` — every spec present in every generated file, and
   the scrape date not stale. A scrape that produced nothing for one spec
   otherwise looks exactly like a successful run.
+* `tools/check_locales.py` — every key the code asks for is defined, and
+  all ten translations carry the same set. A missing key shows up in-game
+  as a blank label, not as an error.
 * `tools/check_lua.sh` — parses every Lua file with a Lua 5.1 compiler,
   the version the WoW client runs. See [docs/data-sources.md](docs/data-sources.md)
 for what each generated file contains and where each field comes from.
@@ -92,6 +95,24 @@ the data rather than hard-coded, so a plain rerun is usually enough:
   season 2. `refresh_sources.py` reads the current one back out of the
   scraped Archon data, and the addon's zone detection does the same at
   runtime.
+
+## Blizzard add-on policy
+
+Checked against Blizzard's [UI Add-On Development Policy](https://us.forums.blizzard.com/en/wow/t/ui-add-on-development-policy/24534).
+
+Upstream broke rule 5, "add-ons may not solicit donations": it shipped a
+"Support on Patreon" button and a panel tab listing Patreon backers. Both
+are gone. That tab is now a Credits tab naming the original author, the
+project this addon derives code from, and the four sites its data comes
+from — credit without a donation request.
+
+The rest of the rules hold. The addon is free and its source is open and
+unobfuscated; it sends no chat or addon messages and registers no
+permanent per-frame handler, so it cannot burden a realm; it ships no
+Blizzard art or audio, referencing built-in icons by path instead; and it
+contains nothing that conflicts with the game's rating. Its only
+automation is applying a talent loadout you picked, through the public
+`C_Traits` API.
 
 ## Known gaps
 
@@ -110,8 +131,9 @@ the data rather than hard-coded, so a plain rerun is usually enough:
 
 ## Licence and credit
 
-MIT, © 2026 jfstn — see [LICENSE](LICENSE). The addon code is unchanged
-upstream work apart from the fixes listed in [CHANGELOG.md](CHANGELOG.md).
+MIT, © 2026 jfstn — see [LICENSE](LICENSE) and [NOTICE.md](NOTICE.md) for
+third-party components. The addon code is unchanged upstream work apart
+from the fixes listed in [CHANGELOG.md](CHANGELOG.md).
 Data belongs to [Wowhead](https://www.wowhead.com),
 [Icy Veins](https://www.icy-veins.com), [Archon](https://www.archon.gg) and
 [murlok.io](https://murlok.io); this addon links back to each guide it
@@ -162,6 +184,25 @@ tools/refresh_all.sh --season midnight-season-3   # nach einem Saisonwechsel
 Gebraucht wird nur Python 3.11+ aus dem Systembestand — keine virtuelle
 Umgebung, kein npm, kein Browser. Ein Durchlauf dauert etwa 15 Minuten und
 legt jede Seite in `tools/.cache/` ab, ein zweiter Lauf ist deshalb schnell.
+
+### Blizzards Addon-Richtlinie
+
+Geprüft gegen Blizzards [UI Add-On Development Policy](https://us.forums.blizzard.com/en/wow/t/ui-add-on-development-policy/24534).
+
+Das Original verstieß gegen Regel 5 („add-ons may not solicit
+donations"): Es lieferte einen „Support on Patreon"-Knopf und einen
+Reiter mit der Liste der Patreon-Unterstützer aus. Beides ist entfernt.
+Aus dem Reiter sind Danksagungen geworden: der ursprüngliche Autor, das
+Projekt, von dem Code stammt, und die vier Datenquellen — Anerkennung
+ohne Spendenaufruf.
+
+Die übrigen Regeln sind eingehalten: kostenlos, quelloffen und
+unverschleiert; keine Chat- oder Addon-Nachrichten und kein dauerhafter
+Handler pro Bild, also keine Last für den Realm; keine mitgelieferten
+Blizzard-Grafiken oder -Klänge (eingebaute Symbole werden nur über ihren
+Pfad referenziert); nichts Anstößiges. Die einzige Automatisierung ist
+das Einspielen einer von dir gewählten Talentverteilung über die
+öffentliche `C_Traits`-Schnittstelle.
 
 ### Bekannte Lücken
 

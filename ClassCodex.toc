@@ -2,7 +2,7 @@
 ## Title: Class Codex
 ## Notes: Stat priorities, talent builds, rotation guides, and gearing recommendations for your current spec.|nData refreshed for Midnight 12.1 Season 2.
 ## Author: jfstn (community continuation by Sparxx947)
-## Version: 0.37.0
+## Version: 0.38.0
 ## SavedVariables: ClassCodexDB
 ## SavedVariablesPerCharacter: ClassCodexCharDB
 ## X-Website: https://github.com/Sparxx947/ClassCodex
@@ -188,7 +188,7 @@ Sections\init.lua
 Sections\Crafting.lua
 Sections\Trinkets.lua
 Sections\Gear.lua
-Sections\Supporters.lua
+Sections\Credits.lua
 Sections\About.lua
 Sections\Stats.lua
 Sections\Enhancements.lua
