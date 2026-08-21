@@ -70,6 +70,14 @@ local DUNGEON_BY_ID, DUNGEON_BY_NAME
 local BOSS_BY_ID, BOSS_BY_NAME
 -- slug -> in-game display name, for the non-localised label fallback.
 local DUNGEON_DISPLAY, BOSS_DISPLAY
+-- Difficulty slugs present in the data, per zone type. These are NOT
+-- constants: Archon renamed the Mythic+ bracket from "high-keys"
+-- (Midnight season 1) to "10" (season 2), and a fresh season publishes
+-- Normal and Heroic raid data weeks before Mythic exists. Reading them
+-- back out of the scraped contexts is what keeps zone detection working
+-- across a season rollover without a code change.
+local MPLUS_DIFFICULTY_COUNT, RAID_DIFFICULTY_SET
+local MPLUS_DIFFICULTY
 
 -- The in-game name we match the player's current zone against: the
 -- spelling override when present, else the scraped encounterLabel.
@@ -91,6 +99,8 @@ local function BuildLookups()
     DUNGEON_BY_ID, DUNGEON_BY_NAME = {}, {}
     BOSS_BY_ID, BOSS_BY_NAME = {}, {}
     DUNGEON_DISPLAY, BOSS_DISPLAY = {}, {}
+    MPLUS_DIFFICULTY_COUNT, RAID_DIFFICULTY_SET = {}, {}
+    MPLUS_DIFFICULTY = nil
 
     local data = GetArchonGlobal()
     lookupsBuilt = data ~= nil
@@ -101,6 +111,14 @@ local function BuildLookups()
                 if contexts then
                     for _, ctx in pairs(contexts) do
                         local slug = ctx.encounter
+                        if ctx.difficulty then
+                            if ctx.zoneType == "mythic-plus" then
+                                MPLUS_DIFFICULTY_COUNT[ctx.difficulty] =
+                                    (MPLUS_DIFFICULTY_COUNT[ctx.difficulty] or 0) + 1
+                            elseif ctx.zoneType == "raid" then
+                                RAID_DIFFICULTY_SET[ctx.difficulty] = true
+                            end
+                        end
                         if slug and slug ~= "all-dungeons" and slug ~= "all-bosses" then
                             local label = ctx.encounterLabel
                             if ctx.zoneType == "mythic-plus" then
@@ -120,6 +138,16 @@ local function BuildLookups()
                     end
                 end
             end
+        end
+    end
+
+    -- One Mythic+ bracket is published per season; pick the slug backing
+    -- the most contexts, with the name as tie-breaker so the choice is
+    -- stable rather than pairs()-order dependent.
+    local bestCount = -1
+    for slug, count in pairs(MPLUS_DIFFICULTY_COUNT) do
+        if count > bestCount or (count == bestCount and slug < MPLUS_DIFFICULTY) then
+            MPLUS_DIFFICULTY, bestCount = slug, count
         end
     end
 
@@ -274,14 +302,28 @@ local function EnsureLookups()
     end
 end
 
--- "Heroic Raid" / "Mythic Raid" difficulty IDs.
--- 14 = Normal, 15 = Heroic, 16 = Mythic, 17 = LFR.
+-- Raid difficulty IDs: 14 = Normal, 15 = Heroic, 16 = Mythic, 17 = LFR.
+-- Each maps to an *ordered* preference list rather than one slug, because
+-- which difficulties Archon has published depends on how far the season
+-- has progressed. LFR has no sample of its own and borrows Normal's.
 local DIFFICULTY_TO_ARCHON = {
-    [14] = "heroic",  -- Normal — no Archon data; treat as heroic for fallback
-    [15] = "heroic",
-    [16] = "mythic",
-    [17] = "heroic",  -- LFR — no Archon data; fall back to heroic
+    [14] = { "normal", "heroic", "mythic" },
+    [15] = { "heroic", "mythic", "normal" },
+    [16] = { "mythic", "heroic", "normal" },
+    [17] = { "normal", "heroic", "mythic" },
 }
+local DIFFICULTY_FALLBACK = { "heroic", "mythic", "normal" }
+
+-- First preference that the loaded dataset actually carries.
+local function PickRaidDifficulty(difficultyID)
+    local prefs = DIFFICULTY_TO_ARCHON[difficultyID] or DIFFICULTY_FALLBACK
+    if RAID_DIFFICULTY_SET then
+        for i = 1, #prefs do
+            if RAID_DIFFICULTY_SET[prefs[i]] then return prefs[i] end
+        end
+    end
+    return prefs[1]
+end
 
 local function ResolveDungeonSlug(instanceMapID, instanceName)
     EnsureLookups()
@@ -310,15 +352,19 @@ local function ComputeActiveContext()
     local instanceName, _, difficultyID, _, _, _, _, instanceMapID = GetInstanceInfo()
 
     if instanceType == "party" then
+        EnsureLookups()
+        local bracket = MPLUS_DIFFICULTY
+        if not bracket then return nil end
         local slug = ResolveDungeonSlug(instanceMapID, instanceName)
         if slug then
-            return "mythic-plus:high-keys:" .. slug
+            return "mythic-plus:" .. bracket .. ":" .. slug
         end
-        return "mythic-plus:high-keys:all-dungeons"
+        return "mythic-plus:" .. bracket .. ":all-dungeons"
     end
 
     if instanceType == "raid" then
-        local archonDiff = DIFFICULTY_TO_ARCHON[difficultyID] or "heroic"
+        EnsureLookups()
+        local archonDiff = PickRaidDifficulty(difficultyID)
 
         -- Mid-pull: prefer the boss the player just engaged. Match on the
         -- encounter name (enUS) since Archon doesn't expose Blizzard
