@@ -20,6 +20,7 @@ ns.Sections.Credits = Credits
 
 local CREDITS = {
     { name = "jfstn", role = L["credits.role.original"], color = { 0.98, 0.78, 0.18 } },
+    { name = "Sparxx947", role = L["credits.role.continuation"], color = { 0.98, 0.78, 0.18 } },
     { name = "NumyAddon", role = L["credits.role.tlm"], color = { 0.85, 0.72, 0.55 } },
     { name = "Ace3 / WoWAce", role = L["credits.role.libs"], color = { 0.85, 0.72, 0.55 } },
     { name = "Wowhead", role = L["credits.role.data"], color = { 0.70, 0.78, 0.90 } },
