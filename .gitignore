@@ -6,3 +6,6 @@ dist/
 __pycache__/
 *.pyc
 dist/
+# never let an API key file into the repository, wherever it is put
+credentials
+*.secret

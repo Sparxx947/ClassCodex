@@ -95,6 +95,70 @@ def log(msg: str) -> None:
 
 
 # --------------------------------------------------------------------------
+# Blizzard API credentials
+# --------------------------------------------------------------------------
+
+CREDENTIALS = Path(os.environ.get(
+    "BNET_CREDENTIALS", Path.home() / ".config" / "bnet" / "credentials"))
+
+
+def bnet_credentials() -> tuple[str, str]:
+    """(client id, client secret) from the environment or a key file.
+
+    The file keeps the secret out of shell history, out of any transcript
+    and out of this repository. Format, one KEY=value per line, `#` for
+    comments:
+
+        BNET_CLIENT_ID=...
+        BNET_CLIENT_SECRET=...
+
+    Nothing here ever prints the values. Callers get them to sign a
+    request and nothing else.
+    """
+    client_id = os.environ.get("BNET_CLIENT_ID")
+    secret = os.environ.get("BNET_CLIENT_SECRET")
+    if client_id and secret:
+        return client_id, secret
+
+    if not CREDENTIALS.exists():
+        raise SystemExit(
+            f"no Blizzard API credentials.\n"
+            f"  Create a client at https://develop.battle.net/access/clients\n"
+            f"  then write them to {CREDENTIALS}:\n"
+            f"      BNET_CLIENT_ID=...\n"
+            f"      BNET_CLIENT_SECRET=...\n"
+            f"  and restrict it:  chmod 600 {CREDENTIALS}\n"
+            f"  Or set BNET_CLIENT_ID and BNET_CLIENT_SECRET in the environment."
+        )
+
+    # A secret readable by other accounts is not a secret. Refuse rather
+    # than warn — a warning scrolls past.
+    mode = CREDENTIALS.stat().st_mode & 0o077
+    if mode:
+        raise SystemExit(
+            f"{CREDENTIALS} is readable beyond its owner "
+            f"(mode {CREDENTIALS.stat().st_mode & 0o777:o}).\n"
+            f"  Fix with:  chmod 600 {CREDENTIALS}"
+        )
+
+    values: dict[str, str] = {}
+    for line in CREDENTIALS.read_text(encoding="utf-8").splitlines():
+        line = line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, _, value = line.partition("=")
+        values[key.strip()] = value.strip().strip("'\"")
+
+    client_id = values.get("BNET_CLIENT_ID")
+    secret = values.get("BNET_CLIENT_SECRET")
+    if not client_id or not secret:
+        raise SystemExit(
+            f"{CREDENTIALS} is missing BNET_CLIENT_ID or BNET_CLIENT_SECRET"
+        )
+    return client_id, secret
+
+
+# --------------------------------------------------------------------------
 # HTTP with an on-disk cache
 # --------------------------------------------------------------------------
 

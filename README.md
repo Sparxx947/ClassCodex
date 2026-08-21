@@ -93,6 +93,31 @@ their own after any change:
   the version the WoW client runs. See [docs/data-sources.md](docs/data-sources.md)
 for what each generated file contains and where each field comes from.
 
+### Blizzard API credentials
+
+Only `tools/probe_bnet.py` needs them, and only to answer the open
+question in the "Known gaps" section below. Nothing else in the toolchain
+uses Blizzard's API.
+
+Create a client at <https://develop.battle.net/access/clients> — any
+name, no redirect URL is needed for `client_credentials` — then put the
+two values in `~/.config/bnet/credentials`:
+
+```
+BNET_CLIENT_ID=...
+BNET_CLIENT_SECRET=...
+```
+
+```bash
+chmod 600 ~/.config/bnet/credentials
+```
+
+The tools refuse to read the file if it is readable beyond its owner —
+refuse rather than warn, because a warning scrolls past. Point
+`BNET_CREDENTIALS` elsewhere to use a different path, or set
+`BNET_CLIENT_ID` and `BNET_CLIENT_SECRET` in the environment instead.
+Nothing prints the values.
+
 ### After a season rollover
 
 Seasons move more than the data. Two slugs change and both are read from

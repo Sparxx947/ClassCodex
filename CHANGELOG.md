@@ -21,7 +21,10 @@ the changes listed here depart from upstream v0.36.3.
 ### Added
 
 * `tools/probe_bnet.py` — establishes whether Blizzard's API still
-  exposes talent loadouts, which is the open question behind #7.
+  exposes talent loadouts, which is the open question behind #7. It reads
+  credentials from `~/.config/bnet/credentials`, so a key never has to go
+  through a shell history or a transcript, and refuses to read the file
+  if it is readable beyond its owner.
 
 ## 0.38.2 — 2026-08-21
 
