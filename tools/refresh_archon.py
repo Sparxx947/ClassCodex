@@ -28,7 +28,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from ccutil import (  # noqa: E402
-    CLASS_DIRS, DATA, SLUG_TO_DIR, fetch, log, lua_str, next_data,
+    CLASS_DIRS, DATA, SLUG_TO_DIR, Keyed, fetch, log, lua_str, next_data,
     strip_markup, write_lua,
 )
 
@@ -294,13 +294,13 @@ def write_class(class_dir: str, specs: dict[str, dict], stamp: str) -> None:
 
     talents = {slug: {"label": d["label"],
                       "contextOrder": d["contextOrder"],
-                      "contexts": d["contexts"]}
+                      "contexts": Keyed(d["contexts"])}
                for slug, d in specs.items() if d["contexts"]}
     if talents:
         write_lua(out / "archon-talents.lua", "ClassCodexArchonData", token,
                   talents, header=header)
 
-    stats = {slug: d["stats"] for slug, d in specs.items() if d["stats"]}
+    stats = {slug: Keyed(d["stats"]) for slug, d in specs.items() if d["stats"]}
     if stats:
         write_lua(out / "archon-stats.lua", "ClassCodexArchonStats", token,
                   stats, header=header)

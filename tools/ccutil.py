@@ -29,6 +29,28 @@ UA = (
     "(KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
 )
 
+# Wowhead sits behind a WAF that rejects anything not sending a full
+# browser header set — a plain User-Agent still earns a 403 whether or
+# not the page exists. Sending the Sec-Fetch / client-hint headers a
+# real navigation carries is what gets a 200 back. Harmless elsewhere,
+# so every request uses them.
+BROWSER_HEADERS = {
+    "User-Agent": UA,
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,"
+              "image/avif,image/webp,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Accept-Encoding": "gzip, deflate",
+    "sec-ch-ua": '"Chromium";v="128", "Not;A=Brand";v="24"',
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": '"Linux"',
+    "Sec-Fetch-Dest": "document",
+    "Sec-Fetch-Mode": "navigate",
+    "Sec-Fetch-Site": "none",
+    "Sec-Fetch-User": "?1",
+    "Upgrade-Insecure-Requests": "1",
+    "Connection": "close",
+}
+
 # Class folder name -> the CLASS token the addon keys its tables with.
 CLASS_DIRS = {
     "DeathKnight": "DEATHKNIGHT",
@@ -106,16 +128,7 @@ def fetch(url: str, *, max_age: float = 21600.0, retries: int = 4) -> str:
     last: Exception | None = None
     for attempt in range(retries):
         _pace()
-        req = urllib.request.Request(
-            url,
-            headers={
-                "User-Agent": UA,
-                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-                "Accept-Language": "en-US,en;q=0.9",
-                "Accept-Encoding": "gzip, deflate",
-                "Connection": "close",
-            },
-        )
+        req = urllib.request.Request(url, headers=dict(BROWSER_HEADERS))
         try:
             with urllib.request.urlopen(req, timeout=45) as resp:
                 raw = resp.read()
@@ -147,9 +160,9 @@ def head_status(url: str, *, retries: int = 3) -> tuple[int, str]:
     """Return (status, final_url) for *url*, following redirects."""
     for attempt in range(retries):
         _pace()
-        req = urllib.request.Request(
-            url, method="GET", headers={"User-Agent": UA, "Accept": "*/*", "Range": "bytes=0-2047"}
-        )
+        headers = dict(BROWSER_HEADERS)
+        headers["Range"] = "bytes=0-2047"
+        req = urllib.request.Request(url, method="GET", headers=headers)
         try:
             with urllib.request.urlopen(req, timeout=30) as resp:
                 resp.read(1)
@@ -177,6 +190,72 @@ def next_data(html: str) -> dict:
     return json.loads(m.group(1))
 
 
+_GATHERER = re.compile(r"WH\.Gatherer\.addData\(\s*(\d+)\s*,\s*\d+\s*,\s*")
+
+
+def _balanced(text: str, start: int) -> str | None:
+    """The {...} literal beginning at *start*, or None if unterminated."""
+    depth = 0
+    for i in range(start, len(text)):
+        if text[i] == "{":
+            depth += 1
+        elif text[i] == "}":
+            depth -= 1
+            if depth == 0:
+                return text[start:i + 1]
+    return None
+
+
+def wowhead_items(html: str, data_type: int = 3) -> dict[int, dict]:
+    """Entity id -> {"name", "icon"} from a page's WH.Gatherer payloads.
+
+    Wowhead's markup references items by id alone; the names and icon
+    slugs ride along in these blocks. Type 3 is items. The icon slug is
+    worth keeping: it encodes what an item *is*
+    (…alchemy_flask…, …alchemy_voidpotion…, …enchanting_manaoil…), which
+    is far more reliable than reading the item's name.
+    """
+    out: dict[int, dict] = {}
+    for m in _GATHERER.finditer(html):
+        if int(m.group(1)) != data_type:
+            continue
+        blob = _balanced(html, m.end())
+        if not blob:
+            continue
+        try:
+            payload = json.loads(blob)
+        except json.JSONDecodeError:
+            continue
+        for key, value in payload.items():
+            if not key.isdigit() or not isinstance(value, dict):
+                continue
+            name = value.get("name_enus")
+            if not name:
+                continue
+            out[int(key)] = {"name": name, "icon": value.get("icon") or ""}
+    return out
+
+
+def wowhead_names(html: str, data_type: int = 3) -> dict[int, str]:
+    """Entity id -> English name. See wowhead_items for the full record."""
+    out: dict[int, str] = {}
+    for m in _GATHERER.finditer(html):
+        if int(m.group(1)) != data_type:
+            continue
+        blob = _balanced(html, m.end())
+        if not blob:
+            continue
+        try:
+            payload = json.loads(blob)
+        except json.JSONDecodeError:
+            continue
+        for key, value in payload.items():
+            name = isinstance(value, dict) and value.get("name_enus")
+            if name and key.isdigit():
+                out[int(key)] = name
+    return out
+
+
 def strip_markup(text: str | None) -> str:
     """Archon wraps labels in pseudo-JSX (<ActorIcon ...>Frost</ActorIcon>)."""
     if not text:
@@ -187,6 +266,17 @@ def strip_markup(text: str | None) -> str:
 # --------------------------------------------------------------------------
 # Lua emitter
 # --------------------------------------------------------------------------
+
+class Keyed(dict):
+    """A dict whose keys come from the data, not from the schema.
+
+    Spec slugs, context keys and difficulty labels are values that happen
+    to be used as table keys. Emitting them quoted — ["holy"] rather than
+    holy — keeps them visually distinct from structural field names and
+    stops a slug that happens to be a Lua identifier from looking like
+    one. Lua treats both forms identically.
+    """
+
 
 _LUA_ESCAPES = {"\\": "\\\\", '"': '\\"', "\n": "\\n", "\r": "\\r", "\t": "\\t"}
 _IDENT = re.compile(r"^[A-Za-z_][A-Za-z0-9_]*$")
@@ -202,8 +292,8 @@ def lua_str(value: str) -> str:
     return f'"{out}"'
 
 
-def lua_key(key: str) -> str:
-    if _IDENT.match(key) and key not in _LUA_KEYWORDS:
+def lua_key(key: str, *, always_quote: bool = False) -> str:
+    if not always_quote and _IDENT.match(key) and key not in _LUA_KEYWORDS:
         return f"{key} = "
     return f"[{lua_str(key)}] = "
 
@@ -229,20 +319,35 @@ def lua_value(value, indent: int = 0) -> str:
     if isinstance(value, (list, tuple)):
         if not value:
             return "{}"
+        # Short all-scalar lists read better on one line — this is what a
+        # stat priority rank looks like: { "Critical Strike", "Haste" }.
+        if all(isinstance(v, (str, int, float, bool)) for v in value):
+            oneline = "{ " + ", ".join(lua_value(v) for v in value) + " }"
+            if len(oneline) + len(pad) <= 100:
+                return oneline
         parts = [f"{inner}{lua_value(v, indent + 1)}," for v in value]
         return "{\n" + "\n".join(parts) + f"\n{pad}}}"
     if isinstance(value, dict):
         items = [(k, v) for k, v in value.items() if v is not None]
         if not items:
             return "{}"
-        parts = [f"{inner}{lua_key(k)}{lua_value(v, indent + 1)}," for k, v in items]
+        quote = isinstance(value, Keyed)
+        parts = [f"{inner}{lua_key(k, always_quote=quote)}{lua_value(v, indent + 1)},"
+                 for k, v in items]
         return "{\n" + "\n".join(parts) + f"\n{pad}}}"
     raise TypeError(f"cannot serialise {type(value).__name__}")
 
 
 def write_lua(path: Path, global_name: str, class_token: str, payload: dict,
               *, header: str = "") -> None:
-    """Write `Global = Global or {}` + `Global["CLASS"] = {...}`."""
+    """Write `Global = Global or {}` + `Global["CLASS"] = {...}`.
+
+    The top level is keyed by spec slug, which is data, so it is emitted
+    quoted regardless of whether a given slug happens to be a valid Lua
+    identifier — otherwise ["beast-mastery"] and survival would sit side
+    by side in the same table.
+    """
+    payload = Keyed(payload)
     path.parent.mkdir(parents=True, exist_ok=True)
     body = [
         "-- Generated by tools/ in this repository. Do not edit by hand.",
