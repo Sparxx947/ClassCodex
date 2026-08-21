@@ -5,6 +5,15 @@ the changes listed here depart from upstream v0.36.3.
 
 ## Unreleased
 
+### Added
+
+* `bnet-pvp-talents.lua` is generated again, for all 40 specs. It was the
+  one file still carrying upstream data from 2026-07-02. `refresh_bnet.py`
+  reads the PvP leaderboards and each listed character's profile — the
+  heaviest scraper here, because there is no aggregate endpoint.
+  `refresh_all.sh` skips it cleanly when no Blizzard credentials are set,
+  so a data refresh never fails over the one source that needs a key.
+
 ### Changed
 
 * Removed 21 locale keys across all ten languages that nothing reaches.
